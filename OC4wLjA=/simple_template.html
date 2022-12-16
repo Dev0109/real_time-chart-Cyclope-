@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="{CURRENT_VERSION_FOLDER}assets/images/favicon.ico">
+    <title>Cyclope</title>
+    <style type="text/css">
+
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+    </style>
+    <!--Old Js And CSs-->
+    <!-- <link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/reset.css" />
+
+        <link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/forms.css" />
+        <link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/colortip-1.0-jquery.css"/>
+        <link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/layout.css"/>
+        <link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/tables.css"/>
+        <link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/smoothness/jquery-ui-1.8.6.custom.css"/>
+        <link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/jquery.ui.css"/> -->
+    <link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/defaults.css" />
+
+    <script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/jquery.class.js"></script>
+    <script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/flobn.js"></script>
+    <script type="text/javascript" src="xlang.php"></script>
+    <script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/jquery.jstree.js"></script>
+    <script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/error_messages.js"></script>
+    <script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/date.js"></script>
+    <script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/jquery-ui-1.8.6.dialog.js"></script>
+    <script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/jquery-idleTimeout.js"></script>
+    <script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/colortip-1.0-jquery.js"></script>
+    <script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/dynamic_charts.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        // $(document).ready(function(){
+        // 	$(document).click(function() {
+        // 	   $('#cat-select').hide();
+        // 	});
+
+        // 	$(document).idleTimeout({
+        // 		inactivity: 1400000,
+        // 		noconfirm: 10000,
+        // 		sessionAlive: 1400000,
+        // 		click_reset: true,
+        // 		logout_url: 'index.php?act=auth-logout',
+        // 		showDialog: true,
+        // 		dialogTitle: 'Auto Logout',
+        // 		dialogText: 'You are about to be signed out due to inactivity.',
+        // 		dialogButton: 'Stay Logged In'
+        // 	});
+        // });
+    </script>
+    <!--End Old Js And Css-->
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="{CURRENT_VERSION_FOLDER}assets/plugins/morris/morris.css">
+    <!-- Treeview css -->
+    <link href="{CURRENT_VERSION_FOLDER}assets/plugins/jstree/style.css" rel="stylesheet" type="text/css" /> {CONVIVAL}
+
+    <!-- App css -->
+    <link href="{CURRENT_VERSION_FOLDER}assets/css/slicknav.css" rel="stylesheet" type="text/css" />
+    <link href="{CURRENT_VERSION_FOLDER}assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="{CURRENT_VERSION_FOLDER}assets/css/core.css" rel="stylesheet" type="text/css" />
+    <link href="{CURRENT_VERSION_FOLDER}assets/css/components.css" rel="stylesheet" type="text/css" />
+    <link href="{CURRENT_VERSION_FOLDER}assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="{CURRENT_VERSION_FOLDER}assets/css/pages.css" rel="stylesheet" type="text/css" />
+    <link href="{CURRENT_VERSION_FOLDER}assets/css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="{CURRENT_VERSION_FOLDER}assets/css/responsive.css" rel="stylesheet" type="text/css" />
+
+    <link href="{CURRENT_VERSION_FOLDER}assets/css/custom.css" rel="stylesheet" type="text/css" />
+    <script src="{CURRENT_VERSION_FOLDER}assets/js/modernizr.min.js"></script>
+</head>
+<body class="fixed-left">
+    <!-- Begin page -->
+    <div id="wrapper">
+        <!-- Top Bar Start -->
+        <div class="topbar">
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <ul class="nav navbar-nav navbar-left">
+                        <!-- <li>
+                            <nav id="menu-nav">
+                                <div id="menu-button">
+                                    <div id="menu-button-inner"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                                </div>
+                            </nav>
+                        </li> -->
+                        <li>
+                            <h4 class="page-title"><img src="{CURRENT_VERSION_FOLDER}assets/images/logo.png"></h4>
+                        </li>
+                    </ul>
+                <a href="index.php" class="logo"><img src="{CURRENT_VERSION_FOLDER}assets/images/logo.png"></a>
+            </div>
+            <!-- Button mobile view to collapse sidebar menu -->
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <!-- Page title -->
+                    
+                    <!-- Right(Notification and Searchbox -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <!-- Notification -->
+                            <div class="notification-box">
+                                <ul class="list-inline m-b-0 headericons">
+                                    <li>
+                                        <a href="index.php?pag=universalsearch"><img src="{CURRENT_VERSION_FOLDER}assets/images/search.png"></a>
+                                    </li>
+                                    <li>
+                                        <a href="help.php?pag=support"><img src="{CURRENT_VERSION_FOLDER}assets/images/Help.png"></a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href=""><img src="{CURRENT_VERSION_FOLDER}assets/images/Notifiication.png"></a>
+                                    </li> -->
+                                    <!--  <li class="dropdown user user-menu">
+                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="drpOpenCloseLogin">
+
+                                             <span class="hidden-xs">
+                                                         {USER}
+                                                     </span>
+                                         </a>
+                                         <ul class="dropdown-menu" id="drplogin">
+                                             <li class="user-body">
+                                                 <ul>
+                                                     <li>
+                                                         <a href="index.php?act=auth-logout"> Logout</a>
+                                                     </li>
+                                                 </ul>
+
+                                             </li>
+
+                                         </ul>
+
+                                     </li> -->
+                                    <div class="dropdown">
+                                        <button onclick="myFunction()" class="dropbtn"> {USER}</button>
+                                        <div id="myDropdown" class="dropdown-content">
+                                            <!--<a href="index.php?pag=myaccount">[!L!]My Profile[!/L!]</a>-->
+                                            <a href="index.php?act=auth-logout">[!L!]Sign Out[!/L!]</a>
+                                        </div>
+                                    </div>
+
+                                </ul>
+
+                            </div>
+                            <!-- End Notification bar -->
+                        </li>
+                        <li class="myaccount">
+                            <a href="index.php?pag=myaccount" style="background-color: transparent !important;">[!L!]My Account[!/L!]</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end navbar -->
+        </div>
+        <!-- Top Bar End -->
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu" id="demo2">
+            <div class="navigation" style="width:100%">
+                <ul class="main-menu clearfix" id="menu">
+                    <li class="has-sub">
+                        <a href="index.php?pag=simpleoverview"><i class="quickreport"></i> <span> [!L!]Quick Reports[!/L!]</span></a>
+                        <ul class="slimscrolla scroll scroll-width-thin">
+                            <li><a href="index.php?pag=simpleoverview">[!L!]Overview[!/L!]{LANGUAGE}</a></li>
+                            <li><a href="index.php?pag=simpleattendance">[!L!]Attendance[!/L!]</a></li>
+                            <li><a href="index.php?pag=simpleapplicationusage">[!L!]Applications[!/L!]</a></li>
+                            <li><a href="index.php?pag=simpleinternet">[!L!]Internet[!/L!]</a></li>
+                            <li><a href="index.php?pag=simpleproductivityreport">[!L!]Productivity[!/L!]</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="index.php?pag=overview"><i class="allreport"></i> <span> [!L!]All Reports[!/L!]</span></a>
+                        <ul class="slimscrolla scroll scroll-width-thin" style="height:230px;background-color:#647495;-webkit-column-count:3;-moz-column-count:3; -moz-column-gap: 1px;-webkit-column-gap: 1px;width:600px;">
+                            <li><a href="index.php?pag=overview" class="active">[!L!]Overview[!/L!]</a></li>
+                            <li><a href="index.php?pag=attendance">[!L!]Attendance[!/L!]</a></li>
+                            <li><a href="index.php?pag=internet">[!L!]Internet[!/L!]</a></li>
+                            <li><a href="index.php?pag=document">[!L!]Documents[!/L!]</a></li>
+                            <li><a href="index.php?pag=applicationusage">[!L!]Applications[!/L!]</a></li>
+                            <li><a href="index.php?pag=productivityreport">[!L!]Productivity[!/L!]</a></li>
+                            <li><a href="index.php?pag=topwebsites">[!L!]Top Websites / Online [!/L!]</a></li>
+                            <li><a href="index.php?pag=topapplications">[!L!]Top Applications[!/L!]</a></li>
+                            <li><a href="index.php?pag=topproductive">[!L!]Top Productive[!/L!]</a></li>
+                            <li><a href="index.php?pag=topactive">[!L!]Top Active / Idle[!/L!]</a></li>
+                            <li><a href="index.php?pag=categoryactivity">[!L!]Activity Categories[!/L!]</a></li>
+                            <li><a href="index.php?pag=triggered">[!L!]Alerts[!/L!]</a></li>	
+                            <li><a href="index.php?pag=print">[!L!]Print[!/L!]</a></li>
+                            <li><a href="index.php?pag=file">[!L!]Files[!/L!]</a></li>
+                            <li><a href="index.php?pag=softwareinventory">[!L!]Software Inventory[!/L!]</a></li>
+                            <li><a href="index.php?pag=applicationforms">[!L!]Application Forms[!/L!]</a></li>
+                            <li><a href="index.php?pag=timeline">[!L!]Timeline[!/L!]</a></li>
+                            <li><a href="index.php?pag=sequence">[!L!]Sequences[!/L!]</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="index.php?pag=monitored"><i class="administration"></i> <span>[!L!]Administration[!/L!] </span></a>
+                        <ul class="slimscrolla scroll scroll-width-thin" style="height:190px;background-color:#647495;-webkit-column-count:3;-moz-column-count:3; -moz-column-gap: 1px;-webkit-column-gap: 1px;width:600px;">
+                            <li><a href="index.php?pag=monitored">[!L!]Monitored Users[!/L!]</a></li>
+                            <li><a href="index.php?pag=members">[!L!]Administrative Users[!/L!]</a></li>
+                            <li><a href="index.php?pag=groups">[!L!]Departments[!/L!]</a></li>
+                            <li><a href="index.php?pag=settings">[!L!]Settings[!/L!]</a></li>
+                            <li><a href="index.php?pag=log">[!L!]Logs Management[!/L!]</a></li>
+                            <li><a href="index.php?pag=emailreports">[!L!]Reports by Email[!/L!]</a></li>
+                            <li><a href="index.php?pag=alerts">[!L!]Alerts[!/L!]</a></li>
+                            <li><a href="index.php?pag=applications">[!L!]Applications[!/L!]</a></li>
+                            <li><a href="index.php?pag=categories">[!L!]Activity Categories[!/L!]</a></li>
+                            <li><a href="index.php?pag=emailsequences">[!L!]Application Sequences[!/L!]</a></li>
+                            <li><a href="index.php?pag=licensing">[!L!]Licensing[!/L!]</a></li>
+                            <li><a href="index.php?pag=notifications">[!L!]Notifications[!/L!]</a></li>
+                            <li><a href="index.php?pag=colorthemes">[!L!]Color Themes[!/L!]</a></li>
+                            
+                            <li><a href="index.php?pag=updates">[!L!]Updates[!/L!]</a></li>
+
+                            <li><a href="index.php?pag=updates">[!L!]&nbsp;[!/L!]</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="help.php?pag=support"><i class="support"></i> <span> [!L!]Support[!/L!] </span></a></li>
+                    <li><a href="help.php?pag=gdpr" class="waves-effect"><i class="gdrp"></i> <span> [!L!]GDPR[!/L!]</span> </a></li>
+                    <!-- <li><a href="index.php?pag=settings" class="waves-effect"><i class="settings"></i> <span> Settings </span> </a></li> -->
+                </ul>
+            </div>
+
+        </div>
+        <!-- Left Sidebar End -->
+        <div class="content-page" id="mastcontent">
+            <div class="content" id="content">
+                <div class="container p-0">
+                    <div class="contercontent">{PAGE}</div>
+                    <div class="rightsidebar">{SIDEBAR}</div>
+                </div>
+            </div>
+           <!--  <footer class="footer text-right">[!L!]
+                Cyclope Employee Surveillance Solution v7.0.0 is provided by Cyclope Series © 2003-
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>[!/L!]
+            </footer> -->
+            <footer class="footer text-right">
+            <div id="mastfooter"> [!L!]Cyclope Employee Surveillance Solution v6.8 is provided by Cyclope Series &copy; 2003-2014[!/L!] </div>
+            </footer>
+        </div>
+    </div>
+    <!-- END wrapper -->
+    <script>
+        var resizefunc = [];
+    </script>
+ 
+ <script src="{CURRENT_VERSION_FOLDER}assets/js/jquery.slicknav.js"></script>
+ <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+ <script type="text/javascript">
+$('#menu').slicknav({
+        prependTo:'#demo2'
+});
+</script>
+    <!-- jQuery  -->
+    <!--  <script src="{CURRENT_VERSION_FOLDER}assets/js/jquery.min.js"></script>
+     <script src="{CURRENT_VERSION_FOLDER}assets/js/bootstrap.min.js"></script>
+     <script src="{CURRENT_VERSION_FOLDER}assets/js/detect.js"></script>
+     <script src="{CURRENT_VERSION_FOLDER}assets/js/fastclick.js"></script>
+     <script src="{CURRENT_VERSION_FOLDER}assets/js/jquery.slimscroll.js"></script>
+     <script src="{CURRENT_VERSION_FOLDER}assets/js/jquery.blockUI.js"></script>
+     <script src="{CURRENT_VERSION_FOLDER}assets/js/waves.js"></script>
+     <script src="{CURRENT_VERSION_FOLDER}assets/js/jquery.nicescroll.js"></script>
+     <script src="{CURRENT_VERSION_FOLDER}assets/js/jquery.slimscroll.js"></script>
+     <script src="{CURRENT_VERSION_FOLDER}assets/js/jquery.scrollTo.min.js"></script>
+     <script type="text/javascript" src="{CURRENT_VERSION_FOLDER}assets/js/custom.js"></script>-->
+    <!-- KNOB JS -->
+    <!--[if IE]>
+        <script type="text/javascript" src="assets/plugins/jquery-knob/excanvas.js"></script>
+        <![endif]-->
+    <!-- App js -->
+    <!-- <script src="{CURRENT_VERSION_FOLDER}assets/js/jquery.core.js"></script>
+    <script src="{CURRENT_VERSION_FOLDER}assets/js/jquery.app.js"></script> -->
+    <!-- Tree view js -->
+    <!-- <script src="{CURRENT_VERSION_FOLDER}assets/plugins/jstree/jstree.min.js"></script>
+       <script src="{CURRENT_VERSION_FOLDER}assets/pages/jquery.tree.js"></script>
+    -->
+    <script type="text/javascript">
+        /*  var h=$(".contercontent").height();
+                    $(".rightsidebar").height(h);*/
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        jQuery(function ($) {
+            var open = false;
+            var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
+
+            function resizeMenu() {
+
+                if (IS_IPAD == true) {
+                    if ($(this).width() <= 1080) {
+                        if (!open) {
+                            $("#menu-responsive").hide();
+                        }
+                        $("#menu-button").show();
+                    }
+                    else if ($(this).width() > 768) {
+                        if (!open) {
+                            $("#menu-responsive").show();
+                        }
+                        $("#menu-button").hide();
+                    }
+                } else {
+                    if ($(this).width() <= 1080) {
+                        if (!open) {
+                            $("#menu-responsive").hide();
+                        }
+                        $("#menu-button").show();
+
+                    }
+                    else if ($(this).width() > 768) {
+                        if (!open) {
+                            $("#menu-responsive").show();
+                        }
+                        $("#menu-button").hide();
+
+                    }
+                }
+
+
+            }
+
+            function setupMenuButton() {
+                $("#menu-button").click(function (e) {
+                    e.preventDefault();
+
+                    if (open) {
+                        $("#menu-responsive").fadeOut();
+                        $("#menu-button").toggleClass("selected");
+                    }
+                    else {
+                        $("#menu-responsive").fadeIn();
+                        $("#menu-button").toggleClass("selected");
+                    }
+                    open = !open;
+                });
+            }
+
+
+            $(window).resize(resizeMenu);
+
+            resizeMenu();
+            setupMenuButton();
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+  $('ul li ').click(function(){
+    $('li ').removeClass("active");
+    $(this).addClass("active");
+});
+});
+    </script>
+
+    {BOTTOM_INCLUDES}
+</body>
+</html>

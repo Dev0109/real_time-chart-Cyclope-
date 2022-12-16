@@ -1,0 +1,63 @@
+<h1 class="windowtitle">{PAGE_TITLE}</h1>
+<div id="content" class="selectemployee panelrow productivitypage">
+  <form action="index.php" method="post">
+    <input type="hidden" name="application_id" value="{APPLICATION_ID}" />
+    <input type="hidden" name="act" value="{ACT}" />
+	<input type="hidden" name="offset" value="{OFFSET}" />
+    <input type="hidden" name="pag" value="application" />
+    <input type="hidden" name="goto" value="{GOTO}" />
+    <fieldset>
+      {MESSAGE}
+      <div class="row">
+      <div class="even col-sm-3">
+        <label for="application_category_id">[!L!]Activity Category[!/L!]</label>
+        <select name="application_category_id" id="application_category_id">
+         
+        
+			{APPLICATION_CATEGORY_ID}
+		
+      
+        </select>
+      </div>
+      <div class="req col-sm-3">
+        <label for="description">[!L!]Name[!/L!]</label>
+        <span>
+        <input type="text" name="description" id="description" value="{DESCRIPTION}" />
+        </span> ([!L!]Machine name[!/L!]: {ALIAS}) </div>
+      <!-- <div>
+        <label for="alias">[!L!]Alias[!/L!]</label>
+        <span>
+        <input type="text" name="alias" id="alias" value="{ALIAS}" />
+        </span> </div> -->
+      <div class="req even col-sm-3">
+        <label for="application_type">[!L!]Show in[!/L!]</label>
+        <select name="application_type" id="application_type">
+          
+        
+			{APPLICATION_TYPE}
+		
+      
+        </select>
+      </div>
+     <!-- <div>
+        <label for="color">[!L!]Color[!/L!]</label>
+        <span>
+        <input type="text" name="color" id="color" value="{COLOR}" />
+        </span> </div>
+      <div>
+        <label for="icon32">[!L!]Icon32[!/L!]</label>
+        <span>
+        <input type="file" name="icon32" id="icon32" value="{ICON32}" />
+        </span> </div>
+      <div>
+        <label for="icon16">[!L!]Icon16[!/L!]</label>
+        <span>
+        <input type="file" name="icon16" id="icon16" value="{ICON16}" />
+        </span> </div>-->
+      <div class="buttons"><span class="submit">
+        <button type="submit"><b>[!L!]Save[!/L!]</b></button>
+        </span></div>
+        </div>
+    </fieldset>
+  </form>
+</div>

@@ -1,0 +1,174 @@
+<!-- BEGIN DYNAMIC BLOCK: ajax -->
+<div id="universalsearch">
+  <h1>[!L!]Search Results[!/L!]{SEARCH_KEY} </h1>
+	<form action="index.php" method="post" id="main_search_form" onsubmit="return validateForm();">
+		<fieldset>
+				<legend>Search key and Reports range:
+				<div class="tooltipcustom" {PDF_HIDE}>? <span class="tooltiptext">[!L!]To perform a search you need to fill in a search key (at least 3 characters in length) and select one or more reports to search into.[!/L!]</span></div>
+
+				</legend>
+				<input type="hidden" name="pag" value="universalsearch" />
+				<span class="srcgrp" >
+					<label for="main_search_input">[!L!] Enter search key: [!/L!]</label>
+					<input type="text" name="search_key" id="main_search_input" value="{SEARCH_VALUE}" onfocus="defaultValue ='{SEARCH_VALUE}'; if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
+				</span>
+				<div class="repgrp">
+					<div class="repinrgrp">
+						<label for="checkall">[!L!] Check where to search: [!/L!]</label><br /><br />
+						<input type="checkbox" name="member" id="member" class="reportlist"  value="1" {MEMBER_CHECKED} /><label for="member">[!L!] Monitored Employees [!/L!]</label><br />
+						<input type="checkbox" name="computer" id="computer" class="reportlist"  value="1" {COMPUTER_CHECKED} /><label for="computer">[!L!] Computers [!/L!]</label><br />
+						<input type="checkbox" name="application" id="application" class="reportlist"  value="1" {APPLICATION_CHECKED} /><label for="application">[!L!] Application [!/L!]</label><br />
+						<input type="checkbox" name="checkall" id="checkall" value="1" /><label for="checkall"><b>[!L!] Check/Clear All [!/L!]</b></label><br />
+					</div>
+					<div class="repinrgrp">
+						<label for="checkall">&nbsp;</label><br /><br />
+						<input type="checkbox" name="internet" id="internet" class="reportlist"  value="1" {INTERNET_CHECKED} /><label for="internet">[!L!] Internet [!/L!]</label><br />
+						<input type="checkbox" name="document" id="document" class="reportlist"  value="1" {DOCUMENT_CHECKED} /><label for="document">[!L!] Documents [!/L!]</label><br />
+						<input type="checkbox" name="chat" id="chat" class="reportlist"  value="1" {CHAT_CHECKED} /><label for="chat">[!L!] Chat [!/L!]</label><br />
+					</div>
+					<div class="repinrgrp">
+						<label for="checkall">&nbsp;</label><br /><br />
+						<input type="checkbox" name="print" id="print" class="reportlist"  value="1" {PRINT_CHECKED} /><label for="print">[!L!] Print [!/L!]</label><br />
+						<input type="checkbox" name="file" id="file" class="reportlist"  value="1" {FILE_CHECKED} /><label for="file">[!L!] Files [!/L!]</label><br />
+						<input type="checkbox" name="window" id="window" class="reportlist"  value="1" {WINDOW_CHECKED} /><label for="window">[!L!] Application Forms [!/L!]</label><br />
+					</div>
+				</div>
+		</fieldset>
+		<fieldset>
+			<div class="custom-serch">
+				<legend>Time frame and start:
+					<div class="tooltipcustom" {PDF_HIDE}>? <span class="tooltiptext">[!L!]Select a date or time period and start your search. By modifying the time frame, the search is performed again automatically according to the new selection.[!/L!]</span></div>
+					</legend>
+			<ul class="filter overtitle">
+				<li class="time"><label for="time-filter" id="search_widget_label"> [!L!] Set time frame:  [!/L!] </label>
+					<input type="text" name="time[time]" class="flobn-range" id="time-filter" value="{DEFAULT_VALUE}" />
+					<div class="tooltipcustom" {PDF_HIDE}>? <span class="tooltiptext">[!L!]Select the desired time frame. The default value is Today's date.[!/L!]</span></div>
+
+					
+					<input type="hidden" name="app" id="search_key" value="{SEARCH_KEY}" />
+				</li>
+				<span class="submit" id="search_submit">
+					<button type="submit">
+						<b>[!L!] Start [!/L!]</b>
+					</button>
+				</span>
+			</ul>
+				</div>
+		</fieldset>
+	</form>
+ 
+   <div class="bd-ajax">
+<!-- END DYNAMIC BLOCK: ajax -->
+  		<ul class="flobn-datatable-body">
+        	<li class="{NAME_CLASS}" {MEMBER_HIDDEN}>
+				<table cellspacing="0" class="">
+				  <thead>
+				    <tr id="search_row">
+				      <th id="search_th_name" ><strong >[!L!]Monitored Employeess [!/L!]</strong></th>				      
+				      <th id="search_th" ><strong >{NAME_COUNT}&nbsp;[!L!]{RESULT_NAME}[!/L!]</strong></th>
+				      <th class="td-application"><div id="search_child" >{NAME_VIEW_CHILD}<span class="search_info">[!L!]{FLAG_NAME}[!/L!]</span></div></th>
+				    </tr>
+				  </thead>
+				</table>
+			</li>
+       		<li class="{COMPUTER_CLASS}" {COMPUTER_HIDDEN}>
+				<table cellspacing="0" class="">			
+       				<thead>
+				    <tr id="search_row">
+				      <th id="search_th_name"><strong >[!L!]Computers [!/L!]</strong></th>				      
+				      <th id="search_th"><strong >{COMPUTER_COUNT}&nbsp;[!L!]{RESULT_COMPUTER}[!/L!]</strong></th>
+				      <th class="td-application"><div id="search_child" >{COMPUTER_VIEW_CHILD}<span class="search_info">[!L!]{FLAG_COMPUTER}[!/L!]</span></div></th>
+				    </tr>
+				  </thead>
+				 </table>
+			</li>
+       		<li class="{APPLICATION_CLASS}" {APPLICATION_HIDDEN}>
+				<table cellspacing="0" class="">			
+       				<thead >
+				    <tr id="search_row" >
+				      <th id="search_th_name"><strong >[!L!]Applications [!/L!]</strong></th>
+				      <th id="search_th"><strong >{APPLICATION_COUNT}&nbsp;[!L!]{RESULT_APPLICATION}[!/L!]</strong></th>
+				 	 <th class="td-application"><div id="search_child" >{APPLICATION_VIEW_CHILD}<span class="search_info">[!L!]{FLAG_APPLICATION}[!/L!]</span></div></th>
+				    </tr>
+				  </thead>
+				 </table>
+			</li>
+       		<li class="{WINDOW_CLASS}" {WINDOW_HIDDEN}>
+				<table cellspacing="0" class="">			
+       				<thead >
+				    <tr id="search_row" >
+				      <th id="search_th_name"><strong >[!L!]Window [!/L!]</strong></th>
+				      <th id="search_th"><strong >{WINDOW_COUNT}&nbsp;[!L!]{RESULT_WINDOW}[!/L!]</strong></th>
+				 	 <th class="td-application"><div id="search_child" >{WINDOW_VIEW_CHILD}<span class="search_info">[!L!]{FLAG_WINDOW}[!/L!]</span></div></th>
+				    </tr>
+				  </thead>
+				 </table>
+			</li>
+       		<li class="{DOCUMENT_CLASS}" {DOCUMENT_HIDDEN}>
+				<table cellspacing="0" class="">			
+       				<thead >
+				    <tr id="search_row">
+				      <th id="search_th_name" ><strong >[!L!]Document [!/L!]</strong></th>				      
+				     <th id="search_th" ><strong >{DOCUMENT_COUNT}&nbsp;[!L!]{RESULT_DOCUMENT}[!/L!]</strong></th>
+				     <th class="td-application"><div id="search_child" >{DOCUMENT_VIEW_CHILD}<span class="search_info">[!L!]{FLAG_DOCUMENT}[!/L!]</span></div></th>
+				    </tr>
+				  </thead>
+				 </table>
+			</li>
+       		<li class="{FILE_CLASS}" {FILE_HIDDEN}>
+				<table cellspacing="0" class="">			
+       				<thead >
+				    <tr id="search_row">
+				      <th id="search_th_name" ><strong >[!L!]File [!/L!]</strong></th>				      
+				     <th id="search_th" ><strong >{FILE_COUNT}&nbsp;[!L!]{RESULT_FILE}[!/L!]</strong></th>
+				     <th class="td-application"><div id="search_child" >{FILE_VIEW_CHILD}<span class="search_info">[!L!]{FLAG_FILE}[!/L!]</span></div></th>
+				    </tr>
+				  </thead>
+				 </table>
+			</li>
+       		<li class="{PRINT_CLASS}" {PRINT_HIDDEN}>
+				<table cellspacing="0" class="">			
+       				<thead >
+				    <tr id="search_row">
+				      <th id="search_th_name" ><strong >[!L!]Print [!/L!]</strong></th>				      
+				     <th id="search_th" ><strong >{PRINT_COUNT}&nbsp;[!L!]{RESULT_PRINT}[!/L!]</strong></th>
+				     <th  class="td-application"><div id="search_child" >{PRINT_VIEW_CHILD}<span class="search_info">[!L!]{FLAG_PRINT}[!/L!]</span></div></th>
+				    </tr>
+				  </thead>
+				 </table>
+			</li>
+       		<li class="{INTERNET_CLASS}" {INTERNET_HIDDEN}>
+				<table cellspacing="0" class="">			
+       				<thead >
+				    <tr id="search_row">
+				      <th id="search_th_name" ><strong >[!L!]Internet activity [!/L!]</strong></th>				      
+				     <th id="search_th"><strong >{INTERNET_COUNT}&nbsp;[!L!]{RESULT_INTERNET}[!/L!]</strong></th>
+				     <th class="td-application"><div id="search_child" >{INTERNET_VIEW_CHILD}<span class="search_info">[!L!]{FLAG_INTERNET}[!/L!]</span></div></th>
+				    </tr>
+				  </thead>
+				 </table>
+			</li>
+       		<li class="{CHAT_CLASS}" {CHAT_HIDDEN}>
+				<table cellspacing="0" class="">			
+       				<thead >
+				    <tr id="search_row">
+				      <th id="search_th_name"><strong >[!L!]Chat activity [!/L!]</strong></th>				      
+				     <th id="search_th"><strong >{CHAT_COUNT}&nbsp;[!L!]{RESULT_CHAT}[!/L!]</strong></th>
+				     <th class="td-application"><div id="search_child" >{CHAT_VIEW_CHILD}<span class="search_info">[!L!]{FLAG_CHAT}[!/L!]</span></div></th>
+				    </tr>
+				  </thead>
+				 </table>
+			</li>
+      </ul>
+
+  <!-- BEGIN DYNAMIC BLOCK: ajax -->
+	</div>
+</div>
+<!-- END DYNAMIC BLOCK: ajax -->
+<script type="text/javascript">
+var tooshort = "[!L!]Please enter a longer search term (minimum 3 characters)[!/L!]";
+var atleastone = "[!L!]Please select at least one report[!/L!]";
+$(document).ready(function(){
+	$('#checkall').checkAll('.reportlist');
+});
+</script>

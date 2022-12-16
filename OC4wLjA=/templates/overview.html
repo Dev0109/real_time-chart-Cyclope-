@@ -1,0 +1,214 @@
+{PDF_HEADER}
+<!-- BEGIN DYNAMIC BLOCK: ajax -->
+<div id="overview" class="{PDF_CLASS}">
+    <div class="col-md-12 p-0 overtitle">
+        <ul class="filter" {PDF_HIDE}>
+            <li class="col-md-12 time text-left p-0">
+                <h1>{PAGE_TITLE}
+                    <div class="main-btn"><span id="append" class="cyclope">{APPEND}</span></div>
+                </h1>
+
+
+                <!--  <img data-toggle="tooltip" data-placement="top" title="Select the desired time frame. The default value is Today's date." src="{CURRENT_VERSION_FOLDER}assets/images/tooltip.png"> -->
+
+            </li>
+
+            <li class="col-md-12 export text-right p-0 time">
+                <div class="pull-left">
+                    <span class="filter-img"><img src="{CURRENT_VERSION_FOLDER}assets/images/filter.png"
+                                                  class="filter_icon"></span>
+                    <!-- <span class="filtertxt">[!L!]Filters[!/L!]</span> -->
+
+                    <input type="text" name="time[time]" class="flobn-range" id="time-filter" value="{DEFAULT_VALUE}"/>
+
+                    <div class="tooltipcustom">?
+                        <span class="tooltiptext">[!L!]Select the desired time frame. The default value is Today's date.[!/L!]</span>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <a href="{HELP_LINK}" target="_blank" id="export-help" {SELECTED_SUPPORT}><img
+                            src="{CURRENT_VERSION_FOLDER}assets/images/help_menu.png"></a>
+
+                    <a href="index.php?pag=emailreport&preset=1" id="export-email"><img
+                            src="{CURRENT_VERSION_FOLDER}assets/images/email.png"></a>
+
+                    <a href="index.php?pag=overview&act=reports-overview{EXPORT_APP_FILTER}" id="export-csv"><img
+                            src="{CURRENT_VERSION_FOLDER}assets/images/csv.png" class="csv"></a>
+                    <a href="index.php?pag=overview&act=reports-overview&format=xls{EXPORT_APP_FILTER}" id="export-xls"><img
+                            src="{CURRENT_VERSION_FOLDER}assets/images/xls1.png" class="xls"></a>
+                    <a href="index.php?pag=overview&render=pdf{EXPORT_APP_FILTER}" target="_blank" id="export-pdf"><img
+                            src="{CURRENT_VERSION_FOLDER}assets/images/pdf.png" class="pdf"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="bd-ajax">
+        <!-- END DYNAMIC BLOCK: ajax -->
+        {NO_DATA_MESSAGE}{ENCRYPTMESSAGERAW}
+
+        <div class="panelrow">
+            <div class="col-lg-6 p-0 content_middle content_odd box half activity actividle {HIDE_CONTENT}">
+                <div class="panel panel-custom panel-border">
+                    <div class="panel-body login_chart">
+                        <div class="donot_chart">
+                            <div class="donut">{TIME_OUTPUT}</div>
+                        </div>
+                        <ul>
+                            <!-- <li class="total"><strong>[!L!]Total Logged Time[!/L!]<span class="tooltip" {PDF_HIDE} title="[!L!]This is the total time monitored by Cyclope. It is the sum of all active and idle time recorded for the selected employee or department. This value can be filtered by date and working schedule.[!/L!]">?</span> (<span id="stats-total">{TOTAL}</span>)</strong></li> -->
+                            <li class="active">
+                                <span class="procent">{ACTIVE_PROC}%</span>
+                                <span id="stats-active">{ACTIVE}</span>
+                                <strong>[!L!]Active Time[!/L!]</strong>
+                                <!-- <img data-toggle="tooltip" {PDF_HIDE} data-placement="top" title="" src="OC4wLjA=/assets/images/tooltip.png" data-original-title="[!L!]This is the active time monitored by Cyclope. An employee is considered to be active if there is a constant input (keystrokes, mouse move, scroll or touch). This value refers to the selected employee or department and can be filtered by date and working schedule.[!/L!]"> -->
+
+                                <div class="tooltipcustom" {PDF_HIDE}>?
+                                    <span class="tooltiptext">[!L!]This is the active time monitored by Cyclope. An employee is considered to be active if there is a constant input (keystrokes, mouse move, scroll or touch). This value refers to the selected employee or department and can be filtered by date and working schedule.[!/L!]</span>
+                                </div>
+                            </li>
+
+                            <li class="idle">
+                                <span class="procent">{IDLE_PROC}%</span>
+                                <span id="stats-idle">{IDLE}</span>
+                                <strong>[!L!]Idle Time[!/L!]</strong>
+                                <!-- <img data-toggle="tooltip" {PDF_HIDE} data-placement="top" title="" src="OC4wLjA=/assets/images/tooltip.png" data-original-title="[!L!]This is the idle time monitored by Cyclope. An employee is considered to be idle if there is no input (keystrokes, mouse move, scroll or touch) for a certain amount of time (default value is 3 minutes). This value refers to the selected employee or department and can be filtered by date and working schedule.[!/L!]"> -->
+                                <div class="tooltipcustom" {PDF_HIDE}>?
+                                    <span class="tooltiptext">[!L!]This is the idle time monitored by Cyclope. An employee is considered to be idle if there is no input (keystrokes, mouse move, scroll or touch) for a certain amount of time (default value is 3 minutes). This value refers to the selected employee or department and can be filtered by date and working schedule.[!/L!]</span>
+                                </div>
+
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 p-0 content_middle box half gauge actividle moniter {HIDE_CONTENT}">
+                <div class="panel panel-custom panel-border">
+                    <div class="panel-body">
+                        <div class="monicenter">
+                            <h1 class="minitertit">[!L!]Monitoring Highlights[!/L!]
+                                <div class="tooltipcustom" {PDF_HIDE}>?
+                                    <span class="tooltiptext">[!L!]This is a fast view of how many computers are actively monitored now and the total number of computers where Cyclope client was installed / deployed.[!/L!]</span>
+                                </div>
+                            </h1>
+                            <!-- <img data-toggle="tooltip" data-placement="top" title="" src="{CURRENT_VERSION_FOLDER}assets/images/tooltip.png" data-original-title="This is a fast view of how many computers are actively monitored now and the total number of computers where Cyclope client was installed / deployed."> -->
+                        </div>
+
+
+                        <div class="monitermiddle">
+                            <div class="col-md-4 p-l-20">
+                                <h1>{MONITOR_COUNT}</h1>
+
+                                <h2>[!L!]monitored now[!/L!]</h2>
+                            </div>
+                            <div class="col-md-4 p-l-20">
+                                <img src="/{CURRENT_VERSION_FOLDER}assets/images/Monitoring Highlights.png">
+                            </div>
+
+                            <div class="col-md-4 p-0">
+                                <h1>{MONITOR_ALL_COUNT}</h1>
+
+                                <h2>[!L!]monitored overall[!/L!]</h2>
+                            </div>
+                        </div>
+
+                        <!-- <div class="moniter_full">
+                             <a href="#" class="fulldetails">Full Details</a>
+                        </div> -->
+
+                        <!-- <div class="btn" {PDF_HIDE}  style="width:83px;margin:0 auto 10px auto;clear:both;float:right;">
+                          <span id="headlinebtns"><a style="width:59px; text-align:center;" href="index.php?pag=monitored">[!L!]Full Details[!/L!]</a>
+                      </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panelrow">
+            <div class="col-lg-6 p-0 {HIDE_CONTENT} content_middle content_odd">
+                <div class="portlet panel">
+                    <div class="portlet-heading portlet-default">
+                        <h1 class="portlet-title">
+                            [!L!]Productivity level[!/L!]
+                        </h1>
+
+                        <div class="portlet-widgets" {PDF_HIDE}>
+                            <a href="index.php?pag=productivityreport" class="fulldetails">[!L!]Full Details[!/L!]</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="productivity_chart">{PRODSTACK_OUTPUT}</div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 p-0 {HIDE_CONTENT} content_middle">
+                <div class="portlet panel">
+                    <div class="portlet-heading portlet-default">
+                        <h1 class="portlet-title">
+                            [!L!]Most visited websites (Active Time)[!/L!]
+                        </h1>
+
+                        <div class="portlet-widgets" {PDF_HIDE}>
+                            <a href="index.php?pag=topwebsites" class="fulldetails">[!L!]Full Details[!/L!]</a>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="top_websites_chart">{TOPWEBSITES_OUTPUT}</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panelrowlast">
+            <div class="col-lg-6 p-0 {HIDE_CONTENT} content_middle content_odd">
+                <div class="portlet panel">
+                    <div class="portlet-heading portlet-default">
+                        <h1 class="portlet-title">
+                           [!L!]Active / Idle times by hour[!/L!]
+                        </h1>
+
+                        <div class="portlet-widgets" {PDF_HIDE}>
+                            <a href="index.php?pag=attendance" class="fulldetails">[!L!]Full Details[!/L!]</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="day_summary_chart">{DAYSUMMARY_OUTPUT}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 p-0 {HIDE_CONTENT} content_middle">
+                <div class="portlet panel">
+                    <div class="portlet-heading portlet-default">
+                        <h1 class="portlet-title">
+                            [!L!]Most used applications (Active Time)[!/L!]
+                        </h1>
+
+                        <div class="portlet-widgets" {PDF_HIDE}>
+                            <a href="index.php?pag=topapplications" class="fulldetails">[!L!]Full Details[!/L!]</a>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+
+                        <div id="top_applications_chart">{TOPAPPS_OUTPUT}</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- BEGIN DYNAMIC BLOCK: ajax -->
+    </div>
+</div>
+<!-- END DYNAMIC BLOCK: ajax -->

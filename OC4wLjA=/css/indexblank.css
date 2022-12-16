@@ -1,0 +1,50 @@
+.list {
+    margin-top: 10px;
+    width: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    color: #898989;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+}
+
+.list th {
+    background-color:#ebebeb;
+    border-bottom: 1px solid #D7D7D7;
+    color: #474747;
+    font-size: 11px;
+    font-weight: bold;
+    height: 33px;
+    padding-left: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.list td {
+    border-bottom: 1px solid #D7D7D7;
+    padding: 10px 0 10px 10px;
+}
+
+.list .even {
+	  background-color: #F5F5F5;
+}
+
+h1 {
+    color: #111111;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 36px;
+    margin: 0 0 10px;
+}
+h2 {
+	color: #3D3D3D;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 31px;
+}

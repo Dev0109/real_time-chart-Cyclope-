@@ -1,0 +1,65 @@
+{PDF_HEADER}
+<div id="categories_chart" class="{HIDE_CONTENT}graph">
+  <div class="graphtitle">
+    [!L!]Internet Activity by Category[!/L!]
+      <!-- <span class="tooltip" {PDF_HIDE} title="[!L!]This chart shows the 5 most used websites categories. To fine tune this chart, select new values on the Category column below.[!/L!]">?</span> -->
+       <div class="tooltipcustom" {PDF_HIDE}>?
+  <span class="tooltiptext">[!L!]This chart shows the 5 most used websites categories. To fine tune this chart, select new values on the Category column below.[!/L!]</span>
+</div>
+    </div>
+    <div class="chart">{AJAX_INTERNETCATEGORY}</div>
+</div>
+<div id="productivity_chart" class="{HIDE_CONTENT}graph">
+  <div class="graphtitle">
+    [!L!]Internet Activity by Productivity[!/L!]
+     <!-- <span class="tooltip" {PDF_HIDE} title="[!L!]This chart shows the productivity settings that you establish for all recorded web domains. This report can be filtered by date and working schedule.[!/L!]">?</span> -->
+     <div class="tooltipcustom" {PDF_HIDE}>?
+  <span class="tooltiptext">[!L!]This chart shows the productivity settings that you establish for all recorded web domains. This report can be filtered by date and working schedule.[!/L!]</span>
+</div>
+   </div>
+   <div class="chart">{AJAX_INTERNETPRODUCTIVITY}</div>
+ </div>
+<div style="clear: both"></div>
+{NO_DATA_MESSAGE}
+  {DEBUGMESSAGE}
+  <div class="info productive" {HIDE_STYLE} {PDF_HIDE}>[!L!]Change the productivity settings for web domain by sliding left for distracting and right for productive.[!/L!]<img src="{HELPIMG}" /></div>
+    <input type="hidden" name="sortcolumn" class="sortcolumn" id="sortcolumn" />
+    <input type="hidden" name="sortorder" class="sortorder" id="sortorder" />
+    <div class="table-responsive">
+<table cellspacing="0" class="list application table filter {HIDE_CONTENT}">
+  <thead>
+    <tr>
+      <th class="first-of-type"><strong><a {ANCHOR_INNER_1} href="">[!L!]Domain[!/L!]</a></strong></th>
+      <th><strong>[!L!]Category[!/L!]</strong></th>
+      <th><strong><a {ANCHOR_INNER_2} href="">[!L!]Type[!/L!]</a></strong></th>
+      <th style="min-width: 120px;"><strong><a {ANCHOR_INNER_0} href="">[!L!]Time[!/L!]</a></strong></th>
+      <th class="th-activeperc"><strong>[!L!]% from Active Time[!/L!]</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr data-department="{DEPARTMENT}">
+      <td class="url">{URL_DOMAIN}<a href="{LINK_URL_DOMAIN}" target="_newtab"><strong>{URL}</strong></a></td></td>
+      <td><a href="#" class="category" rel="{ID}" rev="#cat{CATEGORY_ID}">{CATEGORY}</a></td>
+      <td><div class="slider flobn-slider {CSS_CLASS}" {PDF_HIDE} rel="{ID}" data-duration="{DURATION}" data-parentapp="0" data-first-parentapp="0" data-type="{CHILD_TYPE}"><a class="handle">&nbsp;</a></div>
+        <div style="text-align:center;">{TYPE}</div></td>
+      <td style="text-align:center;"><span>{TIME}</span></td>
+      <td class="td-activeperc" style="text-align:center;"><div>{WIDTH}%</div></td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+  </tbody>
+</table></div>
+<div class="pagination"{PDF_HIDE}>
+ <ul>
+    <li>[!L!]Go To[!/L!]:<input type="text"  data-page="{FILTER_PAGE}" class="p" value="" name="offset" /></li>
+    <li>[!L!]Show Rows[!/L!]:<select class="rp" data-page="{FILTER_PAGE}">{PAGES}</select></li>
+    <li>{INTERVAL} <span>[!L!]of[!/L!]</span> {TOTAL}</li>
+    <li><a href="{BACKLINK}" class="prev">&nbsp;</a></li>
+    <li><a href="{NEXTLINK}" class="next">&nbsp;</a></li>    
+  </ul>
+</div>
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function(){
+  $('.tooltip').colorTip({color:'blue'});
+});
+</script>

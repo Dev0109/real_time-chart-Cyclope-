@@ -1,0 +1,41 @@
+<div class="window" id="assignChoice">
+  <div class="inner">
+    <div class="hd"><a href="#" class="close" rel="close">&nbsp;</a>
+      <h1>[!L!]Assign Choice[!/L!]</h1>
+    </div>
+    <div class="bd clearfix">
+      <p style="text-align:center">[!L!]Please select one of the options below.[!/L!]</p>
+
+      <ul class="selection clearfix">
+
+      	<img src="{CURRENT_VERSION_FOLDER}img/user.png" style="margin-left: -150px; margin-top: 11px;">
+          <li class="user" rel="1" style="list-style: none">
+             <a href="#">
+                 <!--<input type="checkbox" style="margin-right: -170px; margin-top: 5px;">-->
+                 
+                 <strong>[!L!]&nbsp;  User [!/L!]<span>&nbsp;</span></strong>
+             </a>
+            
+          </li>
+      </ul>
+     <ul class="selection clearfix">
+     	<img src="{CURRENT_VERSION_FOLDER}img/monitor.png" style="margin-left: -139px; margin-top: 11px;">
+          <li class="computer" rel="2" style="list-style: none">
+         <a href="#">
+             <!--<input type="checkbox" style="margin-right: -170px; margin-top: 5px;">-->
+             
+              <strong>  [!L!]&nbsp;  Computer [!/L!]<span>&nbsp;</span></strong>
+         </a>
+          </li>
+      </ul>
+
+      <input type="hidden" name="choice" id="choice" value="" />
+      <label class="chk hide">
+        <input type="checkbox" id="choice-def" name="choice-def" value="{DEFAULT}"  />
+        [!L!]Make my choice default[!/L!]</label>
+      <div class="ft">
+        <a href="#" class="btn positive" rel="save"><b rel="save">[!L!]Save[!/L!]</b></a>
+        <a href="#" class="btn negative" rel="cancel"><b rel="cancel">[!L!]Cancel[!/L!]</b></a> </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+{BEGIN_UNLESS}<div class="info">[!L!]The default password for uninstalling the client application is <b>cyclopeadmin</b>. You can change this password in the field below with a more secure phrase.[!/L!]</div>{END_UNLESS}
+<form action="index.php" method="post">
+  <input type="hidden" name="act" value="settings-update" />
+  <input type="hidden" name="pag" value="settings" />
+  <div class="selectemployee">
+  <fieldset>
+    <div class="row">
+    <div class="req even col-sm-4">
+      <label for="language">[!L!]Language[!/L!]</label>
+      <select name="language_id" id="language_id">        
+			{LANGUAGE_ID}        
+      </select>
+    </div>
+    <div class="req col-sm-4">
+      <label for="character_set">[!L!]Character Set[!/L!]</label>
+      <select name="character_set_id" id="character_set_id">        
+			{CHARACTER_SET}        
+      </select>
+    </div>
+    <div class="req uninstall-keeper even col-sm-4">
+      <label for="client_uninstall_password">[!L!]Client Uninstall Password[!/L!] </label>
+      <span>
+      <input type="password" name="client_uninstall_password" id="client_uninstall_password" value="{CLIENT_UNINSTALL_PASSWORD}" />
+      </span> </div>
+     </div>
+    <div class="row">
+      <div class="req chk col-sm-4 timecheck">
+      <p>[!L!]Online Time[!/L!] </p>
+      <label for="online_time">
+        <input type="radio" name="online_time_include" value="3" {BROWSER_SELECTED}  />
+        [!L!]Browser Time[!/L!]</label>
+      <label>
+        <input type="radio" name="online_time_include" value="1,3" {BROWSER_CHAT_SELECTED}  />
+        [!L!]Browser Time + Chat[!/L!]</label>
+    </div>
+    <div class="req even col-sm-4">
+      <label for="number_of_rows">[!L!]Report size (rows)[!/L!]</label>
+      <select name="number_of_rows" id="number_of_rows">        
+			{NUMBER_OF_ROWS}        
+      </select>
+    </div></div>
+    <div class="buttons"><span class="submit">
+      <button type="submit"><b>[!L!]Save[!/L!]</b></button>
+      </span></div>
+   
+  </fieldset>
+</div>
+</form>
+<script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/jquery.pstrength-min.1.2.js"></script>

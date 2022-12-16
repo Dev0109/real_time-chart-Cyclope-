@@ -1,0 +1,45 @@
+{PDF_HEADER} {NO_DATA_MESSAGE}
+ {DEBUGMESSAGE}
+      <input type="hidden" name="sortcolumn" class="sortcolumn" id="sortcolumn" />
+      <input type="hidden" name="sortorder" class="sortorder" id="sortorder" />
+<div class="table-responsive">
+<table cellspacing="0" class="table list application filter {HIDE_CONTENT}{PDF_CLASS}" >
+  <thead>
+    <tr>
+      <th class="first-of-type"><strong><a {ANCHOR_INNER_1} href="">[!L!]Employee[!/L!]</a></strong></th>
+      <th><strong>[!L!]Computer[!/L!]</strong></th>
+      <th><strong><a {ANCHOR_INNER_0} href="">[!L!]Date[!/L!]</a></strong></th>
+      <th><strong><a {ANCHOR_INNER_2} href="">[!L!]Operation[!/L!]</a></strong></th>
+      <th><strong>[!L!]Drive Type[!/L!]</strong></th>
+      <th ><strong>[!L!]Path[!/L!]</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr>
+      <td class="namewidth">{NAME}</td>
+      <td class="compwidth">{COMPUTER}</td>
+      <td class="datewidth">{DATE}</td>
+      <td class="actionwidth">{ACTION}</td>
+      <td class="typewidth">{TYPE}</td>
+      <td class="pathwidth" style="word-break: break-all;">{PATH}</td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+  </tbody>
+</table>
+</div>
+<div class="pagination"{PDF_HIDE}>
+  <ul>
+    <li>[!L!]Go To[!/L!]:
+      <input type="text"  data-page="{FILTER_PAGE}" class="p" value="" name="offset" />
+    </li>
+    <li>[!L!]Show Rows[!/L!]:
+      <select class="rp" data-page="{FILTER_PAGE}">
+        {PAGES}
+      </select>
+    </li>
+    <li>{INTERVAL} <span>[!L!]of[!/L!]</span> {TOTAL}</li>
+    <li><a href="{BACKLINK}" class="prev">&nbsp;</a></li>
+    <li><a href="{NEXTLINK}" class="next">&nbsp;</a></li>
+  </ul>
+</div>

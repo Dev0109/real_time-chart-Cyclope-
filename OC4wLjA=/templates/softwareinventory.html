@@ -1,0 +1,33 @@
+{NO_DATA_MESSAGE}{ENCRYPTMESSAGERAW}
+<!-- BEGIN DYNAMIC BLOCK: ajax -->
+<div id="softwareinventory"  class="{HIDE_CONTENT}">
+
+<div class="col-md-12 p-0 overtitle">
+   <ul class="filter"> 
+    <li class="col-md-9 time text-left p-0 left"><h1>{PAGE_TITLE} <div class="main-btn"><span id="append" class="cyclope">{APPEND}</span></div></h1></li>
+    <li class="col-md-3 export text-right p-0 right"> 
+      <a href="{HELP_LINK}" target="_blank" id="export-help" {SELECTED_SUPPORT}><img src="OC4wLjA=/assets/images/help_menu.png"></a> 
+      <a href="index.php?pag=softwareinventory&act=reports-softwareinventory{EXPORT_APP_FILTER}" id="export-csv" ><img src="OC4wLjA=/assets/images/csv.png" class="csv"></a> 
+      <a href="index.php?pag=softwareinventory&act=reports-softwareinventory&format=xls{EXPORT_APP_FILTER}" id="export-xls" ><img src="OC4wLjA=/assets/images/xls1.png" class="xls"></a><a href="index.php?pag=softwareinventory&render=pdf{EXPORT_APP_FILTER}" target="_blank" id="export-pdf" ><img src="OC4wLjA=/assets/images/pdf.png" class="pdf"></a> 
+    </li>
+</ul>
+</div>
+
+ <div class="bd-ajax">
+  <!-- END DYNAMIC BLOCK: ajax -->
+  <div class="pagetabs">
+  			{INVENTORY_TABLE}
+  </div>
+<!-- BEGIN DYNAMIC BLOCK: ajax -->
+</div>
+</div>
+ <!-- END DYNAMIC BLOCK: ajax -->
+
+<script>
+  $(document).ready(function(){
+	  $('.jstree li[rel="root"]>a, .jstree li[rel="group"]>a').click(function() {
+		location.reload();
+		return false;
+		});
+	});
+</script>

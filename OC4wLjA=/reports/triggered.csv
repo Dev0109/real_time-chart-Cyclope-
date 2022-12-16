@@ -1,0 +1,6 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}{HIDE_START}[!L!]User Name[!/L!],[!L!]Alert Name[!/L!],[!L!]Alert Type[!/L!],[!L!]Details[!/L!],[!L!]Rule[!/L!],[!L!]Date[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: ua_row -->
+"{MEMBER}","{ALERT_NAME}","{ALERT_TYPE}","{DETAILS}","{RULE}","{DATE}"<!-- END DYNAMIC BLOCK: ua_row -->

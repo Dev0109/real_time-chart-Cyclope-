@@ -1,0 +1,6 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+Domain,User,%,Total Time(h),Total Time(m),Total Time(s)<!-- BEGIN DYNAMIC BLOCK: topwebsites_row -->
+"{WWW}","{USERNAME}","{PERCENT}","{TOTAL_TIME_H}","{TOTAL_TIME_M}","{TOTAL_TIME_S}"<!-- END DYNAMIC BLOCK: topwebsites_row -->

@@ -1,0 +1,19 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}{HIDE_START}[!L!]Summary of the times of the day[!/L!],
+
+[!L!]Hour[!/L!],[!L!]Active %[!/L!],[!L!]Idle %[!/L!],[!L!]Private %[!/L!],[!L!]Overtime %[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: day_summary_row -->
+"{HOUR}","{ACTIVE}","{IDLE}","{PRIVATE}","{OVERTIME}"<!-- END DYNAMIC BLOCK: day_summary_row -->
+
+
+{HIDE_START}[!L!]Summary of the weekdays[!/L!]
+
+[!L!]Day[!/L!],[!L!]Active(h)[!/L!],[!L!]Idle(h)[!/L!],[!L!]Private(h)[!/L!],[!L!]Overtime(h)[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: week_summary_row -->
+"{DAY}","{WEEK_ACTIVE}","{WEEK_IDLE}","{WEEK_PRIVATE}","{WEEK_OVERTIME}"<!-- END DYNAMIC BLOCK: week_summary_row -->
+
+{HIDE_START}[!L!]Application Usage[!/L!]
+
+[!L!]Application Name[!/L!],[!L!]Procentage,Time (h)[!/L!],[!L!]Time (m)[!/L!],[!L!]Time (s)[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: application_summary_row -->
+"{APPLICATION}","{PROCENTAGE}","{TIME_H}","{TIME_M}","{TIME_S}"<!-- END DYNAMIC BLOCK: application_summary_row -->

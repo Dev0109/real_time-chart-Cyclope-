@@ -1,0 +1,161 @@
+{PDF_HEADER}<!-- BEGIN DYNAMIC BLOCK: ajax -->
+<div id="timeline">
+<!-- <h1{PDF_HIDE}>[!L!]Timeline for [!/L!]  <span id="append">{APPEND}</span> {BACK_BUTTON}</h1> -->
+<!-- <ul class="filter {PDF_CLASS}"{PDF_HIDE} >
+
+  <li class="time"> [!L!]Filters[!/L!] 
+   
+	
+	
+  </li>
+  <li class="export"> <a href="{HELP_LINK}" target="_blank" id="export-help" {SELECTED_SUPPORT}>[!L!]Explain report[!/L!]</a> <a href="index.php?pag=timeline&act=reports-timeline{EXPORT_APP_FILTER}" id="export-csv" >[!L!]Download CSV[!/L!]</a> <a href="index.php?pag=timeline&act=reports-timeline&format=xls{EXPORT_APP_FILTER}" id="export-xls" >[!L!]Download XLS[!/L!]</a> <a href="index.php?pag=timeline&render=pdf{EXPORT_APP_FILTER}" target="_blank" id="export-pdf" >[!L!]Generate PDF[!/L!]</a> </li>
+</ul> -->
+<div class="col-md-12 p-0 overtitle">
+        <ul class="filter" {PDF_HIDE}>
+            <li class="col-md-12 time text-left p-0"><h1{PDF_HIDE}>[!L!]Timeline for [!/L!] <div class="main-btn"><span id="append" class="cyclope">{APPEND}</span></div></h1>
+
+
+
+          </li>
+
+            <li class="col-md-12 export text-right p-0 time">
+            	 <div class="pull-left">
+            	 	 <span class="filter-img"><img src="{CURRENT_VERSION_FOLDER}assets/images/filter.png" class="filter_icon"></span> <!-- <span class="filtertxt">[!L!]Filters[!/L!]</span> -->
+			
+			<input type="hidden" name="app" id="additional-filter-application" value="{APP}" />
+			<input type="hidden" name="win" id="additional-filter-window" value="{WIN}" />
+			<input type="hidden" name="wact" id="additional-filter-window-active" value="{WACT}" />
+            
+            <input type="text" name="time[time]" class="flobn-range" id="time-filter" value="{DEFAULT_VALUE}" />
+            
+            <span>&nbsp;[!L!]Between[!/L!]:&nbsp;</span>
+            <select name="fromtime" id="fromtime" onchange="hidefromtime()" style="border-radius: 4px; padding: 1px 0 2px 0;">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+			</select>
+			<span>&nbsp;-&nbsp;</span>
+			<select name="totime" id="totime" onchange="hidefromtime()" style="border-radius: 4px; padding: 1px 0 2px 0;">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23" selected>23</option>
+				<option value="24">24</option>
+			</select>
+
+			<!-- <div class="tooltipcustom">?
+                    <span class="tooltiptext">Select the desired time frame. The default value is Today's date.</span>
+            </div> -->
+
+           </div>
+           <div class="pull-right">
+               <a href="{HELP_LINK}" target="_blank" id="export-help" {SELECTED_SUPPORT}><img src="{CURRENT_VERSION_FOLDER}assets/images/help_menu.png"></a>
+
+               <!-- <a href="index.php?pag=emailreport&preset=19" id="export-email" ><img src="{CURRENT_VERSION_FOLDER}assets/images/email.png"></a> -->
+
+               <a href="index.php?pag=timeline&act=reports-timeline{EXPORT_APP_FILTER}" id="export-csv" ><img src="{CURRENT_VERSION_FOLDER}assets/images/csv.png" class="csv"></a>
+
+               <a href="index.php?pag=timeline&act=reports-timeline&format=xls{EXPORT_APP_FILTER}" id="export-xls" ><img src="{CURRENT_VERSION_FOLDER}assets/images/xls1.png" class="csv"></a>
+
+               <a href="index.php?pag=timeline&render=pdf{EXPORT_APP_FILTER}" target="_blank" id="export-pdf" ><img src="{CURRENT_VERSION_FOLDER}assets/images/pdf.png" class="pdf"></a>
+             </div>
+            </li>
+        </ul>
+    </div> 	
+  <div class="bd-ajax">
+  <!-- END DYNAMIC BLOCK: ajax -->
+{NO_DATA_MESSAGE}{ENCRYPTMESSAGERAW}
+<div id="timeline_chart" class="{HIDE_CONTENT}">{TIMELINE_CHART}</div>
+<table cellspacing="0" class="table filter list timeline {HIDE_CONTENT}">
+  <thead>
+  <th class="first-of-type">[!L!]Hour[!/L!]</th>
+    <th>[!L!]Total[!/L!]</th>
+    <th>[!L!]filter by application[!/L!]</th>
+    <th>[!L!]Category[!/L!]</th> 
+    <!-- <th style="padding-right:10px;">Productivity</th>-->
+    </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr class="{CLASS} {HOUR_FORMATED}" data-department="{DEPARTMENT}"><span class="rowone">{ROW}</span>
+      <td class="time">{TIME_FORMATED}<br />{INTERVAL_START} - {INTERVAL_END}</td>
+      <td class="application"><span style="background-color:#{COLOR};">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="{APP_FILTER_LINK}">{APPLICATION}</a><br />
+        <a href="#" class="more-info {HIDE_IF_PRIVATE}"><strong>{WINDOWS} {WINDOWS_TYPE}</strong>({TOTAL_WINDOWS} {WINDOWS_TYPE} [!L!]total[!/L!])</a>
+		<ul class="list hide">
+		<!-- BEGIN DYNAMIC BLOCK: window_template_row -->
+		  <li class="{WINDOW_CLASS}"><a href="{WINDOW_FILTER_LINK}"><strong>{WINDOW_TIME}</strong>{WINDOW_NAME}{WINDOW_ACTIVE}</a></li>
+		<!-- END DYNAMIC BLOCK: window_template_row -->  
+		</ul></td>
+      <td><a href="#" class="category" rel="{APPLICATION_ID}" rev="#cat{CATEGORY_ID}" name="{CAT_TYPE}">{CATEGORY}</a>
+	  </td>
+      <!-- <td class="productivity"><div class="slider {CSS_CLASS}" rel="{ID}" rev="{SEL}"></div>
+        <div style="text-align:center;">[!L!]neutral[!/L!]</div></td> -->
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+  </tbody>
+</table>
+<!-- BEGIN DYNAMIC BLOCK: ajax -->
+</div>
+</div>
+ <!-- END DYNAMIC BLOCK: ajax -->
+<script type="text/javascript">
+function hidefromtime(){
+	var time;
+	timefrom = parseInt($('#fromtime').val());
+	timeto = parseInt($('#totime').val());
+	if(timeto >= timefrom) {
+		for (i = 0; i < 25; i++) {
+			$('.h' + i).show();
+		}
+		for (i = 0; i < timefrom; i++) {
+			$('.h' + i).hide();
+		}
+		for (i = timeto; i < 25; i++) {
+			$('.h' + i).hide();
+		}
+	} else {
+		alert(timeto + 'End time should be greater than start time.' + timefrom);
+	}
+}
+</script>

@@ -1,0 +1,9 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}{HIDE_START}[!L!]Application[!/L!],[!L!]Category[!/L!],[!L!]Type[!/L!],%,[!L!]Time(h)[!/L!],[!L!]Time(m)[!/L!],[!L!]Time(s)[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: agregated_row -->
+"{APPLICATION}","{CATEGORY}","{PERCENT}","{TIME_H}","{TIME_M}","{TIME_S}"<!-- END DYNAMIC BLOCK: agregated_row -->]
+
+{HIDE_START}[!L!]Application[!/L!],[!L!]Category[!/L!],[!L!]Type[!/L!],%,[!L!]Time(h)[!/L!],[!L!]Time(m)[!/L!],[!L!]Time(s)[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: peruser_row -->
+"{APPLICATION}","{CATEGORY}","{PERCENT}","{TIME_H}","{TIME_M}","{TIME_S}"<!-- END DYNAMIC BLOCK: peruser_row -->

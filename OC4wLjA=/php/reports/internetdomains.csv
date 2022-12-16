@@ -1,0 +1,6 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+Domain,Category,Type,Time(h),Time(m),Time(s)<!-- BEGIN DYNAMIC BLOCK: internet_row -->
+"{WEBPAGE}","{CATEGORY}","{TYPE}","{TIME_H}","{TIME_M}","{TIME_S}"<!-- END DYNAMIC BLOCK: internet_row -->

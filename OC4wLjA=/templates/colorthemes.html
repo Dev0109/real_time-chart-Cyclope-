@@ -1,0 +1,39 @@
+<link rel="stylesheet" media="screen" type="text/css" href="{CURRENT_VERSION_FOLDER}css/colorpicker.css" />
+
+<h1 class="windowtitle">[!L!]Color Themes[!/L!]
+  <a href="index.php?pag=colortheme" class="addtheme btn-info monitored">[!L!]Add New Theme[!/L!]</a>
+</h1>
+
+<div id="colorthemeslist">
+	{MESSAGE}
+  <table cellspacing="0" class="table filter bgwhite list application" id="color_themes">
+    <thead>
+      <tr>
+  	  	<th>&nbsp;</th>
+        <th>[!L!]Theme Name[!/L!]</th>
+  	  	<th>[!L!]Colors[!/L!]</th>
+        <th>[!L!]Actions[!/L!]</th>
+      </tr>
+    </thead>
+    <tbody class="categories">
+      <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr class="{CLASS}">
+  	  
+      <td>{SELECTED}</td>
+      <td>{NAME}</td>
+  	  <td>
+  	  
+      <!-- BEGIN DYNAMIC BLOCK: color_row -->
+  	  <div class="colorSelector3" style="float:left;"><div style="background-color:#{COLOR}"></div></div>
+  	  <!-- END DYNAMIC BLOCK: color_row -->
+  	  
+      </td>
+        <td class="actions">  	  
+  	  	<a href="{SELECT_LINK}" class="settings {HIDE_SELECT_LINK}">[!L!]Select[!/L!]</a><a href="{EDIT_LINK}" class="edit {HIDE_EDIT_LINK}">[!L!]Edit[!/L!]</a><a href="{DELETE_LINK}" class="delete {HIDE_DELETE_LINK}">[!L!]Delete[!/L!]</a>
+      </td>
+
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+    </tbody>    
+  </table>
+</div>

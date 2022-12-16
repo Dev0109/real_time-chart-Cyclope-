@@ -1,0 +1,33 @@
+<fieldset>
+<div id="sections">
+
+<div class="btn">
+	<a class="addsection" href="#">
+		<img src="OC4wLjA=/img/plus.png">
+	</a>
+</div>
+<div class="row">
+	<div class="chk req even col-sm-2">
+		   <label for="noise"><input type="checkbox" name="noise" id="noise" value="1" {NOISECHECKED} /> [!L!]Include noise[!/L!]</label>
+	</div>
+	</div>
+<!-- BEGIN DYNAMIC BLOCK: template_row -->
+	 <div class="section">
+	 	<div class="req appformselect">
+			<label for="applicationid">[!L!]Application/Form[!/L!]:</label>
+			<select name="appid[]" class="appid">
+				{APPLIST}
+			</select>
+			<select name="formid[]" class="formid">
+				{FORMLIST}
+			</select>
+	        <a href="#" class='remove'><img src="OC4wLjA=/img/minus.png" alt="" style="vertical-align: bottom;" /></a>
+		</div>
+	  </div>
+<!-- END DYNAMIC BLOCK: template_row -->
+
+</div>
+  <div class="btn"> <button class="back"><a href="#">[!L!]Previous[!/L!]</a></button>
+    <button type="submit" class="next">[!L!]Next[!/L!]</button>
+  </div>
+</fieldset>

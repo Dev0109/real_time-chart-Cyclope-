@@ -1,0 +1,34 @@
+<!--script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/dynamic_charts.js"></script-->
+<div class="legendprod">
+	<span id="productive-total" class="procent">{PRODUCTIVE_TOTAL}%</span>
+	<br />
+	<span id="productive-total-time">{PRODUCTIVE_TOTAL_TIME}</span>
+	<br />
+	<strong>[!L!]Productive Time[!/L!]</strong>
+	<!-- <span class="tooltip" {PDF_HIDE} title="[!L!]This is the productive time monitored by Cyclope for the selected employee or department. Applications and websites have a productivity property that can be set below. The productive time is included in the active time recorded. Idle time does not have productivity settings.[!/L!]">?</span> -->
+	<div class="tooltipcustom">?
+  <span class="tooltiptext">[!L!]This is the productive time monitored by Cyclope for the selected <br>employee or department. Applications and websites have a <br>productivity property that can be set below. <br>The productive time is included in the active time recorded.<br> Idle time does not have productivity settings.[!/L!]</span>
+</div>
+	
+</div>
+<div class="productivedonut">
+	<div id="the_chart" class="{HIDE_CONTENT}">{THE_CHART_OUTPUT}</div>
+</div>
+<div class="legenddistr">
+	<span id="distracting-total" class="procent">{DISTRACTING_TOTAL}%</span>
+	<br />
+	<span id="distracting-total-time">{DISTRACTING_TOTAL_TIME}</span>
+	<br />
+	<strong>[!L!]Distracting Time[!/L!]</strong>
+	<!-- <span class="tooltip" {PDF_HIDE} title="[!L!]This is the distracting time monitored by Cyclope for the selected employee or department. Applications and websites have a productivity property that can be set below. The distracting time is included in the active time recorded. Idle time does not have productivity settings.[!/L!]">?</span> -->
+	 <div class="tooltipcustom">?
+  <span class="tooltiptext">[!L!]This is the distracting time monitored by Cyclope for the selected <br>employee or department. Applications and websites have a <br>productivity property that can be set below.<br> The distracting time is included in the active time recorded.<br> Idle time does not have productivity settings.[!/L!]</span>
+</div>
+	
+</div>
+
+<div class="legendneutr">
+	<strong>[!L!]Neutral Time[!/L!]&nbsp;(<span id="neutral-total-time">{NEUTRAL_TOTAL_TIME}</span>)&nbsp;&nbsp;<span id="neutral-total" class="procent">{NEUTRAL_TOTAL}%</span></strong><br/>
+	<span class="asterixtext">([!L!]Neutral Time = Time with no productivity settings.[!/L!])</span>
+</div>

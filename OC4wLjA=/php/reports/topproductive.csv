@@ -1,0 +1,6 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+Username,%,Total Time(h),Total Time(m),Total Time(s),Productive Time(h),Productive Time(m),Productive Time(s)<!-- BEGIN DYNAMIC BLOCK: topprod_row -->
+"{USERNAME}","{PERCENT}","{TOTAL_TIME_H}","{TOTAL_TIME_M}","{TOTAL_TIME_S}","{PROD_TIME_H}","{PROD_TIME_M}","{PROD_TIME_S}"<!-- END DYNAMIC BLOCK: topprod_row -->

@@ -1,0 +1,111 @@
+{PDF_HEADER}<!-- BEGIN DYNAMIC BLOCK: ajax -->
+<div id="attendance" class="{PDF_CLASS}">
+ <!--  <h1{PDF_HIDE}>{PAGE_TITLE} <span id="append">{APPEND}</span></h1>
+  <ul class="filter" {PDF_HIDE}>
+    <li class="time"> [!L!]Filters[!/L!] 
+      <input type="text" name="time[time]" class="flobn-range" id="time-filter" value="{DEFAULT_VALUE}" /><span class="tooltip" {PDF_HIDE} title="[!L!]Select the desired time frame. The default value is Today's date.[!/L!]">?</span>
+    </li>
+    <li class="export"><a href="{HELP_LINK}" target="_blank" id="export-help" {SELECTED_SUPPORT}>[!L!]Explain report[!/L!]</a> <a href="index.php?pag=emailreport&preset=3" id="export-email" >[!L!]Send Email[!/L!]</a> <a href="index.php?pag=attendance&act=reports-attendance" id="export-csv" >[!L!]Download CSV[!/L!]</a>
+	<a href="index.php?pag=file&act=reports-attendance&format=xls{EXPORT_APP_FILTER}" id="export-xls" >[!L!]Download XLS[!/L!]</a>
+	<a href="index.php?pag=attendance&render=pdf{EXPORT_APP_FILTER}" target="_blank" id="export-pdf" >[!L!]Generate PDF[!/L!]</a></li>
+  </ul> -->
+
+    <div class="col-md-12 p-0 overtitle">
+      <ul class="filter" {PDF_HIDE}>
+          <li class="col-md-12 time text-left p-0"><h1>{PAGE_TITLE} <div class="main-btn"><span id="append" class="cyclope">{APPEND}</span></div></h1>
+
+             
+			</li>
+
+          <li class="col-md-12 export text-right p-0 time">
+            <div class="pull-left">
+               <span class="filter-img"><img src="{CURRENT_VERSION_FOLDER}assets/images/filter.png" class="filter_icon"></span> <!-- <span class="filtertxt">[!L!]Filters[!/L!]</span> -->
+              
+              <input type="text" name="time[time]" class="flobn-range" id="time-filter" value="{DEFAULT_VALUE}" />
+        <!-- <a href="#" data-toggle="tooltip" title="Select the desired time frame. The default value is Today's date." data-placement="top">
+          <img src="{CURRENT_VERSION_FOLDER}assets/images/tooltip.png">
+
+        </a> -->
+        <div class="tooltipcustom">?
+  <span class="tooltiptext">[!L!]Select the desired time frame. The default value is Today's date.[!/L!]</span>
+</div>
+            </div>
+            <div class="pull-right">
+             <a href="{HELP_LINK}" target="_blank" id="export-help" {SELECTED_SUPPORT}><img src="{CURRENT_VERSION_FOLDER}assets/images/help_menu.png"></a>
+
+             <a href="index.php?pag=emailreport&preset=3" id="export-email" ><img src="{CURRENT_VERSION_FOLDER}assets/images/email.png"></a>
+
+             <a href="index.php?pag=file&act=reports-attendance" id="export-csv" ><img src="{CURRENT_VERSION_FOLDER}assets/images/csv.png" class="csv"></a>
+
+             <a href="index.php?pag=file&act=reports-attendance&format=xls{EXPORT_APP_FILTER}" id="export-xls" ><img src="{CURRENT_VERSION_FOLDER}assets/images/xls1.png" class="xls"></a>
+
+             <a href="index.php?pag=attendance&render=pdf{EXPORT_APP_FILTER}" target="_blank" id="export-pdf" ><img src="{CURRENT_VERSION_FOLDER}assets/images/pdf.png" class="pdf"></a>
+           </div>
+          </li>
+         </ul>
+  </div> 
+
+  <div class="bd-ajax">
+    <!-- END DYNAMIC BLOCK: ajax -->
+    {NO_DATA_MESSAGE}{ENCRYPTMESSAGERAW}
+	  {DEBUGMESSAGE}
+    <input type="hidden" name="sortcolumn" class="sortcolumn" id="sortcolumn" />
+    <input type="hidden" name="sortorder" class="sortorder" id="sortorder" />
+    <div class="table-responsive">
+	<table cellspacing="0" class="list application table  m-0 filter {HIDE_CONTENT}">
+      <thead>
+        <tr>
+          <th class="first-of-type"><a {ANCHOR_INNER_1} href="">[!L!]Employee/Computer[!/L!]</a></th>
+          <th><a {ANCHOR_INNER_0} href="">[!L!]Date[!/L!]</a></th>
+		      <th>[!L!]Start Work[!/L!]
+           <!-- <img  {PDF_HIDE} data-toggle="tooltip" data-placement="top" title="[!L!]The employees who are running late / leaving earlier are highlighted with red. Green stands for presence according to the defined working schedule.[!/L!]"  src="{CURRENT_VERSION_FOLDER}assets/images/tooltip.png"> -->
+            <div class="tooltipcustom" {PDF_HIDE}>?
+  <span class="tooltiptext">[!L!]The employees who are running late / leaving earlier are highlighted with red. Green stands for presence according to the defined working schedule.[!/L!]</span>
+</div>
+
+          </th>
+          <th>[!L!]End Work[!/L!]</th>
+          <th>[!L!]Total[!/L!]</th>
+          <th>[!L!]Active[!/L!]</th>
+          <th>[!L!]Idle[!/L!]
+         <!--  <img  {PDF_HIDE} data-toggle="tooltip" data-placement="top" title="[!L!]The idle time considered since the employees arrived at work. This is not affected by the workschedule settings.[!/L!]"  src="{CURRENT_VERSION_FOLDER}assets/images/tooltip.png"> -->
+         <div class="tooltipcustom" {PDF_HIDE}>?
+  <span class="tooltiptext">[!L!]The idle time considered since the employees arrived at work. This is not affected by the workschedule settings.[!/L!]</span>
+</div>
+          </th>
+
+		      <th><strong>[!L!]% of (Total/Active)[!/L!]</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- BEGIN DYNAMIC BLOCK: template_row -->
+        <tr class="{CLASS}">
+          <td><strong>{NAME}/{COMPUTER}</strong></td>
+          <td>{DATE}</td>
+          <td class="{TARDY} centered">{START}</td>
+          <td class="{EARLY} centered">{END}</td>
+          <td>{TOTAL}</td>
+          <td>{ACTIVE}</td>
+          <td>{IDLE}</td>
+          <td class="centered">{RATIO}</td>
+        </tr>
+        <!-- END DYNAMIC BLOCK: template_row -->
+        <tr class="{CLASS}">
+          <td><strong>[!L!]AVERAGE[!/L!]</strong></td>
+          <td></td>
+          <td class="centered">{AVG_START}</td>
+          <td class="centered">{AVG_END}</td>
+          <td>{AVG_TOTAL}</td>
+          <td>{AVG_ACTIVE}</td>
+          <td></td>
+          <td class="centered">{AVG_RATIO}</td>
+        </tr>
+      </tbody>
+    </table>
+	</div>
+    <!-- BEGIN DYNAMIC BLOCK: ajax -->
+  </div>
+</div>
+<!-- END DYNAMIC BLOCK: ajax -->
+
+

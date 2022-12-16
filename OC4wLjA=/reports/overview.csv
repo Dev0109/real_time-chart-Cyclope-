@@ -1,0 +1,34 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}
+{HIDE_START}[!L!]Total[!/L!],[!L!]Active[!/L!],[!L!]Idle[!/L!]{HIDE_END}
+"{G_TOTAL}","{G_ACTIVE}","{G_IDLE}"
+
+
+{NO_DATA_MESSAGE}{HIDE_START}[!L!]Monitored Users[!/L!]{HIDE_END}
+"{MONITOR_COUNT} ({MONITOR_ALL_COUNT} Total)"
+
+
+{NO_DATA_MESSAGE}Productivity Level
+{HIDE_START}[!L!]Productive[!/L!],[!L!]Distracting[!/L!],[!L!]Neutral[!/L!]{HIDE_END}
+"{PRODUCTIVE_TOTAL}","{DISTRACTING_TOTAL}","{NEUTRAL_TOTAL}"
+
+
+{HIDE_START}[!L!]Most used applications (Active Time)[!/L!]
+
+[!L!]Application[!/L!],%,[!L!]Total Time(h)[!/L!],[!L!]Total Time(m)[!/L!],[!L!]Total Time(s)[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: topapplications_row -->
+"{APPLICATION}","{PERCENT}","{TOTAL_TIME_H}","{TOTAL_TIME_M}","{TOTAL_TIME_S}"<!-- END DYNAMIC BLOCK: topapplications_row -->
+
+
+{HIDE_START}[!L!]Most visited websites (Active Time)[!/L!]
+
+[!L!]Domain[!/L!],%,[!L!]Total Time(h)[!/L!],[!L!]Total Time(m)[!/L!],[!L!]Total Time(s)[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: topwebsites_row -->
+"{W_WWW}","{W_PERCENT}","{W_TOTAL_TIME_H}","{W_TOTAL_TIME_M}","{W_TOTAL_TIME_S}"<!-- END DYNAMIC BLOCK: topwebsites_row -->
+
+
+{HIDE_START}[!L!]Active / Idle times by hour[!/L!]
+
+[!L!]Hour[!/L!],[!L!]Active %[!/L!],[!L!]Idle %[!/L!],{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: day_summary_row -->
+"{HOUR}","{ACTIVE}","{IDLE}"<!-- END DYNAMIC BLOCK: day_summary_row -->

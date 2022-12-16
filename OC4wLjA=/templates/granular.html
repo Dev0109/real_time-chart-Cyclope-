@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+<h1 class="windowtitle">[!L!]Granular reports[!/L!]</h1>
+<div id="content">
+          <fieldset>
+    <div class="req"><label for="username">
+		[!L!]Select employee[!/L!]</label><select id="username" name="username">{MONITORED_USERS}</select>
+	</div>
+    <div class="req even"><label for="computer">
+		[!L!]Select computer[!/L!]</label>
+		<select id="computer" name="computer">{MONITORED_COMPUTERS}</select>
+	</div>
+    <div class="req"><label for="date">
+		[!L!]Select date[!/L!]</label>
+		<!--<input id="date" type="date" name="date" /> -->
+		<input type="text" id="datepicker">
+	</div>
+	
+	<div class="buttons"><span id="button" class="submit"><button type="submit"><b>[!L!]Search[!/L!]</b></button></span></div>
+          </fieldset>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#button").click(function () {
+		window.open('{GRANURL}?api=urt9ay671Y8Oqck7LSyH&username=' + $('#username').val() + '&computer=' + $('#computer').val() + '&date=' + $('#datepicker').datepicker("option", "dateFormat", "yy-mm-dd").val() + '','_blank','toolbar=no, menubar=no, resizable=yes, location=no');
+		return false;
+	});
+	$("#username").change(function () {
+		window.location = '/index.php?pag=granular&username=' + $('#username').val();
+		return false;
+	});
+});
+</script>

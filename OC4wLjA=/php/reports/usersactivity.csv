@@ -1,0 +1,6 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+Name,Total (h),Total (m),Total (s),Active (h),Active (m),Active (s),Active (AVG) (h),Active (AVG) (m),Active (AVG) (s),Overtime (h),Overtime (m),Overtime (s),Overtime (AVG) (h),Overtime (AVG) (m),Overtime (AVG) (s),Idle (h),Idle (m),Idle (s),Idle (AVG) (h),Idle (AVG) (m),Idle (AVG) (s),Online (h),Online (m),Online (s),Online (AVG) (h),Online (AVG) (m),Online (AVG) (s),Activity %<!-- BEGIN DYNAMIC BLOCK: ua_row -->
+"{NAME}","{TOTAL_H}","{TOTAL_M}","{TOTAL_S}","{ACTIVE_H}","{ACTIVE_M}","{ACTIVE_S}","{ACTIVE_AVG_H}","{ACTIVE_AVG_M}","{ACTIVE_AVG_S}","{OVERTIME_H}","{OVERTIME_M}","{OVERTIME_S}","{OVERTIME_AVG_H}","{OVERTIME_AVG_M}","{OVERTIME_AVG_S}","{IDLE_H}","{IDLE_M}","{IDLE_S}","{IDLE_AVG_H}","{IDLE_AVG_M}","{IDLE_AVG_S}","{ONLINE_H}","{ONLINE_M}","{ONLINE_S}","{ONLINE_AVG_H}","{ONLINE_AVG_M}","{ONLINE_AVG_S}","{ACTIVITY_PERCENT}"<!-- END DYNAMIC BLOCK: ua_row -->

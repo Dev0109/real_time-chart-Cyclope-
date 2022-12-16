@@ -1,0 +1,29 @@
+{PDF_HEADER}
+<!-- <span class="tooltip tabbed" title="[!L!]This report shows a top of the employees from the selected department, sorted by the active time spent by each of them online. This report can be filtered by date and working schedule.[!/L!]">?</span> -->
+<div class="tooltipcustom" {PDF_HIDE}>?
+  <span class="tooltiptext">[!L!]This report shows a top of the employees from the selected department, sorted by the active time spent by each of them online. This report can be filtered by date and working schedule.[!/L!]</span>
+</div>
+<div id="online_chart" style="padding-left:20px;" class="{HIDE_ONLINE}">{TOPONLINE_CHART}</div>
+	{DEBUGMESSAGE}
+    <input type="hidden" name="sortcolumn" class="sortcolumn" id="sortcolumn" />
+    <input type="hidden" name="sortorder" class="sortorder" id="sortorder" />
+<table cellspacing="0" class="list application topapplications table filter {PDF_CLASS}" >
+    <thead>
+      <tr>
+        <th class="first-of-type"><strong>[!L!]Employee[!/L!]</strong></th>
+		<th><strong>[!L!]Active Time[!/L!]</strong></th>
+        <th><strong>[!L!]Online Time[!/L!]</strong></th>
+		<th class="th-activeperc"><strong>[!L!]% from Active Time[!/L!]</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- BEGIN DYNAMIC BLOCK: template_row -->
+      <tr>      
+        <td><b style="background-color:#{COLOR}"></b>{NAME}</td>
+		    <td>{TOTAL_ACTIVE}</td>
+        <td><span>{TIME}</span></td>
+		<td class="td-activeperc"><div>{PROCENT}%</div></td>
+      </tr>
+      <!-- END DYNAMIC BLOCK: template_row -->
+    </tbody>
+  </table>

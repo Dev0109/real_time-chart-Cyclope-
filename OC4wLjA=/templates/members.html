@@ -1,0 +1,38 @@
+<h1 class="windowtitle">{PAGE_TITLE}
+  <span class="btn btn-info"><a href="index.php?pag=member" class="addtheme monitored">
+    <span>[!L!]Add Member[!/L!]</span></a>
+ </span>
+</h1>
+<div id="content"> {MESSAGE}
+  <div id="members">
+    <table cellspacing="0" class="list application table filter bgwhite">
+      <thead>
+        <tr>
+          <th class="first-of-type"><strong>[!L!]Name[!/L!]</strong></th>
+          <th><strong>[!L!]Logon[!/L!]</strong></th>
+          <th><strong>[!L!]Username[!/L!]</strong></th>
+          <th><strong>[!L!]Access level[!/L!]</strong></th>
+          <th class="actions"><strong>[!L!]Actions[!/L!]</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- BEGIN DYNAMIC BLOCK: template_row -->
+        <tr>
+          <td><span>{FIRST_NAME} {LAST_NAME}</span></td>
+          <td><span>{LOGON}</span></td>
+          <td><span>{USERNAME}</span></td>
+          <td><span>{ACCESS_LEVEL}</span></td>
+          <td class="actions"><!--<a href="{ACTIVE_STATUS_LINK}" onclick="javascript:return confirm('{{ACTIVE_JAVASCRIPT_MESSAGE}');" class="active"><b>Active</b></a> -->
+            <a href="{EDIT_LINK}" class="edit">[!L!]Edit[!/L!]</a><a href="{DELETE_LINK}" class="delete">[!L!]Delete[!/L!]</a></td>
+        </tr>
+        <!-- END DYNAMIC BLOCK: template_row -->
+      </tbody>
+    </table>
+  </div>
+  <ul class="hide">
+    <li class="prev"><a href="{BACKLINK}">[!L!]Previous[!/L!]</a></li>
+    {PAGG}
+    <li class="next"><a href="{NEXTLINK}">[!L!]Next[!/L!]</a></li>
+    <li class="last"><a href="{LAST_LINK}">[!L!]Last[!/L!]</a></li>
+  </ul>
+</div>

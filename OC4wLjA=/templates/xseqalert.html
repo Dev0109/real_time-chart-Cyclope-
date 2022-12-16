@@ -1,0 +1,23 @@
+<div class="btn">
+	<a href="#" class="add"><img src="{CURRENT_VERSION_FOLDER}img/wizard_add.png" width="16" height="16" alt="" /></a>
+</div>
+<h1>[!L!]Sequences[!/L!]</h1>
+<div class="info">[!L!]The alert will be triggered if the number of its appearances is smaller than the defined value for Alert trigger[!/L!]</div>
+<!-- BEGIN DYNAMIC BLOCK: template_row -->
+<fieldset class="template">
+
+  <div class="req">
+    <label for="app_txt">[!L!]Application[!/L!]:</label>
+	<span>
+		<select name="app[]" class="app">
+		{SEQLIST}
+	   </select>
+	</span>
+	<a href="#" class="remove"><img src="{CURRENT_VERSION_FOLDER}img/minus.png" /></a>
+ </div>
+  <div class="req even">
+    <label for="app_hour">[!L!]Alert trigger[!/L!]:</label>
+    <input type="text" name="app_hour[]" class="small" value="{APP_HOUR}" />
+	</div>
+</fieldset>
+<!-- END DYNAMIC BLOCK: template_row -->

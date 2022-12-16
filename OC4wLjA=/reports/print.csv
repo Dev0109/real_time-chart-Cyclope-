@@ -1,0 +1,6 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}{HIDE_START}[!L!]Name[!/L!],[!L!]Computer[!/L!],[!L!]Date[!/L!],[!L!]Pages[!/L!],[!L!]Printer[!/L!],[!L!]Filename[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: print_row -->
+"{NAME}","{COMPUTER}","{DATE}","{PAGENUM}","{PRINTER}","{PATH}"<!-- END DYNAMIC BLOCK: print_row -->

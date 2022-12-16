@@ -1,0 +1,4 @@
+.ui-multiselect { padding:2px 0 2px 4px; text-align:left }
+.ui-multiselect span{ border:none;}
+.ui-multiselect span.ui-icon { float:right; }
+.ui-multiselect-menu { display:none; padding:3px; position:absolute; z-index:10000;width:auto;overflow:auto }

@@ -1,0 +1,6 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}{HIDE_START}[!L!]Username[!/L!],[!L!]Total Time(h)[!/L!],[!L!]Total Time(m)[!/L!],[!L!]Total Time(s)[!/L!],[!L!]Idle Time(h)[!/L!],[!L!]Idle Time(m)[!/L!],[!L!]Idle Time(s)[!/L!],[!L!]% from Active Time[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: topidle_row -->
+"{USERNAME}","{TOTAL_TIME_H}","{TOTAL_TIME_M}","{TOTAL_TIME_S}","{IDLE_TIME_H}","{IDLE_TIME_M}","{IDLE_TIME_S}","{PROCENT}"<!-- END DYNAMIC BLOCK: topidle_row -->

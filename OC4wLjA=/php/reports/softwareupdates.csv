@@ -1,0 +1,6 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+Date,User,Computer,Software<!-- BEGIN DYNAMIC BLOCK: updates_row -->
+"{DATE}","{USER}","{COMPUTER}","{SOFTWARE}"<!-- END DYNAMIC BLOCK: updates_row -->

@@ -1,0 +1,35 @@
+<h1 class="windowtitle">{PAGE_TITLE}</h1>
+<div id="content">{MESSAGE}
+  <form action="index.php" method="post">
+    <input type="hidden" name="act" value="{ACT}" />
+    <input type="hidden" name="pag" value="application" />
+    <div class="table-responsive">
+    <table cellspacing="0" class="list application table filter bgwhite">
+      <thead>
+        <tr>
+          <th class="first-of-type"><strong>[!L!]Name[!/L!]</strong></th>
+          <th><strong>[!L!]Show in[!/L!]</strong></th>
+          <th><strong>[!L!]Category[!/L!]</strong></th>
+          <th class="actions"><strong>[!L!]Actions[!/L!]</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- BEGIN DYNAMIC BLOCK: template_row -->
+        <tr class="{CLASS}">
+          <td class="first-of-type"><span>{DESCRIPTION}</span></td>
+          <td style="width: 200px;"><span>{APPLICATION_TYPE}</span></td>
+          <td style="width: 200px;"><span>{APPLICATION_CATEGORY_ID}</span></td>
+          <td style="width: 200px;" class="actions"><a href="{EDIT_LINK}" class="edit">[!L!]Edit[!/L!]</a></td>
+        </tr>
+        <!-- END DYNAMIC BLOCK: template_row -->
+      </tbody>
+    </table>
+    </div>
+  </form>
+  <ul class="pagination hide">
+    <li class="prev"><a href="{BACKLINK}">[!L!]Previous[!/L!]</a></li>
+    {PAGG}
+    <li class="next"><a href="{NEXTLINK}">[!L!]Next[!/L!]</a></li>
+    <li class="last"><a href="{LAST_LINK}">[!L!]Last[!/L!]</a></li>
+  </ul>
+</div>

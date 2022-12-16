@@ -1,0 +1,64 @@
+<h1>[!L!]Working Schedule[!/L!] {USER_NAME}</h1>
+<table cellspacing="0" class="table filter bgwhite list application schedule" style="margin-top:20px;">
+  <thead>
+    <tr>
+      <th class="first-of-type"><strong>[!L!]Day of the week[!/L!]</strong></th>
+      <th><strong>[!L!]Start Time[!/L!]</strong></th>
+      <th><strong>[!L!]End Time[!/L!]</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: working_row -->
+    <tr class="{CLASS}">
+      <td class="first-of-type"><input type="checkbox" name="w[{DAY}]" value="1" {W_CHECKED} />
+        &nbsp;&nbsp;<strong>[!L!]{WEEKDAY}[!/L!]</strong></td>
+      <td><select name="w_start[{DAY}][hour]" class="small">
+          
+            
+	 		{W_START_HOUR}   
+        
+          
+        </select>
+        &nbsp;
+        <select name="w_start[{DAY}][minute]" class="small">
+          
+            
+			{W_START_MINUTE}
+        
+          
+        </select>
+        &nbsp;
+        <select name="w_start[{DAY}][ampm]" class="small">
+          
+            
+			{W_START_AMPM}
+        
+          
+        </select></td>
+      <td><select name="w_end[{DAY}][hour]" class="small">
+          
+            
+			{W_END_HOUR}
+        
+          
+        </select>
+        &nbsp;
+        <select name="w_end[{DAY}][minute]" class="small">
+          
+            
+			{W_END_MINUTE}
+        
+          
+        </select>
+        &nbsp;
+        <select name="w_end[{DAY}][ampm]" class="small">
+          
+            
+			{W_END_AMPM}
+        
+          
+        </select></td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: working_row -->
+  </tbody>
+</table>

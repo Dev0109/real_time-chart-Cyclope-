@@ -1,0 +1,32 @@
+{DEBUGMESSAGE}
+<div class="table-responsive">
+<table cellspacing="0" class="table filter list application bgwhite" id="results">
+    <thead>
+      <tr>
+        <th class="first-of-type" style="width:50px">
+			<input type="hidden" name="sortcolumn" class="sortcolumn" id="sortcolumn" />
+			<input type="hidden" name="sortorder" class="sortorder" id="sortorder" /><strong><a {ANCHOR_INNER_0} href="">[!L!]Status[!/L!]</a></strong></th>
+        <th style="width:150px"><strong><a {ANCHOR_INNER_1} href="">[!L!]Name[!/L!]</a></strong></th>
+        <th style="width:85px"><strong>[!L!]Rename Employee[!/L!]</strong></th>
+        <th style="width:100px"><strong>[!L!]Machine[!/L!]</strong></th>
+        <th style="width:90px"><strong>[!L!]Last Record[!/L!]</strong></th>
+        <th style="width:50px" class="centered"><strong>[!L!]Version[!/L!]</strong></th>
+        <th class="actions centered" style="width:90px"><strong>[!L!]Actions[!/L!]</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- BEGIN DYNAMIC BLOCK: template_row -->
+      <tr class="{EVEN}">
+        <td class="status"><span><img src="{CURRENT_VERSION_FOLDER}img/{MONITORED}.png" width="16" height="16" /></span></td>
+        <td><span>{NAME}</span></td>
+        <td class="centered"><span>{ALIAS}</span></td>
+        <td><span>{MACHINE}({IP})</span></td>
+        <td><span>{LAST_RECORD}</span></td>
+        <td class="centered"><span>{CLIENT_VERSION}</span></td>
+        <td class="actions"><a href="index_ajax.php?pag=xstettings&computer={COMPUTER_ID}" class="settings" rel="{COMPUTER_ID}">[!L!]Settings[!/L!]</a>
+			<a href="index_ajax.php?act=member-delete&member={MEMBER_ID}&computer={COMPUTER_ID}" class="delete" data-message="[!L!]All data for [!/L!] {NAME}({MACHINE}) [!L!]session will be deleted. Confirm?[!/L!]" data-name="{NAME}" data-usernr="{MEMBER_NR}" data-comps="{MEMBER_COMPS}">[!L!]Delete[!/L!]</a></td>
+      </tr>
+      <!-- END DYNAMIC BLOCK: template_row -->
+    </tbody>
+  </table>
+</div>

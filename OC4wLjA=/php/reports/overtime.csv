@@ -1,0 +1,19 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+Summary of the times of the day
+
+Hour,Active %,Idle %,Private %,Overtime %<!-- BEGIN DYNAMIC BLOCK: day_summary_row -->
+"{HOUR}","{ACTIVE}","{IDLE}","{PRIVATE}","{OVERTIME}"<!-- END DYNAMIC BLOCK: day_summary_row -->
+
+
+Summary of the weekdays
+
+Day,Active(h),Idle(h),Private(h),Overtime(h)<!-- BEGIN DYNAMIC BLOCK: week_summary_row -->
+"{DAY}","{WEEK_ACTIVE}","{WEEK_IDLE}","{WEEK_PRIVATE}","{WEEK_OVERTIME}"<!-- END DYNAMIC BLOCK: week_summary_row -->
+
+Application Usage
+
+Application Name,Procentage,Time (h),Time (m),Time (s)<!-- BEGIN DYNAMIC BLOCK: application_summary_row -->
+"{APPLICATION}","{PROCENTAGE}","{TIME_H}","{TIME_M}","{TIME_S}"<!-- END DYNAMIC BLOCK: application_summary_row -->

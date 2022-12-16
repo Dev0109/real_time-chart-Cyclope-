@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{CURRENT_VERSION_FOLDER}assets/images/favicon.ico">
+<title>Cyclope</title>
+<style type="text/css">
+
+/* width */
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/reset.css" />
+<link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/defaults.css" />
+<link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/forms.css" />
+<!-- <link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/layout.css"/> -->
+<link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/smoothness/jquery-ui-1.8.6.custom.css"/>
+<link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/jquery.ui.css"/>
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/ie.css"/>
+<![endif]-->
+<script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/jquery.class.js"></script>
+<script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/flobn.js"></script>
+<script type="text/javascript" src="xlang.php"></script>
+<script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/error_messages.js"></script>
+
+ <link rel="stylesheet" href="{CURRENT_VERSION_FOLDER}assets/plugins/morris/morris.css">
+<!-- Treeview css -->
+<link href="{CURRENT_VERSION_FOLDER}assets/plugins/jstree/style.css" rel="stylesheet" type="text/css" /> {CONVIVAL}
+<!-- App css -->
+ <link href="{CURRENT_VERSION_FOLDER}assets/css/slicknav.css" rel="stylesheet" type="text/css" />
+<link href="{CURRENT_VERSION_FOLDER}assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="{CURRENT_VERSION_FOLDER}assets/css/core.css" rel="stylesheet" type="text/css" />
+<link href="{CURRENT_VERSION_FOLDER}assets/css/components.css" rel="stylesheet" type="text/css" />
+<link href="{CURRENT_VERSION_FOLDER}assets/css/icons.css" rel="stylesheet" type="text/css" />
+<link href="{CURRENT_VERSION_FOLDER}assets/css/pages.css" rel="stylesheet" type="text/css" />
+<link href="{CURRENT_VERSION_FOLDER}assets/css/menu.css" rel="stylesheet" type="text/css" />
+<link href="{CURRENT_VERSION_FOLDER}assets/css/responsive.css" rel="stylesheet" type="text/css" />
+<link href="{CURRENT_VERSION_FOLDER}assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="fixed-left">
+  <div id="wrapper">
+<!-- <div id="topwrap"> -->
+  <div class="topbar help-header">
+	   <div class="topbar-left">
+        <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <!-- <button class="button-menu-mobile open-left">
+                                <i class="zmdi zmdi-menu"></i>
+                            </button> -->
+                            <!--  <nav id="menu-nav">
+                                <div id="menu-button">
+                                    <div id="menu-button-inner"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                                </div>
+                            </nav> -->
+                        </li>
+                        <li>
+                            <!-- <h4 class="page-title"><img src="{CURRENT_VERSION_FOLDER}assets/images/logo.png"></h4> -->
+                        </li>
+                    </ul>
+	     <a href="index.php" class="logo">
+	       <img src="OC4wLjA=/assets/images/logo.png">
+	     </a>
+	   </div>
+  <!-- <div id="masthead"> -->
+    <!-- <h1><a href="index.php"><span>[!L!]Cyclope employee surveillance[!/L!]</span></a></h1> -->
+    <!-- <ul>
+      <li>
+        <h2>[!L!]Welcome[!/L!] <a href="{ACCOUNT_LINK}">{USER}</a>!</h2>
+      </li>
+      <li><a href="index.php?act=auth-logout" class="btn"><span>[!L!]Sign Out[!/L!]</span></a></li>
+    </ul> -->
+    <div class="navbar navbar-default" role="navigation">
+    	<div class="container">
+                    
+
+                    <!-- Right(Notification and Searchbox -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <!-- Notification -->
+                            <div class="notification-box">
+                                <ul class="list-inline m-b-0 headericons">
+                                    <li>
+                                        <a href="index.php?pag=universalsearch"><img src="{CURRENT_VERSION_FOLDER}assets/images/search.png"></a>
+                                    </li>
+                                    <li>
+                                        <a href="help.php?pag=support"><img src="{CURRENT_VERSION_FOLDER}assets/images/Help.png"></a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href=""><img src="{CURRENT_VERSION_FOLDER}assets/images/Notifiication.png"></a>
+                                    </li> -->
+
+                                    <!-- <li class="dropdown user user-menu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="drpOpenCloseLogin">
+
+                                            <span class="hidden-xs">  
+                                                  {USER}
+                                              </span>
+                                        </a>
+                                        <ul class="dropdown-menu" id="drplogin">
+                                            <li class="user-body">
+                                                <ul>
+                                                    <li>
+                                                        <a href="index.php?act=auth-logout"> Logout</a>
+                                                    </li>
+                                                </ul>
+                                               
+                                            </li>
+                                          
+                                        </ul>
+
+                                    </li> -->
+
+                                    <div class="dropdown">
+                                        <button onclick="myFunction()" class="dropbtn"> {USER}</button>
+                                          <div id="myDropdown" class="dropdown-content">
+                                            <a href="index.php?pag=myaccount">[!L!]My Profile[!/L!]</a>
+                                            <a href="index.php?act=auth-logout">[!L!]Sign Out[!/L!]</a>
+                                          </div>
+                                    </div>
+                                </ul>
+                            </div>
+                            <!-- End Notification bar -->
+                        </li>
+                    </ul>
+              </div>
+                <!-- end container -->
+    </div>
+ <!--  </div> -->
+</div>
+<!-- ========== Left Sidebar Start ========== -->
+<div class="left side-menu" id="demo2">
+     <div class="sidebar-inner">
+        <div class="navigation" style="width:100%">
+          <ul id="menu">
+           <li class="has-sub"> <a href="#"><i class="quickreport" ></i> <span> [!L!]Quick Reports[!/L!]</span></a>
+              <ul class="slimscrolla scroll scroll-width-thin">
+                <li><a href="index.php?pag=simpleoverview">[!L!]Overview[!/L!]</a></li>
+                <li><a href="index.php?pag=simpleattendance">[!L!]Attendance[!/L!]</a></li>
+                <li><a href="index.php?pag=simpleapplicationusage">[!L!]Applications[!/L!]</a></li>
+                <li><a href="index.php?pag=simpleinternet">[!L!]Internet[!/L!]</a></li>
+                <li><a href="index.php?pag=simpleproductivityreport">[!L!]Productivity[!/L!]</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"> <a href="#"><i class="allreport"></i> <span> [!L!]All Reports[!/L!] </span></a>
+              <ul class="slimscrolla scroll scroll-width-thin">
+                <li><a href="index.php?pag=overview" class="active">[!L!]Overview[!/L!]</a></li>
+                <li><a href="index.php?pag=attendance">[!L!]Attendance[!/L!]</a></li>
+                <li><a href="index.php?pag=topwebsites">[!L!]Websites / Online [!/L!]</a></li>
+                <li><a href="index.php?pag=topapplications">[!L!]Applications[!/L!]</a></li>
+                <li><a href="index.php?pag=topproductive">[!L!]Productive[!/L!]</a></li>
+                <li><a href="index.php?pag=topactive">[!L!]Active / Idle[!/L!]</a></li>
+                <li><a href="index.php?pag=productivityreport">[!L!]Productivity[!/L!]</a></li>
+                <li><a href="index.php?pag=categoryactivity">[!L!]Activity Categories[!/L!]</a></li>
+                <li><a href="index.php?pag=applicationforms">[!L!]Application Forms[!/L!]</a></li>
+                <li><a href="index.php?pag=internet">[!L!]Internet[!/L!]</a></li>
+                <li><a href="index.php?pag=document">[!L!]Documents[!/L!]</a></li>
+                <li><a href="index.php?pag=applicationusage">[!L!]Applications[!/L!]</a></li>
+                <li><a href="index.php?pag=print">[!L!]Print[!/L!]</a></li>
+                <li><a href="index.php?pag=file">[!L!]Files[!/L!]</a></li>
+                <li><a href="index.php?pag=softwareinventory">[!L!]Software Inventory[!/L!]</a></li>
+                <li><a href="index.php?pag=triggered">[!L!]Alerts[!/L!]</a></li>
+                <li><a href="index.php?pag=timeline">[!L!]Timeline[!/L!]</a></li>
+                <li><a href="index.php?pag=sequence">[!L!]Sequences[!/L!]</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"> <a href="#"><i class="administration"></i> <span>[!L!]Administration[!/L!] </span></a>
+              <ul class="slimscrolla scroll scroll-width-thin">
+                <li><a href="index.php?pag=monitored">[!L!]Monitored Users[!/L!]</a></li>
+                <li><a href="index.php?pag=members">[!L!]Administrative Users[!/L!]</a></li>
+                <li><a href="index.php?pag=groups">[!L!]Departments[!/L!]</a></li>
+                <li><a href="index.php?pag=settings">[!L!]Settings[!/L!]</a></li>
+                <li><a href="index.php?pag=emailreports">[!L!]Reports by Email[!/L!]</a></li>
+                <li><a href="index.php?pag=alerts">[!L!]Alerts[!/L!]</a></li>
+                <li><a href="index.php?pag=applications">[!L!]Applications[!/L!]</a></li>
+                <li><a href="index.php?pag=categories">[!L!]Activity Categories[!/L!]</a></li>
+                <li><a href="index.php?pag=emailsequences">[!L!]Application Sequences[!/L!]</a></li>
+                <li><a href="index.php?pag=log">[!L!]Logs Management[!/L!]</a></li>
+                <li><a href="index.php?pag=notifications">[!L!]Notifications[!/L!]</a></li>
+                <li><a href="index.php?pag=colorthemes">[!L!]Color Themes[!/L!]</a></li>
+                <li><a href="index.php?pag=licensing">[!L!]Licensing[!/L!]</a></li>
+                <li><a href="index.php?pag=updates">[!L!]Updates[!/L!]</a></li>
+              </ul>
+            </li>
+            <li><a href="help.php?pag=support"><i class="support"></i> <span>[!L!]Support[!/L!] </span></a></li>
+            <li><a href="help.php?pag=gdpr" class="waves-effect"><i class="gdrp"></i> <span>[!L!]GDPR[!/L!] </span> </a></li>
+            <!-- <li><a href="index.php?pag=settings" class="waves-effect"><i class="settings"></i> <span> Settings </span> </a></li> -->
+         </ul>
+     </div>
+    </div>
+    </div>
+        <!-- Left Sidebar End -->
+    <div class="content-page" id="mastcontent">
+        <div class="content">
+          <div id="mastcontent">
+            <div id="hlp-text" class="admintemplate">{PAGE}</div>
+          </div>
+        </div>
+      <!--   <footer class="footer text-right">
+                [!L!]Cyclope Employee Surveillance Solution v7.0.0 is provided by Cyclope Series © 2003-
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>[!/L!]
+            </footer> -->
+             <footer class="footer text-right">
+                <div id="mastfooter"> [!L!]Cyclope Employee Surveillance Solution v6.8 is provided by Cyclope Series &copy; 2003-2014[!/L!] </div>
+            </footer>
+        <!-- <div id="mastfooter"> [!L!]Cyclope Employee Surveillance Solution v6.0 is provided by Cyclope Series &copy; 2003-2012[!/L!] </div> -->
+    </div>
+<div id="hlp-container"></div>
+<div id="overlay"></div></div>
+<script type="text/javascript">
+
+flobn.register("CURRENT_VERSION_FOLDER","{CURRENT_VERSION_FOLDER}");
+
+ function myFunction() {
+     document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+</script>
+<script>
+        jQuery(function ($) {
+            var open = false;
+            var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
+
+            function resizeMenu() {
+
+                if (IS_IPAD == true) {
+                    if ($(this).width() <= 1080) {
+                        if (!open) {
+                            $("#menu-responsive").hide();
+                        }
+                        $("#menu-button").show();
+                    }
+                    else if ($(this).width() > 768) {
+                        if (!open) {
+                            $("#menu-responsive").show();
+                        }
+                        $("#menu-button").hide();
+                    }
+                } else {
+                    if ($(this).width() <= 1080) {
+                        if (!open) {
+                            $("#menu-responsive").hide();
+                        }
+                        $("#menu-button").show();
+
+                    }
+                    else if ($(this).width() > 768) {
+                        if (!open) {
+                            $("#menu-responsive").show();
+                        }
+                        $("#menu-button").hide();
+
+                    }
+                }
+
+
+            }
+
+            function setupMenuButton() {
+                $("#menu-button").click(function (e) {
+                    e.preventDefault();
+
+                    if (open) {
+                        $("#menu-responsive").fadeOut();
+                        $("#menu-button").toggleClass("selected");
+                    }
+                    else {
+                        $("#menu-responsive").fadeIn();
+                        $("#menu-button").toggleClass("selected");
+                    }
+                    open = !open;
+                });
+            }
+
+
+            $(window).resize(resizeMenu);
+
+            resizeMenu();
+            setupMenuButton();
+        });
+    </script>
+
+ <script src="{CURRENT_VERSION_FOLDER}assets/js/jquery.slicknav.js"></script>
+ <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+ <script type="text/javascript">
+$('#menu').slicknav({
+        prependTo:'#demo2'
+});
+</script>
+</body>
+</html>

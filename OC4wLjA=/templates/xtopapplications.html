@@ -1,0 +1,45 @@
+ {PDF_HEADER}<!--<span class="tooltip tabbed" title="[!L!]This report shows which are the 15 most used applications by the selected employee or the selected department. To see all the applications click the "Others" link on the last row of the report. This report can be filtered by date and working schedule.[!/L!]">?</span> -->
+<div class="tooltipcustom" {PDF_HIDE}>?
+  <span class="tooltiptext">[!L!]This report shows which are the 15 most used applications by the selected employee or the selected department. To see all the applications click the "Others" link on the last row of the report. This report can be filtered by date and working schedule.[!/L!]</span>
+</div>
+      <div id="appusage_chart" style="padding-left:50px;">{APPUSAGE_CHART_OUTPUT}</div>
+	{DEBUGMESSAGE}
+    <input type="hidden" name="sortcolumn" class="sortcolumn" id="sortcolumn" />
+    <input type="hidden" name="sortorder" class="sortorder" id="sortorder" />
+    <div class="table-responsive">
+<table cellspacing="0" class="table filter list application topapplications {PDF_CLASS}" >
+    <thead>
+      <tr>
+        <th class="first-of-type"><strong><a {ANCHOR_INNER_1} href="">[!L!]Application[!/L!]</a></strong></th>
+        <th><strong>[!L!]Category[!/L!]</strong></th>
+        <th><strong>[!L!]Employee[!/L!]</strong></th>
+        <th ><strong><a {ANCHOR_INNER_0} href="">[!L!]Time[!/L!]</a></strong></th>
+		    <th class="th-activeperc"><strong>[!L!]% from Active Time[!/L!]</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- BEGIN DYNAMIC BLOCK: template_row -->
+      <tr data-department="{DEPARTMENT}">
+        <td><b style="background-color:#{COLOR}"></b>{NAME}</td>
+        <td><span class="{HIDE_OTHER_CATEGORY}"><a href="#" class="category" rel="{APPLICATION_ID}" rev="#cat{CATEGORY_ID}" name="{CAT_TYPE}">{CATEGORY}</a></span></td>
+		<td>{USER}</td>
+        <td style="text-align:center;"><span>{TIME}</span></td>
+		<td class="td-activeperc" style="text-align:center;"><div>{PROCENT}%</div></td>
+      </tr>
+      <!-- END DYNAMIC BLOCK: template_row -->
+    </tbody>
+  </table>
+  <table cellspacing="0" class="table filter list application topapplications hide" id="other">
+    <tbody>
+      <!-- BEGIN DYNAMIC BLOCK: other_row -->
+      <tr data-department="{OTHER_DEPARTMENT}">
+        <td style="padding-left:10px;"><b style="background-color:#{OTHER_COLOR};"></b>{OTHER_NAME}</td>
+        <td style="width:130px;"><span><a href="#" class="category" rel="{OTHER_APPLICATION_ID}" rev="#cat{OTHER_CATEGORY_ID}" name="{OTHER_CAT_TYPE}">{OTHER_CATEGORY}</a></span></td>
+		<td style="width:130px;">{OTHER_USER}</td>
+        <td style="width:100px; text-align:center;"><span>{OTHER_TIME}</span></td>
+		<td class="td-activeperc" style="width:110px;; text-align:center;"><div>{OTHER_PROCENT}%</div></td>
+      </tr>
+      <!-- END DYNAMIC BLOCK: other_row -->
+    </tbody>
+  </table>
+</div>

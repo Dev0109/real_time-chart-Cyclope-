@@ -1,0 +1,22 @@
+<h1 class="windowtitle">{PAGE_TITLE}</h1>
+<div id="content" class="selectemployee panelrow productivitypage">
+  <form action="index.php" method="post">
+    <input type="hidden" name="application_category_id" value="{APPLICATION_CATEGORY_ID}" />
+    <input type="hidden" name="act" value="{ACT}" />
+	<input type="hidden" name="offset" value="{OFFSET}" />
+    <input type="hidden" name="pag" value="category" />
+    <fieldset>
+      {MESSAGE}
+       <div class="row">
+      <div class="even req col-sm-3">
+        <label for="category">[!L!]Category[!/L!]</label>
+        <span>
+        <input type="text" name="category" id="category" value="{CATEGORY}" />
+        </span> </div>
+      <div class="buttons"><span class="submit">
+        <button type="submit"><b>[!L!]Save[!/L!]</b></button>
+        </span></div>
+        </div>
+    </fieldset>
+  </form>
+</div>

@@ -1,0 +1,158 @@
+<div id="settings">
+  <h1 class="windowtitle">[!L!]Settings[!/L!]</h1>
+  <div id="content"> {MESSAGE}
+    <div class="pagetabs">
+      <ul class="toolbar tabingsidebar">
+        <li class="ui-tabs-selected generalsettings"><a href="#generalsettings"><span>[!L!]General Settings[!/L!]</span></a></li>
+        <li class="workschedule"><a href="#workschedule"><span>[!L!]Work Schedule[!/L!]</span></a></li>
+        <li class="emailsettings"><a href="#emailsettings"><span>[!L!]Email Settings[!/L!]</span></a></li>
+        <li class="emailsettings"><a href="#adsettings"><span>[!L!]AD Settings[!/L!]</span></a></li>
+        <li class="othersettings"><a href="#othersettings"><span>[!L!]Other Settings[!/L!]</span></a></li>
+        <li class="updatesettings"><a href="#updatesettings"><span>[!L!]Update Settings [!/L!]</span></a></li>
+      </ul>
+      <div class="tab-content tabingsidebar_content">
+      <div id="generalsettings" class="tab"> {GENERALSETTINGS} </div>
+      <div id="othersettings" class="tab">
+  {CASUALTY}</div>
+      <div id="emailsettings" class="tab">
+  <div class="info">[!L!]By default, the application uses the Cyclope Email Server settings. If you want to use your own email settings, make sure to test the configuration after saving it.[!/L!]</div>
+        <form action="index.php#emailsettings" method="post" id="emailupdate">
+          <input type="hidden" name="act" value="settings-emailupdate" id="emailupdateact" />
+          <input type="hidden" name="pag" value="settings" />
+          <div class="selectemployee">
+          <fieldset>
+            <div class="row">
+		  	<div class="chk even col-sm-4 timecheck">
+        		<label for="alias">
+          			<input type="checkbox" id="authorisation" name="authorisation" value="1" {AUTHORISATION} />
+          			[!L!]Server does not require authorisation[!/L!]
+          		</label>
+      		</div>
+		  	<div class="chk col-sm-4 timecheck">
+        	    <span>
+          			<input type="radio" id="smtp" name="smtp_mailer" value="smtp" {SMTP_MAILER_SMTP} />[!L!]SMTP[!/L!]
+          			<input type="radio" id="mail" name="smtp_mailer" value="mail" {SMTP_MAILER_MAILER} />[!L!]MS Exchange[!/L!]
+          			<input type="radio" id="none" name="smtp_mailer" value="none" {SMTP_MAILER_NONE} />[!L!]None / Other[!/L!]
+              </span> 
+          		
+      		</div>
+		  	<div class="chk even col-sm-4 timecheck">
+        		<label for="ssl">
+          			<input type="checkbox" id="ssl" name="ssl" value="1" {SSL} />
+          			[!L!]SSL[!/L!]
+          		</label>
+      		</div>
+      		 </div>
+      		 <div class="row">
+            <div class="req col-sm-3">
+              <label for="smtp_server">[!L!]SMTP Server[!/L!] </label>
+              <span>
+              <input type="text" name="smtp_server" id="smtp_server" value="{SMTP_SERVER}" />
+              </span> 
+            </div>
+            <div class="req even col-sm-3">
+              <label for="smtp_user">[!L!]SMTP User[!/L!] </label>
+              <span>
+              <input type="text" name="smtp_user" id="smtp_user" value="{SMTP_USER}" />
+              </span>
+             </div>
+            <div class="req col-sm-3">
+              <label for="smtp_password">[!L!]Password[!/L!] </label>
+              <span>
+              <input type="password" name="smtp_password" id="smtp_password" value="{SMTP_PASSWORD}" />
+              </span> 
+            </div>
+            <div class="req even col-sm-3">
+              <label for="smtp_port">[!L!]Port[!/L!] </label>
+              <span>
+              <input type="text" name="smtp_port" id="smtp_port" value="{SMTP_PORT}" />
+              </span> 
+            </div>
+        </div>
+            <div class="buttons">
+              <span class="submit"><button type="submit"><b>[!L!]Save[!/L!]</b></button></span>&nbsp;
+			  <span class="submit"><button type="submit" id="testemail"><b>[!L!]Test Email[!/L!]</b></button> </span>&nbsp;
+			  <span class="submit"><button type="" id="setdefault"><b>[!L!]Set Default Values[!/L!]</b></button>
+			  <script>
+			  $(document).ready(function(){
+				  $("#setdefault").click(function () {
+						$("#authorisation").attr('checked','');
+						$("#smtp").attr('checked','checked');
+						$("#ssl").attr('checked','');
+						$("#smtp_server").val("mail.amplusnet.com");
+						$("#smtp_user").val("cyclope.reports@amplusnet.com");
+						$("#smtp_password").val("CyC|lop3R3ports");
+						$("#smtp_port").val("25");
+						return true;
+					});
+				});
+			  </script>
+              </span></div>
+           
+          </fieldset>
+        </div>
+        </form>
+      </div>
+      <div id="adsettings" class="tab">
+  <div class="info">[!L!]Please make sure that the information you supply (the username) is able to connect to Active Directory and query the Users structure. For more details please press Help button.[!/L!]</div>
+        <form action="index.php#adsettings" method="post" id="adupdate">
+          <input type="hidden" name="act" value="settings-adupdate" id="adupdateact" />
+          <input type="hidden" name="pag" value="settings" />
+          <div class="selectemployee">
+          <fieldset>
+            <div class="row">
+            <div class="col-sm-3">
+              <label for="base_dn">[!L!]Base DN[!/L!] </label>
+              <span>
+              <input type="text" name="base_dn" id="base_dn" value="{BASE_DN}" title="ex: DC=amplusnet,DC=ro" /></span> ex: DC=amplusnet,DC=ro 
+               </div>
+            <div class="col-sm-3 even">
+              <label for="account_suffix">[!L!]Account Suffix[!/L!] </label>
+              <span>
+              <input type="text" name="account_suffix" id="account_suffix" value="{ACCOUNT_SUFFIX}" title="ex: @amplusnet.ro" /></span> ex: @amplusnet.ro 
+               </div>
+            <div class="col-sm-3">
+              <label for="domain_controllers">[!L!]Domain Controllers[!/L!] </label>
+              <span>
+              <input type="domain_controllers" name="domain_controllers" id="domain_controllers" value="{DOMAIN_CONTROLLERS}" title="Internal IP of your domain controller" /></span> Internal IP of your domain controller 
+               </div>
+            <div class="col-sm-3 even">
+              <label for="admin_username">[!L!]Admin Username[!/L!] </label>
+              <span>
+              <input type="text" name="admin_username" id="admin_username" value="{ADMIN_USERNAME}" title="domain username" /></span> Domain username 
+               </div>
+                </div>
+                <div class="row">
+            <div class="col-sm-3">
+              <label for="admin_password">[!L!]Admin Password[!/L!] </label>
+              <span>
+              <input type="password" name="admin_password" id="admin_password" value="{ADMIN_PASSWORD}" title="domain password" /></span> Domain password 
+               </div>
+            <div class="col-sm-3 even chk timecheck">
+        		  <span>
+          			<input type="radio" id="ldap" name="protocol" value="ldap" {LDAP} />[!L!]ldap[!/L!]
+          			<input type="radio" id="ldaps" name="protocol" value="ldaps" {LDAPS} />[!L!]ldaps[!/L!]
+				</span>
+               </div>
+           </div>
+            <div class="buttons"><span class="submit">
+              <button type="submit"><b>[!L!]Save[!/L!]</b></button></span></div>
+           
+          </fieldset>
+        </div>
+        </form>
+      </div>
+      <div id="workschedule" class="tab ui-tabs-hide">
+        <div class="twocols">
+         
+          <div class="rightcol timetable">
+            <div class="bd-ajax">{WORKSCHEDULE}</div>
+          </div>
+           <div id="sidebar" class="leftcol">{TREE}</div>
+        </div>
+      </div>
+      <div id="updatesettings" class="tab">{UPDATESETTINGS}</div>
+</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+Application,Category,%,Time(h),Time(m),Time(s)<!-- BEGIN DYNAMIC BLOCK: agregated_row -->
+"{APPLICATION}","{CATEGORY}","{PERCENT}","{TIME_H}","{TIME_M}","{TIME_S}"<!-- END DYNAMIC BLOCK: agregated_row -->]
+
+Application,Category,%,Time(h),Time(m),Time(s)<!-- BEGIN DYNAMIC BLOCK: peruser_row -->
+"{APPLICATION}","{CATEGORY}","{PERCENT}","{TIME_H}","{TIME_M}","{TIME_S}"<!-- END DYNAMIC BLOCK: peruser_row -->

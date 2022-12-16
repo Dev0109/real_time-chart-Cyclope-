@@ -1,0 +1,23 @@
+{PDF_HEADER}{NO_DATA_MESSAGE}<span class="tooltip tabbed" title="[!L!]Displays the full list of applications used by the selected employee or by each employee from the selected department. This report can be filtered by date and working schedule.[!/L!]">?</span><div id="appusageperuser_chart" style="padding-left:10px;width:700px;" class="{HIDE_CONTENT}">{APPUSAGE_USER_CHART_OUTPUT}</div>
+<table cellspacing="0" class="list application topapplications {PDF_CLASS} {HIDE_CONTENT}" >
+  <thead>
+    <tr>
+      <th class="first-of-type" style="width:100px"><strong>[!L!]Employee[!/L!]</strong></th>
+	  <th  style="width:169px;"><strong>[!L!]Application[!/L!]</strong></th>
+      <th style="width:200px;"><strong>[!L!]Category[!/L!]</strong></th> 
+      <th style="width:90px"><strong>[!L!]Time[!/L!]</strong></th>
+      <th style="width:115px" class="th-activeperc"><strong>[!L!]% from Active Time[!/L!]</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr class="{TOP_BORDER}">
+	  <td><!-- b style="background-color:#{COLOR}" ></b-->{USERNAME}</td>
+      <td>{NAME}</td>
+      <td><a href="#" class="category" rel="{APPLICATION_ID}" rev="#cat{CATEGORY_ID}">{CATEGORY}</a></td>
+      <td><span>{TIME}</span></td>
+      <td class="td-activeperc" style="text-align:center;"><div>{PROCENT}%</div></td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+  </tbody>
+</table>

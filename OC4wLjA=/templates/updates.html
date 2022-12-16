@@ -1,0 +1,47 @@
+<h1 class="windowtitle">[!L!]Updates[!/L!]</h1>
+<div id="content">
+  <table cellspacing="0" class="table filter list application bgwhite">
+    <thead>
+      <tr>
+	  	<th width="35">&nbsp;</th>
+        <th width="120">[!L!]Version[!/L!]</th>
+        <th width="480">[!L!]Change Log[!/L!]</th>
+		<th>[!L!]Download Date[!/L!]</th>
+        <th width="160">[!L!]Actions[!/L!]</th>
+      </tr>
+    </thead>
+    <tbody class="categories">
+      <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr class="{CLASS}">
+	  <td>{SELECTED}</td>
+      <td>{VERSION}</td>
+      <td><a href="#" class="expand">[!L!]more[!/L!]</a><div class="notes">{NOTES}</div></td>
+	  <td>{DOWNLOAD_DATE}</td>
+	  <td class="actions">  	  
+	  	<a href="{LINK}" class="{LINK_CLASS} {HIDE_LINK}">[!L!]{LINK_NAME}[!/L!]</a></td>
+    </tr>
+      <!-- END DYNAMIC BLOCK: template_row -->
+    </tbody>    
+  </table>
+</div>
+<script type="text/javascript">
+$(function(){
+	$('.expand').click(function(e){
+		var $next = $(e.target).next();
+		if($next.innerHeight() == 40){
+			$next.height('auto');
+			$(e.target).html(flobn.lang.get('less'));
+		}else{
+			$next.height(40);
+			$(e.target).html(flobn.lang.get('more'));
+		}
+		
+		e.preventDefault();
+		e.stopPropagation();
+	});
+	$('.rollback').click(function(e){
+		new flobn.widgets.InfoConfirm(flobn.lang.get('Revert?'),flobn.lang.get('Are you sure you want to revert to this version?<br/><strong> Some functionality may be missing or may work incorrectly in this version.</strong>'),function(){window.location.href = e.target.href;});
+		return false;						  
+	});
+});
+</script>

@@ -1,0 +1,37 @@
+{PDF_HEADER}{NO_DATA_MESSAGE}
+	{DEBUGMESSAGE}
+    <input type="hidden" name="sortcolumn" class="sortcolumn" id="sortcolumn" />
+    <input type="hidden" name="sortorder" class="sortorder" id="sortorder" />
+    <div class="table-responsive">
+<table cellspacing="0" class="list application table filter {HIDE_CONTENT}">
+  <thead>
+    <tr>
+      <th class="first-of-type"><strong><a {ANCHOR_INNER_1} href="">[!L!]Webpage Link[!/L!]</a></strong></th>
+      <!--          <th style="width:160px;"><strong>[!L!]Category[!/L!]</strong></th>-->
+      <th><strong>[!L!]Type[!/L!]</strong></th>
+      <th style="min-width: 120px;"><strong><a {ANCHOR_INNER_0} href="">[!L!]Time[!/L!]</a></strong></th>
+      <th class="th-activeperc"><strong>[!L!]% from Active Time[!/L!]</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr data-department="{DEPARTMENT}">
+      <td class="url"><img src="http://www.google.com/s2/favicons?domain={URL_DOMAIN}" width="16" height="16" hspace="5"  /><a href="{URL}" target="_newtab"><strong>{URL_SHORT}</strong></a></td>
+      <!--<td><a href="#" class="category" rel="{ID}" rev="#cat{CATEGORY_ID}">{CATEGORY}</a></td>-->
+      <td class="flobn-datatable-body">{TYPE_INPUT} <span class="procentbar-text">{TYPE}</span></td>
+      <td ><span>{TIME}</span></td>
+      <td class="td-activeperc"><div>{WIDTH}%</div></td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+  </tbody>
+</table>
+</div>
+<div class="pagination"{PDF_HIDE}>
+ <ul>
+    <li>[!L!]Go To[!/L!]:<input type="text"  data-page="{FILTER_PAGE}" class="p" value="" name="offset" /></li>
+    <li>[!L!]Show Rows[!/L!]:<select class="rp" data-page="{FILTER_PAGE}">{PAGES}</select></li>
+    <li>{INTERVAL} <span>[!L!]of[!/L!]</span> {TOTAL}</li>
+    <li><a href="{BACKLINK}" class="prev">&nbsp;</a></li>
+    <li><a href="{NEXTLINK}" class="next">&nbsp;</a></li>    
+  </ul>
+</div>

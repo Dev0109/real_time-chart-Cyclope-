@@ -1,0 +1,127 @@
+<h1 class="windowtitle"><a href="index.php?pag=members" class="right pull-right list">[!L!]List[!/L!]</a>{PAGE_TITLE}</h1>
+<div id="content" class="selectemployee panelrow productivitypage"> {MESSAGE}
+  <form action="index.php" method="post" id="frm">
+    <input type="hidden" name="mid" value="{MEMBER_ID}" />
+    <input type="hidden" name="act" id="act" value="{ACT}" />
+    <input type="hidden" name="pag" value="member" />
+    <input type="hidden" name="prefilled" value="{PREFILLED}" />
+    <input type="hidden" name="membername" value="{MEMBERNAME}" />
+    <input type="hidden" name="activeold" value="{ACTIVEOLD}" />
+    
+    <fieldset class="zebra">
+      <div class="chk"{NODISPLAY}>
+        <p>[!L!]Active[!/L!]</p>
+        <label for="active">
+          <input type="checkbox" id="active" name="active" value="2" {ACTIVE} />
+          [!L!]Click here to Activate this item[!/L!]</label>
+      </div>
+	  <div class="chk hide" id="enableAlias"{NODISPLAY}>
+        <p>[!L!]Alias[!/L!]</p>
+        <label for="alias">
+          <input type="checkbox" id="alias" name="alias" value="1" {ALIAS} />
+          [!L!]Click here to show First Name and Last Name instead of Logon for this employee[!/L!]</label>
+      </div>
+      <div class="row">
+      <div class="req col-sm-3">
+        <label for="first_name">[!L!]First name[!/L!]</label>
+        <span>
+        <input type="text" name="first_name" id="first_name" value="{FIRST_NAME}" />
+        </span> </div>
+      <div class="req col-sm-3">
+        <label for="last_name">[!L!]Last Name[!/L!]</label>
+        <span>
+        <input type="text" name="last_name" id="last_name" value="{LAST_NAME}" />
+        </span> </div>
+      <div class="req col-sm-3"{NODISPLAY}>
+        <label for="username">[!L!]Username [!/L!]</label>
+        <span>
+        <input type="text" name="username" id="username" value="{USERNAME}"  autocomplete="off" />
+		<select id="adusers" name="adusers" {ADISPLAY} onchange="setUsernameField()"><option>-- [!L!]Or choose one from this list[!/L!] --</option>{ADUSERS}</select>
+        </span> </div>
+      <div class="req uninstall-keeper col-sm-3"{NODISPLAY}>
+        <label for="password">[!L!]Password[!/L!]</label>
+        <span>
+        <input type="password" name="password" id="password" value="{PASSWORD}"  autocomplete="off" />
+        </span> </div>
+      <div class="req col-sm-3"{NODISPLAY}>
+        <label for="password2">[!L!]Re-type Password[!/L!]</label>
+        <span>
+        <input type="password" name="password2" id="password2" value="{PASSWORD2}" />
+        </span></div>
+      <div class="req col-sm-3"{NODISPLAY}>
+        <label for="access_level">[!L!]Access level[!/L!]</label>
+        <select name="access_level" id="access_level" onchange="clearActAndSubmit()">
+          <option value="">&nbsp;&nbsp;</option>
+          
+			{ACCESS_LEVEL}
+        
+        </select>
+      </div>
+      <div class="monitored req col-sm-3{HAS_MONITORED_USERS}"{NODISPLAY}>
+        <label for="treeselect" style="margin-right:5px;">[!L!]Monitored User[!/L!]</label>
+        <span id="treeselect" style="float:left; width:320px; border:0px;{HAS_TREE}"></span>
+        <select id="employeeselect" name="monitored" style="{HAS_DROPDOWN}">
+          <option></option>
+          
+			{MONITORED_USERS}
+        
+        </select>
+      </div>
+      <div class="col-sm-3" {NODISPLAY}>
+        <label for="email">[!L!]Email[!/L!]</label>
+        <span>
+        <input type="text" name="email" value="{EMAIL}"  maxLength="100" size="30" class="txtField" />
+        </span> </div>
+      </div>
+      <div class="buttons"><span class="submit">
+        <button type="submit" id="save_member"><b>[!L!]Save[!/L!]</b></button>
+        </span></div>
+    </fieldset>
+  </form>
+</div>
+<script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/jquery.pstrength-min.1.2.js"></script>
+<script type="text/javascript">
+function clearActAndSubmit(){
+	$('#act').val('');
+	$('#frm').submit();
+}
+function setUsernameField(){
+	var username;
+	var randomstring = Math.random().toString(36).slice(-9);
+	username = $('#adusers').val();
+	$('#username').val(username);
+	$('#first_name').val(username);
+	$('#last_name').val(username);
+	$('#password').val(randomstring);
+	$('#password2').val(randomstring);
+}
+$(function(){
+   $('#password').pstrength();
+	$('#frm').submit(function(){
+		/*empty act or no tree we don't care*/
+		if($('#act').val() == '' || !flobn.get('hasTree')){
+			return true;	
+		}
+		/*is something checked?*/
+		var checkedItems = $('.jstree-checked','#treeselect');
+		if(!checkedItems.length){
+			/*we haz tree but no selection remove all the inputs*/
+			$('.mon').remove();
+			return true;
+		}
+		/*we got this far so we need to create all our inputs*/
+		var out = [],ret = [];		
+		checkedItems.each(function(){
+			ret = [];
+			ret.push('<input type="hidden" name="monitored_group[]" class="mon" value="');
+			ret.push($(this).attr('rev'));
+			ret.push('" />');
+			out.push(ret.join(''));
+		});
+		/*all of our inputs are created we now insert them*/
+		$('#frm').append(out.join(''));
+		/*send it off*/
+		return true;
+	});
+});
+</script>

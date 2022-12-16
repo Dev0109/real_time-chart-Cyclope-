@@ -1,0 +1,40 @@
+{PDF_HEADER}<!--div id="productivity_chart" class="{HIDE_CONTENT}"><div class="graphtitle">[!L!]Chat Activity by Productivity[!/L!]<span class="tooltip" {PDF_HIDE} title="[!L!]This chart shows the productivity settings that you establish for all recorded chat conversations. This report can be filtered by date and working schedule.[!/L!]">?</span></div><div class="chart">{AJAX_CHATCHART}</div></div-->
+    <div style="clear: both"></div>
+    {NO_DATA_MESSAGE}
+	{DEBUGMESSAGE}
+	<!--div class="info productive" {HIDE_STYLE}>[!L!]Change the productivity settings for a conversation by sliding left for distracting and right for productive.[!/L!]<img src="{HELPIMG}" /></div-->
+    <input type="hidden" name="sortcolumn" class="sortcolumn" id="sortcolumn" />
+    <input type="hidden" name="sortorder" class="sortorder" id="sortorder" />
+    <table cellspacing="0" class="list application {HIDE_CONTENT} {PDF_CLASS}" style="width:710px">
+      <thead>
+        <tr>
+          <th class="first-of-type"><strong><a {ANCHOR_INNER_1} href="">[!L!]Screen Name[!/L!]</a></strong></th>
+          <!--<th style="width:160px;"><strong>[!L!]Category[!/L!]</strong></th>-->
+          <!--th style="width:90px; text-align:center; padding-left:0;"><strong><a {ANCHOR_INNER_2} href="">[!L!]Type[!/L!]</a></strong></th-->
+          <th style="width:80px; text-align:center; padding-left:0;"><strong><a {ANCHOR_INNER_0} href="">[!L!]Time[!/L!]</a></strong></th>
+          <th style="width:110px" class="th-activeperc"><strong>[!L!]% from Active Time[!/L!]</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- BEGIN DYNAMIC BLOCK: template_row -->
+         <tr data-department="{DEPARTMENT}">
+          <td><img {PDF_HIDE} src="{ICON_SRC}" /> {NAME}</td>
+          <!--<td><a href="#" class="category" rel="{CHAT_ID}" rev="#cat{CATEGORY_ID}">{CATEGORY}</a></td>-->
+          <!--td>
+			<div {PDF_HIDE} class="slider flobn-slider {CSS_CLASS}" rel="{ID}" data-duration="{DURATION}" data-parentapp="{APPLICATION_ID}" data-childtype="{CHILD_TYPE}"><a class="handle">&nbsp;</a></div>
+			<div style="text-align:center;">{TYPE}</div></td-->
+          <td style="text-align:center;"><span>{TIME}</span></td>
+          <td class="td-activeperc" style="text-align:center;"><div>{WIDTH}%</div></td>
+        </tr>
+        <!-- END DYNAMIC BLOCK: template_row -->
+      </tbody>
+    </table>
+<div class="pagination" {PDF_HIDE}>
+ <ul>
+    <li>[!L!]Go To[!/L!]:<input type="text"  data-page="{FILTER_PAGE}" class="p" value="" name="offset" /></li>
+    <li>[!L!]Show Rows[!/L!]:<select class="rp" data-page="{FILTER_PAGE}">{PAGES}</select></li>
+    <li>{INTERVAL} <span>[!L!]of[!/L!]</span> {TOTAL}</li>
+    <li><a href="{BACKLINK}" class="prev">&nbsp;</a></li>
+    <li><a href="{NEXTLINK}" class="next">&nbsp;</a></li>    
+  </ul>
+</div>

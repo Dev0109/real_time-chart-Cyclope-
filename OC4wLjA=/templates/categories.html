@@ -1,0 +1,31 @@
+<h1 class="windowtitle">[!L!]Activity Categories[!/L!]<span class="btn btn-info"><a class="addtheme monitored " href="{ADD_LINK}">[!L!]Add Category[!/L!]</a></span></h1>
+<div id="content">
+	{MESSAGE}
+	<div class="info">[!L!]Categories marked with (Locked) are system categories and cannot be renamed or deleted. Please create new ones if you want custom categories.[!/L!]</div>
+  <table cellspacing="0" class="list application table filter bgwhite" id="categories">
+    <thead>
+      <tr>
+        <th>[!L!]Category[!/L!]</th>
+		<th>&nbsp;</th>
+        <th>[!L!]Actions[!/L!]</th>
+      </tr>
+    </thead>
+    <tbody class="categories">
+      <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr class="{CLASS}">
+      <td>{SPACER}{NAME}</td>
+	  <td>&nbsp;</td>
+      <td class="actions">  	  
+	  	<a href="{EDIT_LINK}" class="edit">[!L!]Edit[!/L!]</a><a href="{DELETE_LINK}" class="delete">[!L!]Delete[!/L!]</a>
+      </td>
+    </tr>
+      <!-- END DYNAMIC BLOCK: template_row -->
+    {BEGIN_UNLESS}
+    <tr class="even">
+      <td colspan="3" align="center">[!L!]There are no categories in your database, to add a new one please[!/L!]<br />
+        <strong><a href="{ADD_LINK}" style="background:none;padding-left:0px;">[!L!]click here[!/L!]</a></strong></td>
+    </tr>
+	{END_UNLESS}
+    </tbody>    
+  </table>
+</div>

@@ -1,0 +1,27 @@
+<h1>[!L!]Title:[!/L!] {TITLE}</h1>
+<h2>[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}</h2>
+<h2>[!L!]Time period:[!/L!] {TIME_PERIOD}</h2>
+<table cellspacing="0" class="list" >
+  <thead>
+    <tr>
+      <th class="first-of-type" style="width:209px;"><strong>[!L!]www[!/L!]</strong></th>
+	   <th style="width:160px;"><strong>[!L!]User[!/L!]</strong></th>
+      <th style="width:160px;"><strong>%</strong></th>
+      <th style="width:160px"><strong>[!L!]Time(h)[!/L!]</strong></th>
+      <th style="width:160px"><strong>[!L!]Time(m)[!/L!]</strong></th>
+      <th style="width:160px"><strong>[!L!] Time(s)[!/L!]</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr class="{CLASS}">
+	  <td>{WWW}</td>
+      <td>{USER}</td>
+	  <td>{PROCENT}</td>
+      <td>{TIME_H}</td>
+      <td>{TIME_M}</td>
+      <td>{TIME_S}</td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+  </tbody>
+</table>

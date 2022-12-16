@@ -1,0 +1,34 @@
+
+<table cellspacing="0" class="list application">
+  <thead>
+    <tr>
+      <th class="first-of-type" width="220"><strong>[!L!]Software[!/L!]</strong></th>
+      <th><strong>[!L!]User[!/L!]</strong></th>
+      <th><strong>[!L!]Computer[!/L!]</strong></th>
+      <th><strong>[!L!]Date[!/L!]</strong></th>
+      <th><strong>&nbsp;</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr class="{CLASS} {TOP_BORDER}">
+      <td>{APPLICATION}</td>
+      <td>{USER}</td>
+      <td>{COMPUTER} ({IP})</td>
+      <td>{DATE}</td>
+      <td><a href="#" class="category si open">[!L!]Details[!/L!]</a></td>
+    </tr>
+	<tr class="hide {CLASS}">
+      <td colspan="5">
+	  <strong class="indent">[!L!]Version: [!/L!]</strong>{VERSION}<br>
+	  <strong class="indent">[!L!]Path: [!/L!]</strong> {PATH}</td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+  </tbody>
+</table>
+<ul class="pagination hide">
+    <li class="prev"><a href="{BACKLINK}">[!L!]Previous[!/L!]</a></li>
+    {PAGG}
+    <li class="next"><a href="{NEXTLINK}">[!L!]Next[!/L!]</a></li>
+    <li class="last"><a href="{LAST_LINK}">[!L!]Last[!/L!]</a></li>
+</ul>

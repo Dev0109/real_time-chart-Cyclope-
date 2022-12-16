@@ -1,0 +1,55 @@
+<!-- BEGIN DYNAMIC BLOCK: ajax -->
+<div id="casualty">
+  <h1 class="windowtitle">[!L!]Settings[!/L!]</h1>
+  <div id="content">{MESSAGE}
+    <div class="pagetabs">
+      <ul class="toolbar">
+        <li class="generalsettings"><a href="index.php?pag=settings#generalsettings"><span>[!L!]General Settings[!/L!]</span></a></li>
+        <li class="workschedule"><a href="index.php?pag=settings#workschedule"><span>[!L!]Work Schedule[!/L!]</span></a></li>
+        <li class="ui-tabs-selected othersettings"><a href="index.php?pag=casualty"><span>[!L!]Other Settings[!/L!]</span></a></li>
+      </ul>
+	  <div id="generalsettings"></div>
+	  <div id="workschedule"></div>
+      <div id="othersettings">
+        <div class="twocols">
+          
+          <div class="rightcol casualty">
+		  <!-- END DYNAMIC BLOCK: ajax -->
+            <div class="bd-ajax">
+              <h1>[!L!]Cost of working hour for[!/L!] {USER_NAME}</h1>
+              <form action="index.php#othersettings" method="post">
+                <input type="hidden" name="act" value="cost-update" />
+                <input type="hidden" name="pag" value="settings" />
+                <input type="hidden" name="department_id" value="{DEPARTMENT_ID}" />
+                <fieldset>
+                <div class="req">
+                  <label for="cost_per_hour">[!L!]Cost per hour[!/L!]</label>
+                  <span>
+                  <input type="text" name="cost_per_hour" id="cost_per_hour" value="{COSST_PER_HOUR}"  style="width:200px;"/>
+                  </span>
+                  <select name="currency" style="width:55px;">
+                    
+                    
+              
+	  {CURRENCY}
+	  
+            
+                  
+                  </select>
+                </div>
+                <div class="buttons"><span class="submit">
+                  <button type="submit"><b>[!L!]Save[!/L!]</b></button>
+                  </span></div>
+                </fieldset>
+              </form>
+			
+			<!-- BEGIN DYNAMIC BLOCK: ajax -->
+            </div>
+          </div>
+          <div id="sidebar" class="leftcol">{TREE}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END DYNAMIC BLOCK: ajax -->

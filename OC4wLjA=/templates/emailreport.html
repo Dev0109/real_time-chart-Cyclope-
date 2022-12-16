@@ -1,0 +1,31 @@
+<div id="emailreport" class="wizard">
+  <div id="content">
+    <h1 class="windowtitle">{PAGE_TITLE}</h1>
+    {MESSAGE}
+    <div class="pagetabs">
+      <ul class="toolbar tabingsidebar">
+        <li class="ui-tabs-selected selectreport"><a href="#selectreport"><span>[!L!]Report Type[!/L!]</span></a></li>
+        <li class="for"><a href="#for"><span>[!L!]For[!/L!]</span></a></li>
+        <li class="frequency"><a href="#frequency"><span>[!L!]Frequency[!/L!]</span></a></li>
+        <li class="sendto"><a href="#sendto"><span>[!L!]Send To[!/L!]</span></a></li>
+        <li class="sendfrom"><a href="#sendfrom"><span>[!L!]Send From[!/L!]</span></a></li>
+        <li class="details"><a href="#details"><span>[!L!]Details[!/L!]</span></a></li>
+        <li class="save"><a href="#save"><span>[!L!]Save[!/L!]</span></a></li>
+      </ul>
+      <form action="index.php" method="post" id="frm">
+        <input type="hidden" name="email_report_id" value="{EMAIL_REPORT_ID}" />
+        <input type="hidden" name="act" value="{ACT}" />
+        <input type="hidden" name="pag" value="{PAG}" />
+        <div class="tab-content tabingsidebar_content">
+        <div id="selectreport" class="tab"> {SELECTREPORTS} </div>
+        <div id="for" class="tab ui-tabs-hide"> {FOR} </div>
+        <div id="frequency" class="tab ui-tabs-hide"> {FREQUENCY} </div>
+        <div id="sendto" class="tab ui-tabs-hide"> {SENDTO} </div>
+        <div id="sendfrom" class="tab ui-tabs-hide"> {SENDFROM} </div>
+        <div id="details" class="tab ui-tabs-hide"> {DETAILS} </div>
+        <div id="save" class="tab ui-tabs-hide"> {SAVE} </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>

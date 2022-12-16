@@ -1,0 +1,87 @@
+<!-- BEGIN DYNAMIC BLOCK: casual_ajax -->
+{DEBUGMESSAGE}
+<div class="twocols">
+	
+	<div class="rightcol casualty">
+		<div class="bd-ajax">
+<!-- END DYNAMIC BLOCK: casual_ajax -->
+      <!--<h1>[!L!]Cost of working hour for[!/L!] {USER_NAME}</h1>
+  <div class="info">[!L!]Allows you to define an average cost per working hours (it applies at department level) and you can see the total costs of nonproductive time in Top Productive / Unproductive report. For more details please press Help button.[!/L!]</div>-->
+			<form action="index.php#othersettings" method="post">
+				<input type="hidden" name="act" value="cost-update" />
+				<input type="hidden" name="pag" value="settings" />
+				<input type="hidden" name="department_id" value="{DEPARTMENT_ID}" />
+				<fieldset>
+				  <!--div class="req">
+					<label for="cost_per_hour">[!L!]Cost per hour[!/L!]</label>
+					<span>
+					<input type="text" name="cost_per_hour" id="cost_per_hour" value="{COST_PER_HOUR}"  style="width:200px;"/>
+					</span>
+					<select name="currency" style="width:55px;">
+					  {CURRENCY}
+					</select>
+				  </div-->
+				</fieldset>
+				<div class="extrareporttoggle">
+					<div class="insider title">
+						<h1>[!L!]Send Overview report by mail[!/L!]</h1>
+						<div class="info">[!L!]We recommend to keep the options checked and in this way the administrator receives reports with activity by email.[!/L!]</div>
+					</div>
+					<fieldset>
+						<div class="chk req daily">
+							<p></p>
+							<input type="checkbox" name="extrareport_daily" id="extrareport_daily" value="checked" {EXTRAREPORT_DAILY} />
+							<label for="extrareport_daily">[!L!]Daily[!/L!]</label>
+						</div>
+						<div class="chk req weekly">
+							<p></p>
+							<input type="checkbox" name="extrareport_weekly" id="extrareport_weekly" value="checked" {EXTRAREPORT_WEEKLY} />
+							<label for="extrareport_weekly">[!L!]Weekly[!/L!]</label>
+						</div>
+						<div class="chk req monthly">
+							<p></p>
+							<input type="checkbox" name="extrareport_monthly" id="extrareport_monthly" value="checked" {EXTRAREPORT_MONTHLY} />
+							<label for="extrareport_monthly">[!L!]Monthly[!/L!]</label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="extrareporttoggle">
+					<div class="insider title">
+						<h1>[!L!]Anonymize username and computer name[!/L!]</h1>
+						<div class="info">[!L!]Check this if you want to ensure that no personal data is recorded from the users.[!/L!]</div>
+					</div>
+					<fieldset>
+						<div class="chk req anonymize">
+							<p></p>
+							<input type="checkbox" name="anonymize_names" id="anonymize_names" value="checked" {ANONYMIZE_NAMES} />
+							<label for="anonymize_names">[!L!]Anonymize names for both user and computer[!/L!]</label>
+						</div>
+					</fieldset>
+				</div>
+				<fieldset>
+					<div class="buttons"><span class="submit">
+					<button type="submit"><b>[!L!]Save[!/L!]</b></button>
+					</span></div>
+				</fieldset>
+			</form>
+		<!-- BEGIN DYNAMIC BLOCK: casual_ajax1 -->
+		</div>
+	</div>
+	<div id="sidebar2" class="leftcol">
+		<div class="box active monitored">
+			<h3>[!L!]Monitored[!/L!]</h3>
+			<div class="tabs">
+				<ul class="toolbar">
+					<li class="ui-tabs-selected session"><a href="#sessions2" rel="Sessions">[!L!]Sessions[!/L!]</a></li>
+				</ul>
+				<div id="sessions2" class="tab">[!L!]1[!/L!]</div>
+			</div>
+		</div>
+		<div id="filter-box">
+			<div class="rightsearch">
+			<input id="filter2" name="filter" value="[!L!]Find Session[!/L!]" />
+		</div>
+		</div>
+	</div>
+</div>
+<!-- END DYNAMIC BLOCK: casual_ajax1 -->

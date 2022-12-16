@@ -1,0 +1,80 @@
+{PDF_HEADER}<!-- BEGIN DYNAMIC BLOCK: ajax -->
+<div id="sequence">
+<!-- <h1{PDF_HIDE}>[!L!]Sequence for [!/L!]  <span id="append">{APPEND}</span> {BACK_BUTTON}</h1>
+<ul class="filter {PDF_CLASS}"{PDF_HIDE} >
+  <li class="time"> [!L!]Filters[!/L!] 
+    <input type="text" name="time[time]" id="time-filter" class="flobn-range" value="{DEFAULT_VALUE}" />
+	<input type="hidden" name="app" id="additional-filter-application" value="{APP}" />
+	<input type="hidden" name="win" id="additional-filter-window" value="{WIN}" />
+	<input type="hidden" name="wact" id="additional-filter-window-active" value="{WACT}" />
+  </li>
+  <li class="export"> <a href="{HELP_LINK}" target="_blank" id="export-help" {SELECTED_SUPPORT}>[!L!]Explain report[!/L!]</a> <a href="index.php?pag=sequence&act=reports-sequence{EXPORT_APP_FILTER}" id="export-csv" >[!L!]Download CSV[!/L!]</a> <a href="index.php?pag=sequence&act=reports-sequence&format=xls{EXPORT_APP_FILTER}" id="export-xls" >[!L!]Download XLS[!/L!]</a> <a href="index.php?pag=sequence&render=pdf{EXPORT_APP_FILTER}" target="_blank" id="export-pdf" >[!L!]Generate PDF[!/L!]</a> </li>
+</ul> -->
+  <div class="col-md-12 p-0 overtitle">
+      <ul class="filter" {PDF_HIDE}>
+          <li class="col-md-12 time text-left p-0">
+            <h1 {PDF_HIDE}>[!L!]Sequence for [!/L!]  <div class="main-btn"><span id="append" class="cyclope">{APPEND}</span></div></h1>
+
+          
+
+        </li>
+
+          <li class="col-md-12 export text-right p-0 time">
+            <div class="pull-left">
+              <span class="filter-img"><img src="{CURRENT_VERSION_FOLDER}assets/images/filter.png" class="filter_icon"></span> <!-- <span class="filtertxt">[!L!]Filters[!/L!]</span> -->
+          
+          <input type="text" name="time[time]" class="flobn-range" id="time-filter" value="{DEFAULT_VALUE}" />
+    <!--    <div class="tooltipcustom">?
+        <span class="tooltiptext">Select the desired time frame. The default value is Today's date.</span>
+        <img data-toggle="tooltip" data-placement="top" title="Select the desired time frame. The default value is Today's date." src="{CURRENT_VERSION_FOLDER}assets/images/tooltip.png"></div> -->
+            </div>
+
+        <div class="pull-right">
+          <a href="{HELP_LINK}" target="_blank" id="export-help" {SELECTED_SUPPORT}><img src="{CURRENT_VERSION_FOLDER}assets/images/help_menu.png"></a>
+<!--    
+             <a href="index.php?pag=emailreport&preset=19" id="export-email" ><img src="{CURRENT_VERSION_FOLDER}assets/images/email.png"></a>
+ -->
+             <a href="index.php?pag=sequence&act=reports-sequence{EXPORT_APP_FILTER}" id="export-csv" ><img src="{CURRENT_VERSION_FOLDER}assets/images/csv.png" class="csv"></a>
+              <a href="index.php?pag=sequence&act=reports-sequence&format=xls{EXPORT_APP_FILTER}" id="export-xls" ><img src="{CURRENT_VERSION_FOLDER}assets/images/xls1.png" class="xls"></a>
+
+             <a href="index.php?pag=sequence&render=pdf{EXPORT_APP_FILTER}" target="_blank" id="export-pdf" ><img src="{CURRENT_VERSION_FOLDER}assets/images/pdf.png" class="pdf"></a></div>
+          </li>
+      </ul>
+  </div> 
+  <div class="bd-ajax">
+  <!-- END DYNAMIC BLOCK: ajax -->
+{NO_DATA_MESSAGE}{ENCRYPTMESSAGERAW}
+<div class="sequencecount">
+    <!-- BEGIN DYNAMIC BLOCK: sequencecount_row -->
+    <div class="sequence"><span class="sname">{SEQUENCECOUNTNAME}: </span>{SEQUENCECOUNT}</div>
+    <!-- END DYNAMIC BLOCK: sequencecount_row -->
+</div>
+<div class="table-responsive">
+<table cellspacing="0" class="table filter list timeline sequence {HIDE_CONTENT}">
+  <thead>
+  <th class="first-of-type">[!L!]Total[!/L!]</th>
+    <th>[!L!]Activity[!/L!]</th>
+    <th>[!L!]Sequence[!/L!]</th>
+    <!-- <th style="padding-right:10px;">Productivity</th>-->
+    </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr class="{CLASS} {HIGHLIGHT}" data-department="{DEPARTMENT}">{ROW}
+      <td class="time">{TIME_FORMATED}<br />{INTERVAL_START} - {INTERVAL_END}</td>
+      <td class="application"><span style="background-color:#{COLOR};">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="{APP_FILTER_LINK}"><b>{APPLICATION}</b></a><br />
+       {WINDOWS}
+		<ul class="list hide">
+		<!-- BEGIN DYNAMIC BLOCK: window_template_row -->
+		  <li class="{WINDOW_CLASS}"><a href="{WINDOW_FILTER_LINK}"><strong>{WINDOW_TIME}</strong>{WINDOW_NAME}{WINDOW_ACTIVE}</a></li>
+		<!-- END DYNAMIC BLOCK: window_template_row -->  
+		</ul></td>
+      <td>{SEQUENCENAME}</td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+  </tbody>
+</table>
+</div>
+<!-- BEGIN DYNAMIC BLOCK: ajax -->
+</div>
+</div>
+ <!-- END DYNAMIC BLOCK: ajax -->

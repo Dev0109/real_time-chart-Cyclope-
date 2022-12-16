@@ -1,0 +1,6 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+Window Name,Total Time(h),Total Time(m),Total Time(s),Active Time(h),Active Time(m),Active Time(s),Idle Time(h),Idle Time(m),Idle Time(s)<!-- BEGIN DYNAMIC BLOCK: applicationforms_row -->
+"{WINDOWNAME}","{TOTAL_H}","{TOTAL_M}","{TOTAL_S}","{ACTIVE_H}","{ACTIVE_M}","{ACTIVE_S}","{IDLE_H}","{IDLE_M}","{IDLE_S}"<!-- END DYNAMIC BLOCK: applicationforms_row -->

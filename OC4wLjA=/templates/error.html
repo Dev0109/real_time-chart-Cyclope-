@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Error Occured</title>
+<link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/forms.css"/>
+<link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/defaults.css"/>
+<link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/layout.css"/>
+<link  rel="stylesheet" type="text/css" href="OC4wLjA=/assets/css/custom.css" rel="stylesheet" type="text/css" />
+<link  rel="stylesheet" type="text/css"  href="OC4wLjA=/assets/css/core.css" rel="stylesheet" type="text/css" />
+<link href="OC4wLjA=/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+#error-wrap {
+/*	border:1px solid #f1f1f1;*/
+	/*-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;*/
+	margin:0 auto;
+  float: left;
+  width: 100%;
+  background-color: #f3f6f8
+}
+
+.mainsection a.details {
+    margin-top: 14px;
+}
+#error-wrap .col-sm-3 {
+    clear: none !important;
+    width:25%;
+}
+#error-wrap h1 {
+    font-size: 22px;
+    padding: 15px 20px;
+    color: #333;
+    float: left;
+    width: auto;
+    margin: 0
+}
+#error-wrap p {
+    font-size: 16px;
+    color: #333;
+    font-family: 'Avinira-regular' !important;
+    padding-left: 0;
+    width: auto;
+    text-align: left;
+}
+#error-wrap #mastcontent {
+	border:1px solid #c2c2c2;
+	background-color:#ffffff;
+/*	margin:10px;*/
+	padding:10px;
+}
+#error-wrap .buttons {
+    text-align: left;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+.details,
+.details:hover{
+	float:right;	
+    display:inline-block;
+    margin:0 7px 0 0;	
+    background-color:#f5f5f5;
+    border:1px solid #dedede;
+	text-shadow:0px 1px 0px #fff;
+	text-transform:uppercase;
+	border-radius:3px;
+	-moz-border-radius:3px;
+    font-size:100%;
+    line-height:130%;
+    text-decoration:none;
+    color:#565656;
+    cursor:pointer;
+    padding:5px 10px 6px 7px; /* Links */
+	vertical-align:middle;
+}
+.details:hover{
+    background-color:#e5e5e5;
+    border:1px solid #d5d5d5;
+    color:#333;
+}
+/* BUTTONS */
+.buttons a,
+a.button,
+.buttons button{
+    display:inline-block;
+    margin:0 7px 0 0;	
+    background-color:#f5f5f5;
+    border:1px solid #dedede;
+	text-shadow:0px 1px 0px #fff;
+	text-transform:uppercase;
+	border-radius:3px;
+	-moz-border-radius:3px;
+    font-size:100%;
+	font-weight:bold;
+    line-height:130%;
+    text-decoration:none;
+    color:#565656;
+    cursor:pointer;
+    padding:5px 10px 6px 7px; /* Links */
+	vertical-align:middle;
+}
+
+.buttons button{
+    width:auto;
+	height:auto;
+    overflow:visible;
+    padding:4px 10px 3px 7px; /* IE6 */
+}
+
+.buttons button[type]{
+    padding:5px 10px 5px 7px; /* Firefox */
+    line-height:17px; /* Safari */
+}
+
+*:first-child+html button[type]{
+    padding:4px 10px 3px 7px; /* IE7 */
+}
+
+.buttons button img, 
+.buttons a img,
+a.button img{
+    margin:0 3px -3px 0 !important;
+    padding:0;
+    border:none;
+    width:16px;
+    height:16px;
+}
+
+/* STANDARD */
+button:hover, 
+.buttons a:hover,
+a.button:hover{
+    background-color:#e5e5e5;
+    border:1px solid #d5d5d5;
+    color:#333;
+}
+
+.buttons a:active,
+a.button:active{
+    background-color:#6299c5;
+    border:1px solid #6299c5;
+    color:#fff;
+}
+
+
+
+/* POSITIVE */
+button.positive,
+.buttons a.positive,
+a.button.positive{
+    color:#529214;
+}
+
+.buttons a.positive:hover, 
+button.positive:hover,
+a.button.positive:hover{
+    background-color:#D0E5F2;
+    border:1px solid #D0E5F2;
+    color:#0092b3;
+}
+
+.buttons a.positive:active,
+a.button.positive:active{
+    background-color:#529214;
+    border:1px solid #529214;
+    color:#fff;
+}
+
+
+
+/* NEGATIVE */
+.buttons a.negative,
+a.button.negative,
+button.negative{
+    color:#d12f19;
+}
+
+.buttons a.negative:hover,
+a.button.negative:hover,
+button.negative:hover{
+    background:#fbe3e4;
+    border:1px solid #fbc2c4;
+    color:#d12f19;
+	text-decoration:none;
+}
+
+.buttons a.negative:active,
+a.button.negative:active{
+    background-color:#d12f19;
+    border:1px solid #d12f19;
+    color:#fff;
+}
+.mainsection {
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+    box-shadow: 0px 1px 0px 1px #d8dbdd;
+    background-color: #fff;
+    webkit-box-shadow: 0px 2px 0px 1px #d8dbdd;
+}
+.mainsection h1{
+  float: left;
+}
+#error-wrap form {
+    background-color: #fff;
+    float: left;
+    width: 100%;
+    padding: 15px;
+}
+#error-wrap fieldset .even{
+  background-color: transparent;
+}
+.error-page label {
+    float: left;
+    text-align: left;
+    font-size: 14px;
+    width: 20%
+}
+.error-page {
+    float: left;
+    width: 40%;
+    padding: 0 0 0 20px;
+}
+.error-page span {
+    width: 80%;
+    float: left;
+}
+
+</style>
+</head>
+<body>
+<div id="error-wrap">
+  <!-- <div id="mastcontent"> -->
+    <div class="mainsection">
+      <h1>Error</h1>
+      <a href="{PATH}" class="details" target="_blank">See Report Details</a>
+    </div>
+      
+    <form action="index.php" method="post">
+      <input type="hidden" name="pag" value="error" />
+      <input type="hidden" name="act" value="error-send" />
+      <input type="hidden" name="file" value="{FILE}" />
+      <p>A problem has occured, forcing Cyclope to quite. To help avoid similiar problems in the future, please send an error report bellow:</p>  
+      <div class="error-page">
+      <fieldset>
+        <div class="row">
+        <div class="even">
+          <label for="lastpage">Last Page Visited</label>
+          <span>
+          <input type="text" name="lastpage" id="lastpage" value="{LASTPAGE}" />
+          </span>
+        </div>
+        <div class="even">
+          <label for="comments">Comments</label>
+          <span>
+          <textarea name="comments" id="comments" rows="5">{COMMENTS}</textarea>
+          <p>Please fill in this field with information we can use to reproduce the error you have just encountered. Information like filters, previous actions anything you think that could potentialy be usefull.</p>
+          </span>
+          
+        </div>
+        <div class="even">
+          <label for="email">Contact email</label>
+          <span>
+          <input type="text" name="email" id="email" value="{EMAIL}" />
+          </span> </div>
+        <div class="chk">
+          <label><p>After Sending this form:</p></label>
+          <label for="after1">
+            <input type="radio" name="after" id="after1" value="1" checked="checked">
+            Log out</label>
+          <label for="after2">
+            <input type="radio" name="after" id="after2" value="2">
+            Return to Overview</label>
+          <label for="after3">
+            <input type="radio" name="after" id="after3" value="3" >
+            Reset All filters and reload page</label>
+        </div>
+      </div></div>
+        <div class="buttons">
+          <button class="positive" type="submit">Send Report</button>
+          <a href="index.php?pag=overview" class="negative">Do Not Send Report</a> </div>
+      </fieldset>
+    </form>
+ <!--  </div> -->
+</div>
+</body>
+</html>

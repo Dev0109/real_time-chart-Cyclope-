@@ -1,0 +1,6 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+Username,%,Total Time(h),Total Time(m),Total Time(s),Unproductive Time(h),Unproductive Time(m),Unproductive Time(s),Cost,Currency<!-- BEGIN DYNAMIC BLOCK: topunprod_row -->
+"{USERNAME}","{PERCENT}","{TOTAL_TIME_H}","{TOTAL_TIME_M}","{TOTAL_TIME_S}","{UNPROD_TIME_H}","{UNPROD_TIME_M}","{UNPROD_TIME_S}","{COST}","{CURRENCY}"<!-- END DYNAMIC BLOCK: topunprod_row -->

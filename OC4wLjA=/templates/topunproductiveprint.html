@@ -1,0 +1,31 @@
+<h1>[!L!]Title:[!/L!] {TITLE}</h1>
+<h2>[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}</h2>
+<h2>[!L!]Time period:[!/L!] {TIME_PERIOD}</h2>
+<table cellspacing="0" class="list" >
+  <thead>
+    <tr>
+      <th class="first-of-type" style="width:209px;"><strong>[!L!]User[!/L!]</strong></th>
+      <th style="width:160px;"><strong>%</strong></th>
+      <th style="width:160px"><strong>[!L!]Total Time(h)[!/L!]</strong></th>
+      <th style="width:160px"><strong>[!L!]Total Time(m)[!/L!]</strong></th>
+      <th style="width:160px"><strong>[!L!]Total Time(s)[!/L!]</strong></th>
+	  <th style="width:160px"><strong>[!L!]Unproductive Time(h)[!/L!]</strong></th>
+      <th style="width:160px"><strong>[!L!]Unproductive Time(m)[!/L!]</strong></th>
+      <th style="width:160px"><strong>[!L!]Unproductive Time(s)[!/L!]</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr class="{CLASS}">
+      <td>{USER}</td>
+	  <td>{PROCENT}</td>
+      <td>{TOTAL_TIME_H}</td>
+      <td>{TOTAL_TIME_M}</td>
+      <td>{TOTAL_TIME_S}</td>
+	  <td>{UNPRODUCTIVE_TIME_H}</td>
+      <td>{UNPRODUCTIVE_TIME_M}</td>
+      <td>{UNPRODUCTIVE_TIME_S}</td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+  </tbody>
+</table>

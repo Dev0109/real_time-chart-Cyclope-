@@ -1,0 +1,51 @@
+{PDF_HEADER}<!-- BEGIN DYNAMIC BLOCK: ajax -->
+<div id="topapplications">
+  <div class="col-md-12 p-0 overtitle">
+      <ul class="filter">
+        <li class="col-md-12 time text-left p-0">
+            <h1>{PAGE_TITLE} 
+              <div class="main-btn"><span id="append" class="cyclope">{APPEND}</span></div>
+              <!-- <span class="tooltip" {PDF_HIDE} data-toggle="tooltip" title='[!L!]This report shows which are the 15 most used applications by the selected employee or the selected department. To see all the applications click the "Others" link on the last row of the report. This report can be filtered by date and working schedule.[!/L!]'>?</span> -->
+              
+            </h1>
+          
+              <!--  </li> -->
+            
+        </li>
+        
+        <li class="col-md-12 export text-right p-0 time">
+          <div class="pull-left">
+            <!-- <div class="tooltipcustom">?
+               <span class="tooltiptext">[!L!]This report shows which are the 15 most used applications by the selected employee or the selected department. To see all the applications click the "Others" link on the last row of the report. This report can be filtered by date and working schedule.[!/L!]</span>
+            </div> -->
+           <span class="filter-img"><img src="OC4wLjA=/assets/images/filter.png" class="filter_icon"></span>
+           <!-- <span class="filtertxt">Filters</span> -->
+               <!-- <li class="time"> [!L!]Filters[!/L!]  -->
+                  <input type="text" name="time[time]" class="flobn-range" id="time-filter" value="{DEFAULT_VALUE}" />
+                  <!-- <span class="tooltip" {PDF_HIDE} title="[!L!]Select the desired time frame. The default value is Today's date.[!/L!]">?</span> -->
+                   <div class="tooltipcustom">?
+  <span class="tooltiptext">[!L!]Select the desired time frame. The default value is Today's date.[!/L!]</span>
+</div>
+        </div>
+          <div class="pull-right">
+             <a href="{HELP_LINK}" target="_blank" id="export-help" {SELECTED_SUPPORT}><img src="{CURRENT_VERSION_FOLDER}assets/images/help_menu.png"></a> 
+             <a href="index.php?pag=emailreport&preset=23" id="export-email" ><img src="{CURRENT_VERSION_FOLDER}assets/images/email.png"></a>
+             <a href="index.php?pag=topapplications&act=reports-topapplications" id="export-csv" ><img src="{CURRENT_VERSION_FOLDER}assets/images/csv.png" class="csv"></a>
+             <a href="index.php?pag=topapplications&act=reports-topapplications&format=xls{EXPORT_APP_FILTER}" id="export-xls" ><img src="{CURRENT_VERSION_FOLDER}assets/images/xls1.png"></a>
+             <a href="index.php?pag=topapplications&render=pdf" target="_blank" id="export-pdf" ><img src="{CURRENT_VERSION_FOLDER}assets/images/pdf.png" class="pdf"></a>
+           </div>
+        </li>
+      </ul>
+    
+</div>
+  
+  <div class="bd-ajax">
+    <!-- END DYNAMIC BLOCK: ajax -->
+	{NO_DATA_MESSAGE}{ENCRYPTMESSAGERAW}
+    <div class="box bgwhite{HIDE_CONTENT}">
+      <h3>[!L!]Top Applications[!/L!]</h3>
+      {APP_USAGE} </div>
+    <!-- BEGIN DYNAMIC BLOCK: ajax -->
+  </div>
+</div>
+<!-- END DYNAMIC BLOCK: ajax -->

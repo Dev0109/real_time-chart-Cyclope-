@@ -1,0 +1,6 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}{HIDE_START}[!L!]Window[!/L!],[!L!]Type[!/L!],[!L!]Time(h)[!/L!],[!L!]Time(m)[!/L!],[!L!]Time(s)[!/L!],[!L!]% from Active Time[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: internet_row -->
+"{WEBPAGE}","{TYPE}","{TIME_H}","{TIME_M}","{TIME_S}","{WIDTH}"<!-- END DYNAMIC BLOCK: internet_row -->

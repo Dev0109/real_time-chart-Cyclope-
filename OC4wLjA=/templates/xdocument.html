@@ -1,0 +1,39 @@
+{PDF_HEADER}
+<!--div id="productivity_chart" class="{HIDE_CONTENT}"><div class="graphtitle">[!L!]Document Activity by Productivity[!/L!]<span class="tooltip" {PDF_HIDE} title="[!L!]This chart shows the productivity settings that you establish for all documents used. This report can be filtered by date and working schedule.[!/L!]">?</span></div><div class="chart">{AJAX_DOCCHART}</div></div-->
+<div style="clear: both"></div>
+{NO_DATA_MESSAGE}
+	{DEBUGMESSAGE}
+	<!--div class="info productive" {HIDE_STYLE}>[!L!]Change the productivity settings for a document by sliding left for distracting and right for productive.[!/L!]<img src="{HELPIMG}" /></div-->
+    <input type="hidden" name="sortcolumn" class="sortcolumn" id="sortcolumn" />
+    <input type="hidden" name="sortorder" class="sortorder" id="sortorder" />
+<table cellspacing="0" class="table list application filter \{HIDE_CONTENT} {PDF_CLASS}">
+  <thead>
+    <tr>
+      <th class="first-of-type"><strong><a {ANCHOR_INNER_1} href="">[!L!]Document[!/L!]</a></strong></th>
+      <!--<th class="cat"><strong>[!L!]Category[!/L!]</strong></th>-->
+      <th class="time"><strong><a {ANCHOR_INNER_0} href="">[!L!]Time[!/L!]</a></strong></th>
+      <th class="fromactive" class="th-activeperc"><strong>[!L!]% from Active Time[!/L!]</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr data-department="{DEPARTMENT}">
+      <td><img {PDF_HIDE} src="{ICON_SRC}" /> {NAME}</td>
+      <!--<td><a href="#" class="category"  rel="{DOCUMENT_ID}" rev="#cat{CATEGORY_ID}">{CATEGORY}</a></td>-->
+      <!--td><div class="slider flobn-slider {CSS_CLASS}" {PDF_HIDE} rel="{ID}" data-duration="{DURATION}" data-parentapp="{APPLICATION_ID}" data-childtype="{CHILD_TYPE}"><a class="handle">&nbsp;</a></div>
+        <div style="text-align:center;">{TYPE}</div></td-->
+      <td><span>{TIME}</span></td>
+      <td class="td-activeperc"><div>{WIDTH}%</div></td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+  </tbody>
+</table>
+<div class="pagination" {PDF_HIDE}>
+ <ul>
+    <li>[!L!]Go To[!/L!]:<input type="text"  data-page="{FILTER_PAGE}" class="p" value="" name="offset" /></li>
+    <li>[!L!]Show Rows[!/L!]:<select class="rp" data-page="{FILTER_PAGE}">{PAGES}</select></li>
+    <li>{INTERVAL} <span>[!L!]of[!/L!]</span> {TOTAL}</li>
+    <li><a href="{BACKLINK}" class="prev">&nbsp;</a></li>
+    <li><a href="{NEXTLINK}" class="next">&nbsp;</a></li>    
+  </ul>
+</div>

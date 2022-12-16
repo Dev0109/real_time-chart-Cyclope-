@@ -1,0 +1,50 @@
+<h1 class="windowtitle">{PAGE_TITLE}</h1>
+<div class="selectemployee panelrow productivitypage">
+{MESSAGE}
+  <form action="index.php" method="post" id="frm">
+    <input type="hidden" name="mid" value="{MEMBER_ID}" />
+    <input type="hidden" name="act" id="act" value="{ACT}" />
+    <input type="hidden" name="pag" value="myaccount" />
+    
+    <fieldset class="zebra">
+     <div class="row">
+      <div class="req col-sm-3">
+        <label for="first_name">[!L!]First name[!/L!]</label>
+        <span>
+        <input type="text" name="first_name" id="first_name" value="{FIRST_NAME}" />
+        </span> </div>
+      <div class="req col-sm-3">
+        <label for="last_name">[!L!]Last Name[!/L!]</label>
+        <span>
+        <input type="text" name="last_name" id="last_name" value="{LAST_NAME}" />
+        </span> </div>
+      <div class="req uninstall-keeper col-sm-3">
+        <label for="password">[!L!]Password[!/L!]</label>
+        <span>
+        <input type="password" name="password" id="password" value="{PASSWORD}" />
+        </span> </div>
+      <div class="req col-sm-3">
+        <label for="password2">[!L!]Re-type Password[!/L!]</label>
+        <span>
+        <input type="password" name="password2" id="password2" value="{PASSWORD2}" />
+        </span></div> 
+        </div>  
+        <div class="row">  
+      <div class="col-sm-3">
+        <label for="email">[!L!]Email[!/L!]</label>
+        <span>
+        <input type="text" name="email" value="{EMAIL}"  maxLength="100" size="30" class="txtField" />
+        </span> </div>
+        </div>
+      <div class="buttons"><span class="submit">
+        <button type="submit" id="save_member"><b>[!L!]Save[!/L!]</b></button>
+        </span></div>
+    </fieldset>
+  </form>
+  </div>
+<script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/jquery.pstrength-min.1.2.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#password').pstrength();
+});
+</script>

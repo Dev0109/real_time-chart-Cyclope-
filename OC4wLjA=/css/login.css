@@ -1,0 +1,112 @@
+#login {
+	margin:0px;
+	padding:0px;
+	border:0px;
+    background: #eaeaea !important
+	}
+#login #wrap {
+    background: none repeat scroll 0 0 transparent;
+    top: 50%;
+	margin-top:-200px;
+    left: 50%;
+    margin-left: -151px;
+    position: absolute;
+    width: 320px;
+}
+#login #wrap #mainwrap {
+    width: 320px;
+	background:none transparent; 
+}
+#login #wrap #mainwrap #innercontentwrapper {
+    /*background: url("../img/sprite.gif") no-repeat scroll -4916px -104px transparent;*/
+    margin: 0 auto;
+    padding: 15px 0 0;
+    width: 320px;
+}
+#login #wrap #mainwrap #contentwrapper {
+   /* background: url("../img/sprite.gif") no-repeat scroll -4915px -104px transparent;*/
+    margin: 0;
+    padding: 0;
+}
+#login #wrap #mainwrap #content {
+    /*border-left: 10px solid #F1F1F1;
+    border-right: 10px solid #F1F1F1;*/
+    margin: 0;
+    padding: 0;
+}
+#login #wrap #mainwrap #content fieldset {
+  /*  border-left: 1px solid #C2C2C2;
+    border-right: 1px solid #C2C2C2;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-top: 16px;
+    width: 280px;*/
+	background-color:#ffffff;
+    padding: 20px 15px 15px 15px;
+    margin: 0;
+    text-align: center;
+    border-radius: 3px;
+    -webkit-box-shadow:2px 2px 7px 2px rgba(0, 0, 0, 0.25);
+-moz-box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.25);
+box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.25);
+height: 270px;
+min-height: 270px;
+}
+#login #wrap #mainwrap #content fieldset img {
+    margin: 20px 0;
+}
+/*#login #wrap #mainwrap fieldset label {
+    width: 67px;
+}*/
+#login #wrap #mainwrap fieldset input:focus{outline: none;}
+#login fieldset span{
+    width: 100%;
+}
+#login fieldset span {
+    width: 100%;
+    padding: 0;
+    margin-top: 14px;
+    background:none !important;
+}
+#login label{
+    width:100%;
+    text-align: left;
+}
+#login #wrap #mainwrap fieldset input {
+    text-align: left;
+    border:1px solid #e2e2e2;
+    padding: 10px;
+}
+/*#login #wrap #mainwrap #bottom-lid {
+    background: url("../img/sprite.gif") no-repeat scroll -4916px -129px transparent;
+    height: 15px;
+    overflow: hidden;
+}*/
+#login .error {
+    margin: 0 auto 10px;
+    text-align: left;
+    width: 235px;
+}
+#wrap {
+    background: url("../img/sprite.gif") no-repeat scroll -4242px bottom #F1F1F1;
+    margin: 20px auto;
+    padding-bottom: 5px;
+    text-align: left;
+    width: 976px;
+}
+#login #mastfooter { 
+	clear:both;
+	float:none;
+	background:none transparent; 
+	padding-bottom:10px;
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	margin:0px auto;
+}
+.info{
+	position:fixed;
+	bottom:0px;
+	right:0px;
+	width:250px;
+}

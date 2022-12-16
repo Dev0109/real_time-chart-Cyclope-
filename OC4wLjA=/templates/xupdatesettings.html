@@ -1,0 +1,20 @@
+
+  <div class="info">[!L!]We recommend to enable (as default value) the automatic updates in order to keep your Cyclope installation up to date. Cyclope checks for updates once a day. [!/L!]</div>
+  <form action="index.php#updatesettings" method="post" id="updateupdate">
+	<input type="hidden" name="act" value="settings-updateupdate" id="updateupdateact" />
+    <input type="hidden" name="pag" value="settings" />
+    <fieldset>
+    	<div class="chk even">
+        	<p>&nbsp;</p>
+      		<label for="alias">
+        		<input type="checkbox" id="automatic_updates" name="automatic_updates"  value="1" {AUTOMATIC_UPDATES}/>
+      			[!L!]Enable automatic server updates[!/L!]
+      		</label>
+    	</div>
+      	<div class="buttons">
+      	   	<span class="submit">
+      			<button type="submit"><b>[!L!]Save[!/L!]</b></button>
+      		</span>
+    	</div>
+	</fieldset>
+</form>

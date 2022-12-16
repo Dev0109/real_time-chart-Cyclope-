@@ -1,0 +1,29 @@
+<table cellspacing="0" cellpadding="0" border="0" >
+  <thead>
+    <tr>
+      <th class="application">[!L!]Application Name[!/L!]</th>
+      <th class="proc">%</th>
+      <th class="time">[!L!]Time[!/L!]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr>
+      <td class="application"><b style="background-color:#{COLOR}"></b>{NAME}</td>
+      <td class="proc">{PROCENT}%</td>
+      <td class="time">{TIME}</td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+  </tbody>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" id="otherstats" class="hide">
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_other_row -->
+    <tr>
+      <td class="application" style="padding-left:25px"><b style="background-color:#{OTHER_COLOR}"></b>{OTHER_NAME}</td>
+      <td class="proc">{OTHER_PROCENT}%</td>
+      <td class="time">{OTHER_TIME}</td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_other_row -->
+  </tbody>
+</table>

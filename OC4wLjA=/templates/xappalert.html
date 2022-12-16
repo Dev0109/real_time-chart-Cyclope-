@@ -1,0 +1,31 @@
+<div class="btn">
+	<a href="#" class="add"><img src="{CURRENT_VERSION_FOLDER}img/wizard_add.png" width="16" height="16" alt="" /></a>
+</div>
+<h1>[!L!]Applications[!/L!]</h1>
+<div class="info">[!L!]Start typing (<strong>2 characters at least</strong>) the application name and then select it from the list of returned results.[!/L!]</div>
+<!-- BEGIN DYNAMIC BLOCK: template_row -->
+<fieldset class="template">
+
+  <div class="req">
+    <label for="app_txt">[!L!]Application[!/L!]:</label>
+   <span> <input type="text" name="app_txt[]" class="app_txt" value="{APP}" /></span>
+    <input type="hidden" name="app[]" value="{APP_ID}" /><a href="#" class="remove"><img src="{CURRENT_VERSION_FOLDER}img/minus.png" /></a>
+ </div>
+  <div class="req even">
+    <label for="app_hour">[!L!]Time[!/L!]:</label>
+    <select name="app_hour[]" class="small">
+      
+  
+	 		{APP_HOUR}   
+
+    </select>
+    h
+    &nbsp;
+    <select name="app_minute[]" class="small">
+      
+			{APP_MINUTE}
+
+    </select>
+    m </div>
+</fieldset>
+<!-- END DYNAMIC BLOCK: template_row -->

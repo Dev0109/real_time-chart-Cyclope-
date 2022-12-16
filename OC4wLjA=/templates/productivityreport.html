@@ -1,0 +1,143 @@
+{PDF_HEADER}<!-- BEGIN DYNAMIC BLOCK: ajax -->
+
+<div id="productivityreport" data-mainred="{MAIN_RED}" data-maingreen="{MAIN_GREEN}" data-mainrest="{MAIN_REST}" class="{PDF_CLASS}">
+  <!--<h1{PDF_HIDE}>{PAGE_TITLE} <span id="append">{APPEND}</span></h1>
+  <ul class="filter" {PDF_HIDE}>
+    <li class="time"> [!L!]Filters[!/L!] 
+      <input type="text" name="time[time]" class="flobn-range" id="time-filter" value="{DEFAULT_VALUE}" /><span class="tooltip" {PDF_HIDE} title="[!L!]Select the desired time frame. The default value is Today's date.[!/L!]">?</span>
+    </li>
+    <li class="export"> <a href="{HELP_LINK}" target="_blank" id="export-help" {SELECTED_SUPPORT}>[!L!]Explain report[!/L!]</a> <a href="index.php?pag=emailreport&preset=5" id="export-email" >[!L!]Send Email[!/L!]</a> <a href="index.php?pag=productivityreport&act=reports-productivityreport" id="export-csv" >[!L!]Download CSV[!/L!]</a> <a href="index.php?pag=productivityreport&act=reports-productivityreport&format=xls{EXPORT_APP_FILTER}" id="export-xls" >[!L!]Download XLS[!/L!]</a> <a href="index.php?pag=productivityreport&render=pdf" target="_blank" id="export-pdf" >[!L!]Generate PDF[!/L!]</a> </li>
+  </ul>--> 
+   <div class="col-md-12 p-0 overtitle">
+	<ul class="filter" {PDF_HIDE}>
+	<li class="col-md-12 time text-left p-0"><h1>{PAGE_TITLE} <div class="main-btn"><span id="append" class="cyclope">{APPEND}</span></div></h1></li>
+
+	    <li class="col-md-12 export text-right p-0 time">
+	    <div class="pull-left">
+	    	  <span class="filter-img"><img src="{CURRENT_VERSION_FOLDER}assets/images/filter.png" class="filter_icon"></span> <!-- <span class="filtertxt">[!L!]Filters[!/L!]</span> -->
+	    
+	   			 <input type="text" name="time[time]" class="flobn-range" id="time-filter" value="{DEFAULT_VALUE}" />
+
+		   <!--  <img data-toggle="tooltip" data-placement="top" title="Select the desired time frame. The default value is Today's date." src="{CURRENT_VERSION_FOLDER}assets/images/tooltip.png"> -->
+		    <div class="tooltipcustom">?
+			  <span class="tooltiptext">[!L!]Select the desired time frame. The default value is Today's date.[!/L!]</span>
+			</div>
+	    </div>
+	    <div class="pull-right">
+	       <a href="{HELP_LINK}" target="_blank" id="export-help" {SELECTED_SUPPORT}><img src="{CURRENT_VERSION_FOLDER}assets/images/help_menu.png"></a>
+
+	       <a href="index.php?pag=emailreport&preset=5" id="export-email" ><img src="{CURRENT_VERSION_FOLDER}assets/images/email.png"></a>
+
+	       <a href="index.php?pag=productivityreport&act=reports-productivityreport" id="export-csv" ><img src="{CURRENT_VERSION_FOLDER}assets/images/csv.png" class="csv"></a>
+	       <a href="index.php?pag=productivityreport&act=reports-productivityreport&format=xls{EXPORT_APP_FILTER}" id="export-xls" ><img src="{CURRENT_VERSION_FOLDER}assets/images/xls1.png" class="csv"></a>
+
+
+	       <a href="index.php?pag=productivityreport&render=pdf" target="_blank" id="export-pdf" ><img src="{CURRENT_VERSION_FOLDER}assets/images/pdf.png" class="pdf"></a>
+	      </div>
+	    </li>
+	   </ul>
+	</div> 
+    <div class="bd-ajax">
+        <!-- END DYNAMIC BLOCK: ajax -->{ENCRYPTMESSAGERAW}
+		<div class="panelrow col-md-12 productivitypage align-middle  box average productivedonutwrapper {HIDE_CONTENT}" id="timebox" data-total="{TOTAL_TIME_RAW}"> 
+		  
+		  <div class="col-lg-4 align-middle text-center legendprod">
+			  <ul>
+				<li class="active">
+					<span id="productive-total" class="procent">{PRODUCTIVE_TOTAL}%</span>
+					<span id="productive-total-time">{PRODUCTIVE_TOTAL_TIME}</span>
+					<strong>[!L!]Productive Time[!/L!]</strong>
+					 <!-- <img data-toggle="tooltip" data-placement="top" title="[!L!]This is the productive time monitored by Cyclope for the selected employee or department. Applications and websites have a productivity property that can be set below. The productive time is included in the active time recorded. Idle time does not have productivity settings.[!/L!]"  src="{CURRENT_VERSION_FOLDER}assets/images/tooltip.png"> -->
+					  <div class="tooltipcustom" {PDF_HIDE}>?
+  <span class="tooltiptext">[!L!]This is the productive time monitored by Cyclope for the selected employee or department. Applications and websites have a productivity property that can be set below. The productive time is included in the active time recorded. Idle time does not have productivity settings.[!/L!]</span>
+</div>
+				</li>
+			  </ul>
+		  </div>
+		  
+		  <div class="col-lg-4 align-middle text-center productivedonut">
+			{AJAX_DONUT}
+		  </div>
+		  
+		  <div class="col-lg-4 align-middle text-center legenddistr">
+			  <ul>
+				<li class="idle">
+					<span id="distracting-total" class="procent">{DISTRACTING_TOTAL}%</span>
+					<span id="distracting-total-time">{DISTRACTING_TOTAL_TIME}</span>
+					 <strong>[!L!]Distracting Time[!/L!]</strong>
+					<!--  <img data-toggle="tooltip" data-placement="top" title="[!L!]This is the distracting time monitored by Cyclope for the selected employee or department. Applications and websites have a productivity property that can be set below. The distracting time is included in the active time recorded. Idle time does not have productivity settings.[!/L!]"  src="{CURRENT_VERSION_FOLDER}assets/images/tooltip.png"> -->
+					   <div class="tooltipcustom" {PDF_HIDE}>?
+  <span class="tooltiptext">[!L!]This is the distracting time monitored by Cyclope for the selected employee or department. Applications and websites have a productivity property that can be set below. The distracting time is included in the active time recorded. Idle time does not have productivity settings.[!/L!]</span>
+</div>
+				</li>
+			   </ul>
+		  </div>
+		  <div class="legendneutr">
+			  <h1>[!L!]Neutral Time[!/L!] (<span id="neutral-total-time">{NEUTRAL_TOTAL_TIME}</span>)
+			  <span id="neutral-total" class="procent">{NEUTRAL_TOTAL}%</span>
+			  </h1>
+			  <span class="asterixtext">([!L!]Neutral Time = Time with no productivity settings.[!/L!])</span>
+		   </div>
+		</div>       
+	
+		 <!--div id="productivityreport_charts" style="padding-left: 50px;" class="{HIDE_CONTENT}">[!L!]Loading...[!/L!]</div-->
+		<!--<div style="padding-left: 50px;" class="{HIDE_CONTENT}">&nbsp;&nbsp;&nbsp;</div>-->
+		{NO_DATA_MESSAGE}
+		{DEBUGMESSAGE}
+	
+		<div class="panelrow productivitypage col-md-12">
+			<div class="col-lg-10">
+				<div class="info productive" {HIDE_STYLE} {PDF_HIDE}>[!L!]Change the productivity settings for an application by sliding left for distracting and right for productive.[!/L!]</div>
+			</div>
+			<div class="col-lg-2">
+				<img src="{HELPIMG}" />
+			</div>
+		</div>
+	
+		<div class="panelrow productivity_tbl p-0 col-md-12">
+			<input type="hidden" name="sortcolumn" class="sortcolumn" id="sortcolumn" />
+			<input type="hidden" name="sortorder" class="sortorder" id="sortorder" />
+			<div class="table-responsive produtive-table">
+			<table cellspacing="0" class="table flobn-datatable-head {HIDE_CONTENT}">
+				<thead>
+				  <tr>
+					<th class="th-application"><strong><a {ANCHOR_INNER_1} href="">[!L!]Application[!/L!]</a></strong></th>
+					<th class="th-category"><strong>[!L!]Category[!/L!]</strong></th>
+					<th class="th-type"><strong><a {ANCHOR_INNER_2} href="">[!L!]Type[!/L!]</a></strong></th>
+					<th class="th-time"><strong><a {ANCHOR_INNER_0} href="">[!L!]Time[!/L!]</a></strong></th>
+					<th class="th-activeperc"><strong>[!L!]% from Active Time[!/L!]</strong></th>
+				  </tr>
+				</thead>
+			  </table>
+			
+			  <ul class="flobn-datatable-body">
+			  
+				<!-- BEGIN DYNAMIC BLOCK: template_row -->
+				<li class="{CLASS}" data-department="{DEPARTMENT}">
+				  <table cellspacing="0" class="table">
+					<tbody>
+					  <tr>
+						<td class="td-application"><div>{ICON_SRC}<span title="{NAME}"> {NAME}</span></div></td>
+						<td class="td-category"><div><a href="#" class="category" rel="{APPLICATION_ID}" rev="#cat{CATEGORY_ID}" name="{CAT_TYPE}">{CATEGORY}</a></div></td>
+						<td class="td-type"></td>
+						<td class="td-type">
+						{TYPE_RESET}
+						 <div class="first-of-type">
+						{TYPE_INPUT}                
+						  <span style="text-align:center;" class="procentbar-text">{TYPE}</span></div></td>
+						<td class="td-time"><div>{TIME}</div></td>
+						<td class="td-activeperc"><div>{WIDTH}%</div></td>
+					  </tr>
+					</tbody>
+				  </table>
+				</li>
+				
+				<!-- END DYNAMIC BLOCK: template_row -->
+			  </ul></div>
+			
+		  <!-- BEGIN DYNAMIC BLOCK: ajax -->
+		 </div>
+    </div>
+</div>
+<script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/slider/combine.js"></script>
+<!-- END DYNAMIC BLOCK: ajax -->

@@ -1,0 +1,32 @@
+<div class="info" id="email_detail_info" style="">[!L!]Leave the corresponding fields unchanged if you don't have a preffered email subject and email body.[!/L!]</div>
+<fieldset>
+ <div class="">
+  <label for="email">[!L!]Subject[!/L!]</label>
+  <span>
+  <input class="defaultText" title="[!L!]Email subject[!/L!]" type="text" name="subject" value="{SUBJECT}" />
+  </span></div>
+  <div class="">
+  <label for="attachement" style="padding-top: 7px;">[!L!]Attachment type[!/L!]</label>
+  <ul class="attachment-type" id="attachement">
+		  <label for="pdf"  ><input class="attachment-radio" type="radio" name="attachmenttype" value="1" id="pdf" {PDF_CHECKED}/> [!L!]PDF[!/L!]</label>
+		  <label for="excel" ><input class="attachment-radio"type="radio" name="attachmenttype" value="2" id="excel" {EXCEL_CHECKED}/> [!L!]Excel[!/L!]</label>
+		<!-- <label for="html" style="width: 70px; background: none; font-weight: normal;"><input class="attachment-radio"type="radio" name="attachmenttype" value="3"  id="html" {HTML_CHECKED}/> [!L!]HTML[!/L!]</label>-->
+      </ul></div>
+  <div class="">
+  <label for="timespan" style="padding-top: 7px;">[!L!]Time filter[!/L!]</label>
+  <ul class="time-type" id="timespan">
+		  <label for="all_time"  ><input class="time-radio" type="radio" name="timespan" value="1" id="all_time" {ALL_CHECKED}/> [!L!]All[!/L!]</label>
+		  <label for="woktime" ><input class="time-radio"type="radio" name="timespan" value="3" id="woktime" {WORKTIME_CHECKED}/> [!L!]Worktime Only[!/L!]</label>
+		  <label for="overtime" ><input class="time-radio"type="radio" name="timespan" value="4" id="overtime" {OVERTIME_CHECKED}/> [!L!]Overtime Only[!/L!]</label>
+		<!-- <label for="html" style="width: 70px; background: none; font-weight: normal;"><input class="attachment-radio"type="radio" name="attachmenttype" value="3"  id="html" {HTML_CHECKED}/> [!L!]HTML[!/L!]</label>-->
+      </ul></div>
+  <div  class="">
+          <label for="description">[!L!]Body[!/L!]</label>
+          <span>
+          <textarea class="defaultText" title="[!L!]Email body[!/L!]" name="body" id="body" rows="10">{BODY}</textarea>
+          </span>
+		 </div>
+<div class="btn"> <a href="#" class="back"><img src="{CURRENT_VERSION_FOLDER}img/wizard_left.png" width="16" height="16" alt="" />[!L!]Previous[!/L!]</a>
+    <button type="submit" class="next">[!L!]Next[!/L!]<img src="{CURRENT_VERSION_FOLDER}img/wizard_right.png" width="16" height="16" alt="" /></button>
+  </div>
+  </fieldset>

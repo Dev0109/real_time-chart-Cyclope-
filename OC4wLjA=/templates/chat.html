@@ -1,0 +1,37 @@
+<!-- BEGIN DYNAMIC BLOCK: ajax -->
+<div id="chat">
+  <div class="col-md-12 p-0 overtitle">
+    <ul class="filter">
+  
+  
+    <li class="col-md-9 time text-left p-0">
+    <h1>{PAGE_TITLE} <div class="main-btn"><span id="append" class="cyclope">{APPEND}</span></div></h1> 
+    <span class="filter-img"><img src="OC4wLjA=/assets/images/filter.png" class="filter_icon"></span>
+      <input type="text" name="time[time]" class="flobn-range" id="time-filter" value="{DEFAULT_VALUE}" />
+     <div class="tooltipcustom">? <span class="tooltiptext">[!L!]Select the desired time frame. The default value is Today's date.[!/L!]</span></div>
+      <!-- <span class="tooltip" {PDF_HIDE} title="[!L!]Select the desired time frame. The default value is Today's date.[!/L!]">?</span> -->
+    </li>
+      
+    <li class="col-md-3 export text-right p-0">
+      <a href="{HELP_LINK}" target="_blank" id="export-help" {SELECTED_SUPPORT}><img src="{CURRENT_VERSION_FOLDER}assets/images/help_menu.png"></a>
+       <a href="index.php?pag=chat&act=reports-chat{EXPORT_APP_FILTER}" id="export-csv" ><img src="{CURRENT_VERSION_FOLDER}assets/images/csv.png" class="csv"></a>
+        <a href="index.php?pag=chat&act=reports-chat&format=xls{EXPORT_APP_FILTER}" id="export-xls" ><img src="{CURRENT_VERSION_FOLDER}assets/images/xls1.png" class="xls"></a> 
+        <a href="index.php?pag=chat&render=pdf{EXPORT_APP_FILTER}" target="_blank" id="export-pdf" ><img src="{CURRENT_VERSION_FOLDER}assets/images/pdf.png" class="pdf"></a>
+      </li>
+      <span class="app ddrow-parent">
+        <span class="ddrow-parent">
+            <select name="app" id="app-filter" class="flobn-ddrow" title="filter by application">
+          <option value="-1">[!L!]filter by application[!/L!]</option>
+          {APPS}
+        </select>
+        </span>
+     </span>
+  </ul></div>
+  <div class="bd-ajax">
+    <!-- END DYNAMIC BLOCK: ajax -->{ENCRYPTMESSAGERAW}
+    {CHAT}
+    <!-- BEGIN DYNAMIC BLOCK: ajax -->
+  </div>
+</div>
+<script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/slider/combine.js"></script>
+<!-- END DYNAMIC BLOCK: ajax -->

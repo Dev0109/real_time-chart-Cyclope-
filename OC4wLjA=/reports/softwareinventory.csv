@@ -1,0 +1,21 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}<!-- BEGIN DYNAMIC BLOCK: template_row -->
+"{COMPUTER}","{USER}","{IP}"
+"[!L!]Last updated[!/L!]","{LAST_UPDATE}"
+"[!L!]Computer Type[!/L!]","{USER_TYPE}"
+"[!L!]OS[!/L!]","{USER_OS}"
+"[!L!]CPU[!/L!]","{USER_CPU}"
+"[!L!]Memory[!/L!]","{USER_RAM}"
+"[!L!]Motherboard[!/L!]","{USER_MB}"
+"[!L!]Graphics[!/L!]","{USER_VIDEO}"
+"[!L!]Storage[!/L!]","{USER_HDD}"
+"[!L!]Monitor[!/L!]","{USER_MONITOR}"
+
+"[!L!]Installed Applications[!/L!]"
+{SOFTWARE_INFO}
+			
+			
+<!-- END DYNAMIC BLOCK: template_row -->

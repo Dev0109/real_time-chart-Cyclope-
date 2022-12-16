@@ -1,0 +1,6 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+Hour,Start Time,End Time,Applications,Category<!-- BEGIN DYNAMIC BLOCK: template_row -->
+"{HOUR}","{START}","{END}","{APPLICATION}","{CATEGORY}"<!-- END DYNAMIC BLOCK: template_row -->

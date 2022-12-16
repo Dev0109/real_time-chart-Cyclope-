@@ -1,0 +1,50 @@
+ {PDF_HEADER}{NO_DATA_MESSAGE}
+	{DEBUGMESSAGE}
+    <input type="hidden" name="sortcolumn" class="sortcolumn" id="sortcolumn" />
+    <input type="hidden" name="sortorder" class="sortorder" id="sortorder" />
+<div class="table-responsive">
+<table cellspacing="0" class="table list application filter {HIDE_CONTENT}{PDF_CLASS}  filter">
+  <thead> 
+    <tr>
+      <th class="first-of-type"><strong><a {ANCHOR_INNER_1} href="">[!L!]Application[!/L!]</a></strong></th>
+      <th><strong><a {ANCHOR_INNER_2} href="">[!L!]Show in[!/L!]</a></strong></th>
+      <th class="windowname"><strong><a {ANCHOR_INNER_3} href="">[!L!]Window Name[!/L!]</a></strong></th>
+      <th style="min-width: 120px;"><strong>[!L!]Total Time[!/L!]</strong></th>
+      <th style="min-width: 120px;"><strong>[!L!]Active Time[!/L!]</strong></th>
+      <th style="min-width: 120px;"><strong>[!L!]Idle Time[!/L!]</strong></th>
+      <!-- <th style="width:100px">&nbsp;</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[!L!]Total (on this page)[!/L!]</td>
+      <td></td>
+      <td></td>
+      <td>{TOTALTOTAL}</td>
+      <td style="background-color:#a4f8ba;">{TOTALACTIVE}</td>
+      <td style="background-color:#ffc9c9;">{TOTALIDLE}</td>
+      <!-- <td><span class="graph" style="width:{WIDTH}px"></span></td> -->
+    </tr>
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr>
+      <td>{APPLICATION}</td>
+      <td>[!L!]{CATEGORY}[!/L!]<a href="/index.php?pag=application&application_id={ID}&goto=applicationforms" class="appformedit" {PDF_HIDE}> [[!L!]change[!/L!]] </a></td>
+      <td style="word-break: break-all;">{NAME}</td>
+      <td>{TOTAL_TIME}</td>
+      <td style="background-color:#a4f8ba;">{ACTIVE_TIME}</td>
+      <td style="background-color:#ffc9c9;">{IDLE_TIME}</td>
+      <!-- <td><span class="graph" style="width:{WIDTH}px"></span></td> -->
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+  </tbody>
+</table>
+</div>
+<div class="pagination"{PDF_HIDE}>
+ <ul>
+    <li>[!L!]Go To[!/L!]:<input type="text"  data-page="{FILTER_PAGE}" class="p" value="" name="offset" /></li>
+    <li>[!L!]Show Rows[!/L!]:<select class="rp" data-page="{FILTER_PAGE}">{PAGES}</select></li>
+    <li>{INTERVAL} <span>[!L!]of[!/L!] </span>{TOTAL}</li>
+    <li><a href="{BACKLINK}" class="prev">&nbsp;</a></li>
+    <li><a href="{NEXTLINK}" class="next">&nbsp;</a></li>    
+  </ul>
+</div>

@@ -1,0 +1,6 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+Document,Category,Time(h),Time(m),Time(s)<!-- BEGIN DYNAMIC BLOCK: document_row -->
+"{DOCUMENT}","{CATEGORY}","{TIME_H}","{TIME_M}","{TIME_S}"<!-- END DYNAMIC BLOCK: document_row -->

@@ -1,0 +1,78 @@
+/*Default form styles*/
+	fieldset div{
+		clear:both;
+		margin-bottom:10px;
+	}
+		fieldset .vertical div,
+		fieldset .high div,
+		fieldset .low div{
+			display:block;
+		}
+		fieldset div div,
+		fieldset .vertical .first,
+		fieldset .vertical a,
+		fieldset .vertical a:hover{
+			display:-moz-inline-box;
+			display:inline-block;
+		}
+	fieldset label,
+	fieldset p{
+		margin:0;
+		display:-moz-inline-box;
+		display:inline-block;
+		text-align:right;
+	}
+	fieldset input{
+		margin:0px 5px;	
+	}
+	fieldset .chk{
+	}
+		fieldset .chk p{
+			width:10em;
+			text-align:left;
+			float:left;
+		}
+			fieldset .chk div{
+				clear:none;
+				float:left;
+				width:auto;
+			}
+			fieldset .chk div label{
+				width:auto;
+				margin-left:0px;
+				margin-right:10px;
+			}
+		fieldset .chk input{
+			width:auto;
+			border:0px;
+			background:none;
+			vertical-align:middle;
+		}
+		fieldset .chk label{
+			padding-top:0px;
+			text-align: left;
+			margin-left: 10em;
+			width: auto;
+			float: none;
+		}
+		
+		fieldset .vertical p{
+			width:10em;
+			text-align:left;
+			*float:left;
+			*padding-top:7px;
+		}
+			fieldset .vertical .first label,
+			fieldset .vertical div label{
+				width:5em;
+			}
+		fieldset .vertical .first{
+			margin-left:0px;
+			clear:none;
+		}	
+		fieldset .vertical div{
+			margin-left:10em;	
+		}
+.req{
+	font-weight:bold;
+}

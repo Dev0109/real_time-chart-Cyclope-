@@ -1,0 +1,70 @@
+<h1>[!L!]Title:[!/L!] {TITLE}</h1>
+<h2>[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}</h2>
+<h2>[!L!]Time period:[!/L!] {TIME_PERIOD}</h2>
+
+<h2>[!L!]Summary of the times of the day[!/L!]</h2>
+
+<table cellspacing="0" class="list" >
+    <thead>
+      <tr>
+        <th class="first-of-type" style="width:209px;"><strong>[!L!]Hour[!/L!]</strong></th>
+        <th style="width:160px;"><strong>[!L!]Active %[!/L!]</strong></th>
+        <th style="width:160px"><strong>[!L!]Idle %[!/L!]</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- BEGIN DYNAMIC BLOCK: day_summary_row -->
+      <tr class="{CLASS}">      
+        <td>{HOUR}</td>
+        <td>{ACTIVE}</td>
+		<td>{IDLE}</td>
+      </tr>
+      <!-- END DYNAMIC BLOCK: day_summary_row -->
+    </tbody>
+  </table>
+
+<h2>[!L!]Summary of the weekdays[!/L!]</h2>
+
+<table cellspacing="0" class="list" >
+    <thead>
+      <tr>
+        <th class="first-of-type" style="width:209px;"><strong>[!L!]Day[!/L!]</strong></th>
+        <th style="width:160px;"><strong>[!L!]Active(h)[!/L!]</strong></th>
+        <th style="width:160px"><strong>[!L!]Idle(h)[!/L!]</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- BEGIN DYNAMIC BLOCK: week_summary_row -->
+	<tr class="{CLASS_WEEK}">      
+        <td>{DAY}</td>
+        <td>{WEEK_ACTIVE}</td>
+		<td>{WEEK_IDLE}</td>
+      </tr>
+      <!-- END DYNAMIC BLOCK: week_summary_row -->
+    </tbody>
+  </table>
+
+<h2>[!L!]Application Usage[!/L!]</h2>
+
+<table cellspacing="0" class="list" >
+    <thead>
+      <tr>
+        <th class="first-of-type" style="width:209px;"><strong>[!L!]Day[!/L!]</strong></th>
+        <th style="width:160px;"><strong>[!L!]Active(%)[!/L!]</strong></th>
+        <th style="width:160px"><strong>[!L!]Time(h)[!/L!]</strong></th>
+		<th style="width:160px"><strong>[!L!]Time(m)[!/L!]</strong></th>
+		<th style="width:160px"><strong>[!L!]Time(s)[!/L!]</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- BEGIN DYNAMIC BLOCK: application_summary_row -->
+      <tr class="{CLASS_APP}"> 
+        <td>{APPLICATION}</td>
+        <td>{PROCENTAGE}</td>
+		<td>{TIME_H}</td>
+				<td>{TIME_M}</td>
+						<td>{TIME_S}</td>
+      </tr>
+      <!-- END DYNAMIC BLOCK: application_summary_row -->
+    </tbody>
+  </table>

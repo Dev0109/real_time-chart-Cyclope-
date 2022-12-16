@@ -1,0 +1,6 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+User Name,Date,Start Work,End Work,Total (h),Total (m),Total (s),Active (h),Active (m),Active (s),Overtime (h),Overtime (m),Overtime (s),Idle (h),Idle (m),Idle (s),Private (h),Private (m),Private (s)<!-- BEGIN DYNAMIC BLOCK: ua_row -->
+"{NAME}","{DATE}","{START}","{END}","{TOTAL_H}","{TOTAL_M}","{TOTAL_S}","{ACTIVE_H}","{ACTIVE_M}","{ACTIVE_S}","{OVERTIME_H}","{OVERTIME_M}","{OVERTIME_S}","{IDLE_H}","{IDLE_M}","{IDLE_S}","{PRIVATE_H}","{PRIVATE_M}","{PRIVATE_S}"<!-- END DYNAMIC BLOCK: ua_row -->

@@ -1,0 +1,52 @@
+
+<div id="content">
+  <div class="info">[!L!]The import of Organizational Units and users from Active Directory creates the tree structure in Cyclope but does not deploy the client Application. For details about how to deploy the client application please check: http://cyclope-series.com/resources/documents/cyclope-employee-surveillance-installation-guide.pdf (open in new window) section2.2.2. Cyclope synchronizes the tree structure once a day according with the changes that you do in Active Directory. They will be reflected automatically in Cyclope tree structure. [!/L!]</div>
+	<div id="importad">{MESSAGE}
+		  <form action="index.php?pag=importad" method="post" id="frm">
+			  <fieldset>		
+				<!-- div class="">
+				  <label for="base_dn">[!L!]Base DN[!/L!] </label>
+				  <span>
+				  <input type="text" name="base_dn" id="base_dn" value="{BASE_DN}" />
+				  </span> </div>
+				<div class=" even">
+				  <label for="account_suffix">[!L!]User Suffix[!/L!] </label>
+				  <span>
+				  <input type="text" name="account_suffix" id="account_suffix" value="{ACCOUNT_SUFFIX}" />
+				  </span> </div>
+				<div class=" ">
+				  <label for="domain_controllers">[!L!]Domain Controllers[!/L!] </label>
+				  <span>
+				  <input type="text" name="domain_controllers" id="domain_controllers" value="{DOMAIN_CONTROLLERS}" />
+				  </span> </div>
+				<div class=" even">
+				  <label for="account_admin">[!L!]Account Admin[!/L!] </label>
+				  <span>
+				  <input type="text" name="account_admin" id="account_admin" value="{ACCOUNT_ADMIN}" />
+				  </span> </div>
+				<div class=" ">
+				  <label for="account_password">[!L!]Account Admin Password[!/L!] </label>
+				  <span>
+				  <input type="password" name="account_password" id="account_password" value="{ACCOUNT_PASSWORD}" />
+				  </span> </div -->
+
+				<div class="monitored req adimport" {OULIST} ><h1>[!L!]Select the Organizational Units to import[!/L!]</h1> <span id="treeselect" style="float:left; width:320px; border:0px;"></span> </div>
+				<!--button onclick="checkAll()"  type="button">Select All</button>
+				<button onclick="uncheckAll()"  type="button">Deselect All</button-->
+				<input type="hidden" name="jsfields" id="jsfields" value="" />
+				<div class="buttons"><span class="submit">
+				  <button type="submit" class="savethis"><b>[!L!]Next[!/L!]</b></button></span></div>
+			  </fieldset>
+		  </form>
+	</div>
+</div>
+<script language="javascript">
+function checkAll() {
+	$("#treeselect").jstree("check_all");
+	return false;
+}
+function uncheckAll() {
+	$("#treeselect").jstree("uncheck_all");
+	return false;
+}
+</script>

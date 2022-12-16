@@ -1,0 +1,68 @@
+<div class="overlay {HIDEMODAL}">
+<div class="modalbox">
+<img src="{CURRENT_VERSION_FOLDER}img/{LANG}/adduser.jpg" usemap="#planetmap" />
+</div></div>
+
+<map name="planetmap">
+    <area alt="" title="" href="http://cyclope-series.com/resources/documents/cyclope-employee-surveillance-installation-guide.pdf" shape="rect" coords="4,368,184,526" />
+    <area alt="" title="" href="http://cyclope-series.com/resources/documents/cyclope-employee-surveillance-installation-guide.pdf" shape="rect" coords="208,429,354,532" />
+    <area alt="" title="" href="mailto:support@cyclope-series.com" shape="rect" coords="235,559,521,597" />
+</map> 
+
+{ENCRYPTMESSAGE}<h1 class="windowtitle">[!L!]Departments Management[!/L!]
+<a href="#" class="addtheme monitored btn btn-info">[!L!]Add More Users[!/L!]</a> 
+</h1>
+<div id="groups">
+  <div id="content" class="leftcol">
+  <div class="box active monitored">
+    <h3><span class="right" id="headlinebtns"><a href="#" rel="expand">[!L!]Expand all[!/L!]</a><a href="#" rel="contract">[!L!]Collapse all[!/L!]</a></span>[!L!]Structure[!/L!]</h3>
+    <div class="tabs">
+      <div class="tab" id="usertree" style="max-height:none;height:auto;overflow:visible"> </div>
+    </div>
+  </div>
+</div>
+  <div id="sidebar" class="rightcol">
+    <ul class="actionbuttons">
+      <li><a href="#" class="add" ><span rel="createGroup"><i class="fa fa-plus" aria-hidden="true"></i>[!L!]Add New Group[!/L!]</span></a></li>
+      <li><a href="#" class="remove"><span rel="removeGroup"><i class="fa fa-minus" aria-hidden="true"></i>[!L!]Delete Group[!/L!]</span></a></li>
+  	   <li><a href="index.php?pag=importad" class="import" ><i class="fa fa-upload" aria-hidden="true"></i><span rel="importGroup">[!L!]Import groups[!/L!]</span></a></li>
+    </ul>
+  <div class="box active">
+    <h3>[!L!]How to Create a New Group[!/L!]</h3>
+    <p>[!L!]To create a new group (<span class="demogrp">&nbsp;&nbsp;&nbsp;&nbsp;</span>) press "Add New Group". A folder named "New" will be created in the monitored list available at the right of the panel. Double-click the folder name to edit it and rename it. To assign members to the group, "drag and drop" each user (<span class="demouser">&nbsp;&nbsp;&nbsp;&nbsp;</span>) from the monitored employees list to the new group.[!/L!]</p>
+  </div>
+  <div class="box active">
+    <h3>[!L!]How to Delete a Group[!/L!]</h3>
+    <p>[!L!]For deleting a group, select it then press "Delete group". [!/L!]</p>
+  </div>
+</div>
+
+</div>
+
+<!-- <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      
+      <div class="modal-content">
+        <div class="overlay {HIDEMODAL}"><div class="modalbox">
+<img src="{CURRENT_VERSION_FOLDER}img/{LANG}/adduser.jpg" usemap="#planetmap" />
+</div></div>
+
+      </div>
+      
+    </div>
+  </div> -->
+
+<script>
+  $(document).ready(function(){
+	  $(".addtheme").click(function () {
+			$(".overlay").show();
+			return false;
+		});
+	  $(".overlay").click(function () {
+			$(".overlay").hide();
+			return false;
+		});
+	  $(".overlay.showmodal").show();
+	});
+</script>

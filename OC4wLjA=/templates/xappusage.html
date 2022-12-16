@@ -1,0 +1,32 @@
+{PDF_HEADER}	{DEBUGMESSAGE}
+    <input type="hidden" name="sortcolumn" class="sortcolumn" id="sortcolumn" />
+    <input type="hidden" name="sortorder" class="sortorder" id="sortorder" />
+<table cellspacing="0" cellpadding="0" border="0"  class="{PDF_CLASS}">
+  <thead>
+    <tr>
+      <th class="application"><a {ANCHOR_INNER_1} href="">[!L!]Application Name[!/L!]</a></th>
+      <th class="proc">%</th>
+      <th class="time"><a {ANCHOR_INNER_0} href="">[!L!]Time[!/L!]</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr>
+      <td class="application"><b style="background-color:#{COLOR}"></b>{NAME}</td>
+      <td class="proc">{PROCENT}%</td>
+      <td class="time">{TIME}</td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+  </tbody>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" id="otherstats" class="hide" class="{PDF_CLASS}">
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_other_row -->
+    <tr>
+      <td class="application" style="padding-left:25px"><b style="background-color:#{OTHER_COLOR}"></b>{OTHER_NAME}</td>
+      <td class="proc">{OTHER_PROCENT}%</td>
+      <td class="time">{OTHER_TIME}</td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_other_row -->
+  </tbody>
+</table>

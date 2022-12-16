@@ -1,0 +1,30 @@
+{PDF_HEADER}<!-- <span class="tooltip tabbed" title="[!L!]This report shows a top of the employees from the selected department, sorted by the productive time recorded for each one. The most productive are first. This report can be filtered by date and working schedule.[!/L!]">?</span> -->
+<div class="tooltipcustom" {PDF_HIDE}>?
+  <span class="tooltiptext">[!L!]This report shows a top of the employees from the selected department, sorted by the productive time recorded for each one. The most productive are first. This report can be filtered by date and working schedule.[!/L!]</span>
+</div>
+			 <div id="productive_chart" style="padding-left:20px;    padding-top: 30px;
+    padding-bottom: 30px;" class="{HIDE_PRODUCTIVE}">{TOPBAR_CHART}</div>
+<table cellspacing="0" class="table filter list application topapplications {PDF_CLASS}" >
+  <thead>
+    <tr>
+      <th class="first-of-type">
+	{DEBUGMESSAGE}
+    <input type="hidden" name="sortcolumn" class="sortcolumn" id="sortcolumn" />
+    <input type="hidden" name="sortorder" class="sortorder" id="sortorder" />
+	<strong><a {ANCHOR_INNER_1} href="">[!L!]Employee[!/L!]</a></strong></th>
+	  <th><strong>[!L!]Active Time[!/L!]</strong></th>
+      <th><strong><a {ANCHOR_INNER_0} href="">[!L!]Productive Time[!/L!]</a></strong></th>
+	  <th  class="th-activeperc"><strong>[!L!]% from Active Time[!/L!]</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr>
+      <td><b style="background-color:#{COLOR}"></b>{NAME}</td>
+	  <td>{TOTAL}</td>
+      <td><span>{TIME}</span></td>
+	  <td class="td-activeperc"><div>{PROCENT}%</div></td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+  </tbody>
+</table> 

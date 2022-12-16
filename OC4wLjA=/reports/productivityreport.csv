@@ -1,0 +1,10 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}[!L!]Productivity Level[!/L!]
+{HIDE_START}[!L!]Productive[!/L!],[!L!]Distracting[!/L!],[!L!]Neutral[!/L!]{HIDE_END}
+"{PRODUCTIVE_TOTAL}","{DISTRACTING_TOTAL}","{NEUTRAL_TOTAL}"
+
+{NO_DATA_MESSAGE}{HIDE_START}[!L!]Application[!/L!],[!L!]Category[!/L!],[!L!]Type[!/L!],[!L!]Time(h)[!/L!],[!L!]Time(m)[!/L!],[!L!]Time(s)[!/L!],[!L!]% from Active Time[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: template_row -->
+"{APPLICATION}","{CATEGORY}","{TYPE}","{TIME_H}","{TIME_M}","{TIME_S}","{WIDTH}"<!-- END DYNAMIC BLOCK: template_row -->

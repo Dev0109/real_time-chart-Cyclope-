@@ -1,0 +1,6 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}{HIDE_START}[!L!]Username[!/L!],[!L!]Total Time(h)[!/L!],[!L!]Total Time(m)[!/L!],[!L!]Total Time(s)[!/L!],[!L!]Active Time(h)[!/L!],[!L!]Active Time(m)[!/L!],[!L!]Active Time(s)[!/L!],[!L!]% from Active Time[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: topactive_row -->
+"{USERNAME}","{TOTAL_TIME_H}","{TOTAL_TIME_M}","{TOTAL_TIME_S}","{ACTIVE_TIME_H}","{ACTIVE_TIME_M}","{ACTIVE_TIME_S}","{PROCENT}"<!-- END DYNAMIC BLOCK: topactive_row -->

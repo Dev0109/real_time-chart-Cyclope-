@@ -1,0 +1,26 @@
+<!-- BEGIN DYNAMIC BLOCK: ajax -->
+<div class="notifi">
+<div id="notification" class="col-md-12 p-0">
+	<ul class="filter">
+	<li class="col-md-9 time text-left p-0">
+		<h1>{PAGE_TITLE}</h1>
+	</li>
+	<li class="col-md-3 pull-right">
+		<!-- <span class="app ddrow-parent"> -->
+			<span class="app ddrow-parent">
+	    	<select name="type-filter" id="type-filter" title="filter by type">
+	        	<option value="-1">[!L!]All Data types[!/L!]</option>
+	        	{TYPES}
+			</select></span>
+		<!-- </span> -->
+	</li>
+</ul>
+	</div>
+	<div class="bd-ajax" >
+		<!-- END DYNAMIC BLOCK: ajax -->
+	   	{NOTIFICATIONS}
+	   	<!-- BEGIN DYNAMIC BLOCK: ajax -->
+	</div>
+
+</div>
+<!-- END DYNAMIC BLOCK: ajax -->

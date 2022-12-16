@@ -1,0 +1,23 @@
+<div id="emailsequence" class="wizard">
+  <div id="content">
+    <h1 class="windowtitle">{PAGE_TITLE}</h1>
+    {MESSAGE}
+    <div class="pagetabs">
+      <ul class="toolbar tabingsidebar">
+        <li class="for"><a href="#for"><span>[!L!]For[!/L!]</span></a></li>
+        <li class="frequency"><a href="#frequency"><span>[!L!]Application Sequence[!/L!]</span></a></li>
+        <li class="save"><a href="#save"><span>[!L!]Save[!/L!]</span></a></li>
+      </ul>
+      <form action="index.php" method="post" id="frm">
+        <input type="hidden" name="sequencegrp_id" value="{EMAIL_REPORT_ID}" />
+        <input type="hidden" name="act" value="{ACT}" />
+        <input type="hidden" name="pag" value="{PAG}" />
+        <div class="tab-content tabingsidebar_content">
+        <div id="for" class="tab ui-tabs-hide"> {FOR} </div>
+        <div id="frequency" class="tab ui-tabs-hide"> {FREQUENCY} </div>
+        <div id="save" class="tab ui-tabs-hide"> {SAVE} </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

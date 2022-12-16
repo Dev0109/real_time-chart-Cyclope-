@@ -1,0 +1,84 @@
+
+<h1>[!L!]Working Schedule For[!/L!] {USER_NAME}</h1>
+<div class="info">[!L!]Allows you to define when the activity starts and when it ends. The activity during this interval is considered Worktime. Activities outside this interval are considered Overtime. For more details please press Help button.[!/L!]</div>
+<form action="index.php#workschedule" method="post">
+  <input type="hidden" name="act" value="workschedule-update" />
+  <input type="hidden" name="pag" value="settings" />
+  <input type="hidden" name="department_id" value="{DEPARTMENT_ID}" />
+  <table cellspacing="0" class="table filter bgwhite list application schedule" style="margin-top:0px;">
+    <thead>
+      <tr>
+        <th class="first-of-type"><strong>[!L!]Day of the week[!/L!]</strong></th>
+        <th><strong>[!L!]Start Time[!/L!]</strong></th>
+        <th><strong>[!L!]End Time[!/L!]</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- BEGIN DYNAMIC BLOCK: working_row -->
+      <tr class="{CLASS}" data-day="{DAY}" data-department ="{DEPARTMENT_ID}">
+        <td class="first-of-type"><input id="modifiable" type="checkbox" name="w[{DAY}]" value="1" {W_CHECKED} />
+          &nbsp;&nbsp;<strong>[!L!]{WEEKDAY}[!/L!]</strong></td>
+        <td><select id="modifiable" name="w_start[{DAY}][hour]" class="small">
+            
+	 		{W_START_HOUR}   
+        
+          </select>
+          &nbsp;
+          <select id="modifiable" name="w_start[{DAY}][minute]" class="small">
+            
+			{W_START_MINUTE}
+        
+          </select>
+          &nbsp;</td>
+        <td><select id="modifiable" name="w_end[{DAY}][hour]" class="small">
+            
+			{W_END_HOUR}
+        
+          </select>
+          &nbsp;
+          <select id="modifiable" name="w_end[{DAY}][minute]" class="small">
+            
+			{W_END_MINUTE}
+        
+          </select>
+          &nbsp;</td>
+      </tr>
+      <!-- END DYNAMIC BLOCK: working_row -->
+    </tbody>
+  </table>
+  <fieldset>
+  <div class="buttons"><span class="submit">
+    <button id="modifiable" type="submit"><b>[!L!]Save[!/L!]</b></button>
+    </span></div>
+  </fieldset>
+</form>
+
+<script>
+$(document).ready(function(){
+	/*$(document).click(function() {
+	   $('#cat-select').hide();
+	});*/
+	 $('.schedule tbody tr').each(function() {
+			var dayindex = $( this ).attr("data-day");
+			$("select[name='w_start[" + dayindex + "][hour]'],select[name='w_end[" + dayindex + "][hour]']").change( function (e) {
+				var valueStartSelected = $("select[name='w_start[" + dayindex + "][hour]']").val();
+				var valueEndSelected = $("select[name='w_end[" + dayindex + "][hour]']").val();
+				if (Number(valueEndSelected) <= Number(valueStartSelected)) {
+					$("select[name='w_end[" + dayindex + "][hour]']").val(Number(valueStartSelected) + 1);
+					alert('[!L!]Your END value must be greater then your START value! Please fix this.[!/L!]');
+				}
+			});
+		});
+	 $('.private tbody tr').each(function() {
+			var dayindex = $( this ).attr("data-day");
+			$("select[name='p_start[" + dayindex + "][hour]'],select[name='p_end[" + dayindex + "][hour]']").change( function (e) {
+				var valueStartSelected = $("select[name='p_start[" + dayindex + "][hour]']").val();
+				var valueEndSelected = $("select[name='p_end[" + dayindex + "][hour]']").val();
+				if (Number(valueEndSelected) <= Number(valueStartSelected)) {
+					$("select[name='p_end[" + dayindex + "][hour]']").val(Number(valueStartSelected) + 1);
+					alert('[!L!]Your END value must be greater then your START value! Please fix this.[!/L!]');
+				}
+			});
+		});
+});
+</script>

@@ -1,0 +1,34 @@
+<div class="window" id="monitoredsettings">
+  <form action="index_ajax.php" method="post">
+  <input type="hidden" name="act" value="log-update" />
+  <input type="hidden" name="computer_id" value="{COMPUTER_ID}" />
+  <div class="inner">
+    <div class="hd"><a href="#" class="close"></a>
+      <h1>[!L!]Settings[!/L!]</h1>
+    </div>
+    <div class="bd clearfix">
+    <fieldset>
+	<div class="req">
+        <label for="connectivity">[!L!]Connectivity[!/L!]</label>
+        <span>
+        <input type="text" name="connectivity" id="connectivity" value="{CONNECTIVITY}"/>
+        </span> </div>
+		<div class="req even">
+        <label for="precision">[!L!]Precision[!/L!] </label>
+        <span>
+        <input type="text" name="precision" id="precision" value="{PRECISION}"/>
+        </span> </div>
+    	<div class="req">
+        <label for="idlefactor">[!L!]Idle Factor[!/L!] </label>
+        <span>
+        <input type="text" name="idlefactor" id="idlefactor" value="{IDLEFACTOR}"/>
+        </span> </div>
+    </fieldset>
+	 
+      <div class="ft">
+        <button type="submit" class="btn positive"><b>[!L!]Save[!/L!]</b></button>
+        <a href="#" class="btn negative close"><b>[!L!]Cancel[!/L!]</b></a> </div>
+    </div>
+  </div>
+  </form>	 			
+</div>

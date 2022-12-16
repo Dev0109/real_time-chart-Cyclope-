@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cyclope - Top Active - {FILTER}</title>
+<link rel="stylesheet" type="text/css" href="{CURRENT_VERSION_FOLDER}css/reset.css"/>
+<meta http-equiv="preview-refresh" content="3600">
+<style type="text/css">
+@media screen and (view-mode: minimized) {
+body{
+	background:url({CURRENT_VERSION_FOLDER}img/bg.gif) repeat left top;
+	margin:0px;
+	padding:0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#898989;
+	height:100%;
+	width:100%;
+}
+	dl {
+		margin:0;
+		padding:0 0 15px 0;
+		width:100%;
+		height:auto;
+	}
+	dt {
+		text-align:center;
+		font-size:1.5em;
+		border-bottom:3px solid #fff;
+	}
+	dd {
+		margin:0;
+		display:block;
+		width:100%;
+		height:2em;
+		background:#0a0;
+		border-bottom:1px solid #fff;
+	}
+	dd b {
+		float:right;
+		display:block;
+		margin-left:auto;
+		background:#fafafa;
+		height:2em;
+		line-height:2em;
+		text-align:right;
+	}
+	dd.p670 b {
+		width:33%;
+	}
+	dd.p67 b {
+		width:93.3%;
+	}
+	dd.p12 b {
+		width:98.8%;
+	}
+	dd.p197 b {
+		width:80.3%;
+	}
+	dd.p26 b {
+		width:100%;
+	}
+	dd.p08 b {
+		width:99.2%;
+	}
+<!-- BEGIN DYNAMIC BLOCK: css_row -->	
+	dd.active{I} b {
+		width:{PROC}%;
+	}
+	dd.active{I}{
+		background-color:#{COLOR};	
+	}
+<!-- END DYNAMIC BLOCK: css_row -->		
+}
+</style>
+</head>
+<body>
+<dl>
+<!-- BEGIN DYNAMIC BLOCK: template_row -->
+  <dd class="active{I}"><b>{NAME}</b></dd>
+<!-- END DYNAMIC BLOCK: template_row -->
+</dl>
+</body>
+</html>

@@ -1,0 +1,31 @@
+ <div id="notifications">
+	 {NO_DATA_MESSAGE}
+	{DEBUGMESSAGE}
+    <input type="hidden" name="sortcolumn" class="sortcolumn" id="sortcolumn" />
+    <input type="hidden" name="sortorder" class="sortorder" id="sortorder" />
+	 <table cellspacing="0" class="table filter bgwhite list application {HIDE_CONTENT}">
+	  <thead>
+	    <tr>
+	      <th><strong>&nbsp;</strong></th>
+	      <th><strong><a {ANCHOR_INNER_0} href="">[!L!]Date[!/L!]</a></strong></th>
+	      <th><strong>[!L!]Message[!/L!]</strong></th>
+	      <th><strong>[!L!]Actions[!/L!]</strong></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+	    <tr class="{CLASS} {TOP_BORDER}">
+	      <td class="status"><span><img src="{CURRENT_VERSION_FOLDER}img/{NOTIFICATION_TYPE}.png" width="16" height="16" /></span></td>
+	      <td>{DATE}</td>
+	      <td>{MESSAGE}</td>
+	      <td class="actions"><a href="{MARKASREAD_LINK}" class="category si open">[!L!]Details[!/L!]</a>&nbsp;<a href="{DELETE_LINK}" class="delete">[!L!]Delete[!/L!]</a></td>
+	    </tr>
+		<tr class="hide {CLASS}">
+	      <td colspan="4" class="notification">
+		  <strong class="indent">[!L!]Cause: [!/L!]</strong>{CAUSE}<br>
+		  <strong class="indent">[!L!]Solution: [!/L!]</strong>{SOLUTION}</td>
+	    </tr>
+	    <!-- END DYNAMIC BLOCK: template_row -->
+	  </tbody>
+	</table>
+ </div>

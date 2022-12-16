@@ -1,0 +1,7 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}{HIDE_START}[!L!]User/Computer[!/L!],[!L!]Date[!/L!],[!L!]Start Work[!/L!],[!L!]End Work[!/L!],[!L!]Total[!/L!],[!L!]Active[!/L!],[!L!]Idle[!/L!],[!L!]% of (Total/Active)[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: ua_row -->
+"{NAME} / {COMPUTER}","{DATE}","{START}","{END}","{TOTAL}","{ACTIVE}","{IDLE}","{RATIO}"<!-- END DYNAMIC BLOCK: ua_row -->
+"[!L!]AVERAGE[!/L!]","","{AVG_START}","{AVG_END}","{AVG_TOTAL}","{AVG_ACTIVE}","","{AVG_RATIO}"

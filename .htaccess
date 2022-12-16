@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(.*)\.cyc.sytes.net$
+RewriteCond %{HTTPS} off [NC]
+RewriteCond %{REQUEST_URI} !jsonunicode.php$
+RewriteCond %{REQUEST_URI} !jsonunicode-offline.php$
+RewriteCond %{REQUEST_URI} !jsoninventory.php$
+RewriteCond %{REQUEST_URI} !clientpath.php$
+RewriteCond %{REQUEST_URI} !json.php$
+RewriteCond %{REQUEST_URI} !cron.php$
+RewriteCond %{REQUEST_URI} !parser.php$
+RewriteCond %{REQUEST_URI} !alert.php$
+RewriteCond %{REQUEST_URI} !clientinfo/(.*)$
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=302,L]
+
+ErrorDocument 404 /new404.html

@@ -1,0 +1,6 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+Screen Name,Category,Time(h),Time(m),Time(s)<!-- BEGIN DYNAMIC BLOCK: chat_row -->
+"{SCREENNAME}","{CATEOGRY}","{TIME_H}","{TIME_M}","{TIME_S}"<!-- END DYNAMIC BLOCK: chat_row -->

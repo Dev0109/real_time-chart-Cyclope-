@@ -1,0 +1,68 @@
+<div id="alert" class="wizard">
+  <div id="content">
+    <h1 class="windowtitle">{PAGE_TITLE}</h1>
+    {MESSAGE}
+    <div class="pagetabs">
+      <ul class="toolbar tabingsidebar">
+        <li class="ui-tabs-selected selectreport"><a href="#selectreport"><span>[!L!]Alert Type[!/L!]</span></a></li>
+        <li class="for"><a href="#for"><span>[!L!]Department[!/L!]</span></a></li>
+        <li class="define"><a href="#define"><span>[!L!]Define[!/L!]</span></a></li>
+        <li class="save"><a href="#save"><span>[!L!]Save[!/L!]</span></a></li>
+      </ul>
+      <form action="index.php" method="post" id="frm">
+        <input type="hidden" name="alert_id" value="{ALERT_ID}" />
+        <input type="hidden" name="act" value="{ACT}" />
+        <input type="hidden" name="pag" value="{PAG}" />
+        <div class="tab-content tabingsidebar_content">
+        <div id="selectreport" class="tab">
+          <ul id="emailreportlist" class="clearfix">
+            <!-- BEGIN DYNAMIC BLOCK: template_row -->
+            <li class="{ACTIVE}">
+              <label class="item">
+                <input type="radio" value="{VALUE}" {CHECKED} name="alert_type"/>
+                {ALERT_NAME}</label>
+            </li>
+            <!-- END DYNAMIC BLOCK: template_row -->
+          </ul>
+          <div class="btn"> <button class="next"><a href="#">[!L!]Next[!/L!]</a> </button></div>
+        </div>
+        <div id="for" class="tab ui-tabs-hide">
+          <fieldset>
+            <div class="monitored req"> <span id="treeselect" style="float:left; width:320px; border:0px;"></span> </div>
+            <div class="btn"> <button class="back"> <a href="#">[!L!]Previous[!/L!]</a></button>
+             <button class="next"> <a href="#" class="next">[!L!]Next[!/L!]</a></button>
+            </div>
+          </fieldset>
+        </div>
+        <div id="define" class="tab ui-tabs-hide">
+        	<div id="placeholder-loading">{TAB_CONTENT}</div>
+        	<div class="btn"> <button class="back"><a href="#" class="back">[!L!]Previous[!/L!]</a></button>
+              <button class="next"><a href="#" class="next">[!L!]Next[!/L!]</a></button>
+            </div>
+        </div>
+        <div id="save" class="tab ui-tabs-hide">
+        <div class="selectemployee">
+          <fieldset>
+          <div class="row">
+            <div class="req col-sm-4">
+              <label for="name">[!L!]Name[!/L!]</label>
+              <span><input type="text" name="name" value="{ALERT_NAME}" /></span>
+            </div>
+            <div class="even col-sm-4">
+              <label for="description">[!L!]Description[!/L!]</label>
+              <span><input type="text" name="description" id="description" value="{ALERT_DESCRIPTION}"></textarea></span> 
+            </div>
+          </div>
+            <div class="btn"> 
+              <button class="back"><a href="#">[!L!]Previous[!/L!]</a></button>
+              <button type="submit" class="next">[!L!]Finish[!/L!]</button>
+            </div>
+            
+          </fieldset>
+          </div>
+        </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

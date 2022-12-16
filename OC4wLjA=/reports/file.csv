@@ -1,0 +1,6 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}{HIDE_START}[!L!]Name[!/L!],[!L!]Computer[!/L!],[!L!]Date[!/L!],[!L!]Operation[!/L!],[!L!]Drive Type[!/L!],[!L!]Path[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: file_row -->
+"{NAME}","{COMPUTER}","{DATE}","{OPERATION}","{TYPE}","{PATH}"<!-- END DYNAMIC BLOCK: file_row -->

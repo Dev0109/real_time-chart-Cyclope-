@@ -1,0 +1,79 @@
+	{PDF_HEADER}
+	{DEBUGMESSAGE}{NO_DATA_MESSAGE}
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+	<div class="inventoryblock {PDF_CLASS} {HIDE_CONTENT}">
+		<div class="usercomputer col-sm-3">
+			<!-- <ul class="toolbar">
+				<li class="ui-tabs-selected websites"><a href="#websites"><span class="title">[!L!]Computer - User - IP[!/L!]</span></a></li>
+			</ul> -->
+			<span class="title">[!L!]Computer - User - IP[!/L!]</span>
+			<ul class="usercomputerli">
+				<li class="computer">{COMPUTER}</li>
+				<li class="user">{USER}</li>
+				<li class="ip">{IP}</li>
+			</ul>
+			<div class="lastupdate">
+			<span class="title"><strong>[!L!]Last updated[!/L!]:</strong> {LAST_UPDATE}</span><br />
+			<span class="title"><strong>[!L!]Computer Type[!/L!]:</strong> {USER_TYPE}</span>
+		</div>
+		</div>
+		<div class="hardware col-sm-9">
+			<!-- <ul class="toolbar">
+			  <li class="ui-tabs-selected websites"><a href="#websites"><span class="title">[!L!]System Information[!/L!]</span></a></li>
+			</ul> -->
+			<span class="title">[!L!]System Information[!/L!]</span>
+			<div class="content os">
+			  <i class="fa fa-windows" aria-hidden="true"></i>
+			  <div class="right-con"><strong>[!L!]OS[!/L!]:</strong> {USER_OS}</div>
+			</div>
+			<div class="content cpu">
+				<i><img src="OC4wLjA=/assets/images/cpu.png"></i>
+				<div class="right-con"><strong>[!L!]CPU[!/L!]:</strong> {USER_CPU}</div>
+			</div>
+			<div class="content ddr">
+				<i><img src="OC4wLjA=/assets/images/ram1.png"></i>
+				<div class="right-con"><strong>[!L!]Memory[!/L!]:</strong> {USER_RAM}</div>
+			</div>
+			<div class="content hdd">
+				<i class="fa fa-archive" aria-hidden="true"></i>
+				<div class="right-con"><strong>[!L!]Storage[!/L!]:</strong> {USER_HDD}</div>
+			</div>
+			<div class="content monitor"><i class="fa fa-desktop" aria-hidden="true"></i>
+				<div class="right-con"><strong>[!L!]Monitor[!/L!]:</strong> {USER_MONITOR}</div>
+			</div>
+			<!--<div class="content mb"><strong>[!L!]Motherboard[!/L!]:</strong> {USER_MB}</div>
+			<div class="content graph"><strong>[!L!]Graphics[!/L!]:</strong> {USER_VIDEO}</div>-->
+		</div>
+		</div>
+		
+		
+		<div class="software">
+			<ul class="toolbar">
+			  <li class="ui-tabs-selected websites"><a href="#websites"><span class="title">[!L!]Installed Applications[!/L!]</span></a></li>
+			</ul>
+			<div class="content"> </div>
+			<table cellspacing="0" class="list application table filter{HIDE_CONTENT}">
+			  <thead>
+				<tr>
+				  <th class="first-of-type"><strong>[!L!]Application Name[!/L!]</strong></th>
+				  <th><strong>[!L!]Publisher[!/L!]</strong></th>
+				  <th><strong>[!L!]Installed on[!/L!]</strong></th>
+				  <!--th style="width:150px"><strong>[!L!]Size[!/L!]</strong></th>
+				  <th style="width:150px"><strong>[!L!]Version[!/L!]</strong></th-->
+				</tr>
+			  </thead>
+			  <tbody>
+				{SOFTWARE_INFO}
+			  </tbody>
+			</table>
+		</div>
+	
+	<hr class="separatorhr" />
+    <!-- END DYNAMIC BLOCK: template_row -->
+<ul class="pagination hide">
+    <li class="prev"><a href="{BACKLINK}">[!L!]Previous[!/L!]</a></li>
+    {PAGG}
+    <li class="next"><a href="{NEXTLINK}">[!L!]Next[!/L!]</a></li>
+    <li class="last"><a href="{LAST_LINK}">[!L!]Last[!/L!]</a></li>
+</ul>
+

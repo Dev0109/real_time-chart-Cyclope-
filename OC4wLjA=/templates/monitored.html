@@ -1,0 +1,67 @@
+<div class="overlay {HIDEMODAL}">
+	<div class="modalbox">
+    <img src="{CURRENT_VERSION_FOLDER}img/{LANG}/adduser.jpg" usemap="#planetmap" />
+    </div> 
+</div>
+
+<map name="planetmap">
+    <area alt="" title="" href="http://cyclope-series.com/resources/documents/cyclope-employee-surveillance-installation-guide.pdf" shape="rect" coords="4,368,184,526" />
+    <area alt="" title="" href="http://cyclope-series.com/resources/documents/cyclope-employee-surveillance-installation-guide.pdf" shape="rect" coords="208,429,354,532" />
+    <area alt="" title="" href="mailto:support@cyclope-series.com" shape="rect" coords="235,559,521,597" />
+</map> 
+
+<div id="monitored">
+	<h1 class="windowtitle">
+	   <div class="pull-left">{PAGE_TITLE} 
+		 	<a href="#" class="addtheme monitored btn btn-info">[!L!]Add More Employees[!/L!]</a>
+		 	<!-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"><a href="#" class="addtheme monitored">Add More Employees</a> </button> -->
+		 </div>
+	   <div class="pull-right">
+	      <div class="right rightsearch" id="search_form">
+	      	<!-- <strong id="clear-search">&nbsp;</strong> --><input type="text" name="search_key" id="search_key" value="" /></div>
+	   </div>
+	 </h1>
+<div id="content"> {MESSAGE} {ENCRYPTMESSAGE}
+<div class="pagetabs">
+    <ul class="toolbar">
+      <li class="ui-tabs-selected "><a href="#monitored_table" title="Monitored"><span>[!L!]Monitored Employees[!/L!]</span></a></li>
+      <li class="uninstalled"><a href="index_ajax.php?pag=xuninstalled" title="Removed"><span>[!L!]Removed Employees[!/L!]</span></a></li>	  
+      <li class="legendbuttons" style="float:right;"><img src="{CURRENT_VERSION_FOLDER}img/connect.png" /> = [!L!]monitored now[!/L!] | <img src="{CURRENT_VERSION_FOLDER}img/partialconnect.png" /> = [!L!]monitored today[!/L!] | <img src="{CURRENT_VERSION_FOLDER}img/disconnect.png" /> = [!L!]not monitored[!/L!]</li>	  
+    </ul>
+    <div id="monitored_table" class="tab">{MONITORED_USERS}</div>
+	<div id="Removed" class="tab"></div>
+</div>
+ 
+ 
+ 
+</div></div>
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+    
+      <div class="modal-content">
+        <div class="overlay {HIDEMODAL}">
+	<div class="modalbox">
+    <img src="{CURRENT_VERSION_FOLDER}img/{LANG}/adduser.jpg" usemap="#planetmap" />
+    </div> 
+</div>
+        
+        
+      </div>
+      
+    </div>
+  </div> -->
+<script>
+  $(document).ready(function(){
+	  $(".addtheme").click(function () {
+			$(".overlay").show();
+			return false;
+		});
+	  $(".overlay").click(function () {
+			$(".overlay").hide();
+			return false;
+		});
+	  $(".overlay.showmodal").show();
+	});
+</script>

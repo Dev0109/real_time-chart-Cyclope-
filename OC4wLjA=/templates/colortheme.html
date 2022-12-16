@@ -1,0 +1,33 @@
+<link rel="stylesheet" media="screen" type="text/css" href="{CURRENT_VERSION_FOLDER}css/colorpicker.css" />
+<script type="text/javascript" src="{CURRENT_VERSION_FOLDER}js/colorpicker.js"></script>
+<div id="colorthemes">
+<h1 class="windowtitle">{PAGE_TITLE}<a href="{RESET_LINK}" class="resettheme addtheme btn-info monitored {HIDE_RESET_LINK}" id="setdefault">[!L!]Reset to default[!/L!]</a></h1>
+<div id="content" class="panelrow productivitypage">
+	<form action="index.php" method="post">
+    <input type="hidden" name="act" value="{ACT}" />
+	<input type="hidden" name="theme_id" value="{THEME_ID}" />
+    <input type="hidden" name="pag" value="colortheme" />
+	{MESSAGE}
+    <fieldset class="color-picker">
+      <!-- BEGIN DYNAMIC BLOCK: template_row -->
+	  <div class="{CLASS} req">
+        <label for="category">{LABEL} #</label>
+        <span>
+        <input name="color[{INDEX}]" type="text" id="color-{INDEX}" value="{COLOR}" maxlength="6" />
+        </span>
+		<div id="color-{INDEX}-sample" class="colorSelector2"><div style="background-color:#{COLOR}"> </div></div>
+		</div>
+	  <!-- END DYNAMIC BLOCK: template_row -->
+	  <div class="{CLASS} req">
+        <label for="name">[!L!]Theme Name[!/L!]</label>
+        <span>
+        <input name="name" type="text" id="name" value="{NAME}" />
+        </span>
+		</div>
+      <div class="buttons"><span class="submit">
+        <button type="submit"><b>[!L!]Save[!/L!]</b></button>
+        </span></div>
+    </fieldset>
+  </form>
+</div>
+</div>

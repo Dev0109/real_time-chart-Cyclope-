@@ -1,0 +1,26 @@
+<div class="info">[!L!]Pentru a putea primi din nou date de la un utilizator şters, trebuie mai intâi să fie ştearsă intrarea care îi corespunde în acestă listă utilizând comanda <strong>Restaurează</strong>.
+Statusul unei intrări se schimbă din "marcat pentru ştergere" în "şters" doar după ce staţia utilizatorului şters a fost restartată. <strong>Schimbarea statusului nu se produce dacă, înainte să optaţi pentru dezinstalare, aţi redenumit username-ul din Windows sau numele calculatorului pentru angajatul respectiv.</strong>[!/L!]</div>
+ {MESSAGES}
+<div class="table-responsive">
+ <table cellspacing="0" class="table filter list application bgwhite {NO_RESULTS}">
+    <thead>
+      <tr>
+        <th style="width:150px"><strong>[!L!]Name[!/L!]</strong></th>
+        <th style="width:100px"><strong>[!L!]Machine[!/L!]</strong></th>
+		<th style="width:100px"><strong>[!L!]Status[!/L!]</strong></th>
+        <th class="actions" style="width:90px"><strong>[!L!]Actions[!/L!]</strong></th>        
+      </tr>
+    </thead>
+    <tbody>
+      <!-- BEGIN DYNAMIC BLOCK: template_row -->
+      <tr class="{EVEN}">
+        <td><span>{NAME}</span></td>
+        <td><span>{MACHINE}</span></td>
+        <td><span>{STATUS}</span></td>
+        <td class="actions"><a href="index_ajax.php?act=member-cleardeleted&uninstall_id={UNINSTALL_ID}" class="clear-deleted">[!L!]Restore[!/L!]</a></td>
+      </tr>
+      <!-- END DYNAMIC BLOCK: template_row -->
+    </tbody>
+  </table>
+</div>
+  

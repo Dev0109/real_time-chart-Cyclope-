@@ -1,0 +1,36 @@
+<div id="log">
+<h1 class="windowtitle">{PAGE_TITLE}</h1>
+	<div id="content">{MESSAGE}
+		<div class="pagetabs panelrow productivitypage">
+			<ul class="toolbar">
+				<li class="ui-tabs-selected deletelogs"><a href="#deletelogs"><span>[!L!]Delete Logs[!/L!]</span></a></li>
+			</ul>
+			<div id="deletelogs" class="tab">
+				<form action="index.php#deletelogs" method="post" id="updateautodelete">
+					<input type="hidden" name="act" value="settings-updateautodelete" id="updateautodeleteact" />
+					<input type="hidden" name="pag" value="log" />
+					<fieldset>
+						<div class="btn chk buttondelete">
+							<a href="index.php?pag=log&act=log-clearquarter" class="quarter">[!L!]Delete logs older than 3 months[!/L!]</a>
+							<a href="index.php?pag=log&act=log-clearhalf" class="half">[!L!]Delete logs older than 6 months[!/L!]</a>
+							<a href="index.php?pag=log&act=log-clear" class="clear1y">[!L!]Delete logs older than 12 months[!/L!]</a>
+							<a href="index.php?pag=log&act=log-clearall" class="clearall">[!L!]Delete all logs[!/L!]</a>
+						</div>
+						<div class="chk even">
+							<p>&nbsp;</p>
+							<label for="alias">
+								<input type="checkbox" id="autodelete_logshalf" name="autodelete_logshalf"  value="1" {AUTODELETE_LOGSHALF}/>
+								[!L!]Automatically delete logs older than 6 months[!/L!]
+							</label>
+						</div>
+						<div class="buttons">
+							<span class="submit">
+								<button type="submit"><b>[!L!]Save[!/L!]</b></button>
+							</span>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div> 
+</div>

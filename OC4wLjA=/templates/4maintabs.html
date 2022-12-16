@@ -1,0 +1,20 @@
+<ul id="mastmenu">
+  <li ><a href="index.php?pag=simpleoverview" {SELECTED_SIMPLE}><span class="simpleview"><strong>[!L!]Quick Reports[!/L!]</strong></span></a></li>
+  <li ><a href="index.php?pag=overview" {SELECTED_STATS}><span class="statistics"><strong>[!L!]All Reports[!/L!]</strong></span></a></li>
+  <!--li id="hlp-trigger2"><a href="{HELP_LINK}" {SELECTED_HELP}><span class="help"><strong>[!L!]Help[!/L!]</strong></span></a></li-->
+  <li ><a {SELECTED_SUPPORT} href="help.php?pag=support"><span class="support"><strong>[!L!]Support[!/L!]</strong></span></a></li>
+	
+  <div id="main_search_wrapper">
+  <form action="index.php" method="post" id="main_search_form">
+		<input type="hidden" name="pag" value="universalsearch" />
+
+  		<span class="right" >	
+  			<input type="text" name="search_key" id="main_search_input" value="{SEARCH_VALUE}"
+							onfocus="defaultValue ='{SEARCH_VALUE}';
+												 if(this.value==this.defaultValue)this.value='';"
+							onblur="if(this.value=='')this.value=this.defaultValue;"/>
+  			<INPUT TYPE="image" id="main_search_image" SRC="{CURRENT_VERSION_FOLDER}img/magnifying_glass.png"  ALT="SUBMIT!">
+  		</span>
+  </form>
+ </div>
+</ul>

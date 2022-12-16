@@ -1,0 +1,6 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}{HIDE_START}[!L!]Window Name[!/L!],[!L!]Total Time(h)[!/L!],[!L!]Total Time(m)[!/L!],[!L!]Total Time(s)[!/L!],[!L!]Active Time(h)[!/L!],[!L!]Active Time(m)[!/L!],[!L!]Active Time(s)[!/L!],[!L!]Idle Time(h)[!/L!],[!L!]Idle Time(m)[!/L!],[!L!]Idle Time(s)[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: applicationforms_row -->
+"{WINDOWNAME}","{TOTAL_H}","{TOTAL_M}","{TOTAL_S}","{ACTIVE_H}","{ACTIVE_M}","{ACTIVE_S}","{IDLE_H}","{IDLE_M}","{IDLE_S}"<!-- END DYNAMIC BLOCK: applicationforms_row -->

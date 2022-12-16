@@ -1,0 +1,6 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+Username,%,Total Time(h),Total Time(m),Total Time(s),Idle Time(h),Idle Time(m),Idle Time(s)<!-- BEGIN DYNAMIC BLOCK: topidle_row -->
+"{USERNAME}","{PERCENT}","{TOTAL_TIME_H}","{TOTAL_TIME_M}","{TOTAL_TIME_S}","{IDLE_TIME_H}","{IDLE_TIME_M}","{IDLE_TIME_S}"<!-- END DYNAMIC BLOCK: topidle_row -->

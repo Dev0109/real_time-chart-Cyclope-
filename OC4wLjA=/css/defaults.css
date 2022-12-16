@@ -1,0 +1,223 @@
+.tooltipcustom {
+    position: relative;
+    display: inline-block;
+    color: #f98b1f;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tooltipcustom .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+    position: absolute;
+    z-index: 111111;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    font-weight: 400;
+}
+.tooltipcustom:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.overtitle {
+    margin-bottom: 10px;
+}
+.contercontent .filter li {
+    list-style-type: none;
+}
+.contercontent .filter h1 {
+    line-height: 46px;
+    width: max-content;
+    float: left;
+}
+.time .cyclope {
+    background: #f98b1f;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 19px;
+}
+.contercontent .filter {
+    padding: 13px 20px;
+    margin-bottom:0px !important;
+    background: #fff;
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0px 2px 0px 1px #d8dbdd;
+    box-shadow: 0px 1px 0px 1px #d8dbdd;
+    border-radius: 2px;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.clear{
+	clear:both;
+	height:1px;
+	overflow:hidden;
+	font-size:1px;
+}
+.ui-tabs-hide,
+.hide{
+	display:none;
+	visibility:hidden;
+}
+.clearfix:after{
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+.twocols:after{
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+.twocols {
+	display: inline-block;
+	clear:both;	
+}
+/* Hides from IE-mac \*/
+* html .twocols {height: 1%;}
+.twocols {display: block;}
+/* End hide from IE-mac */
+
+.twocols .leftcol{
+	float:left;
+}
+.twocols .rightcol{
+	float:right;
+	text-align:left;
+}
+.info, .success, .warning, .error{  
+    border: 2px solid;  
+    margin: 10px 0px;  
+    padding:10px 10px 10px 53px;  
+    background-repeat: no-repeat;  
+    background-position: 10px center;
+	text-align:left;
+	font-size:11px;
+}
+	.info h3,
+	.success h3,
+	.warning h3,
+	.error h3{
+		font-size:17px;
+	}
+	.info .dismiss,
+	.info .dismiss:hover,
+	.success .dismiss,
+	.success .dismiss:hover,	
+	.warning .dismiss,
+	.warning .dismiss:hover,	
+	.error .dismiss,
+	.error .dismiss:hover{
+		font-size:11px;
+		float:right;
+		font-weight:bold;
+		text-decoration:none;
+		outline:none;
+		text-transform:capitalize;
+		background-image:url(../img/msg_dismiss.gif);
+		background-repeat:no-repeat;
+		padding-left:15px;
+	}
+	
+.info{
+    color: #567da5;  
+/*    background-color: #d7ebf2;  */
+    background-image: url(../img/msg_info.png);
+	border-color:#b6c7cd;
+/*	float: left;
+	width: 100%;*/
+	background-size: 37px;
+	border-radius: 10px;
+	float: left;
+}
+	.info.productive {
+		background-image: url(../img/msg_info.png);
+	}
+	.info .dismiss{
+		color: #567da5;
+		background-position:0px -35px;
+	}
+	.info a,
+	.info a:hover{
+		color:#567da5;
+		font-weight:bold;
+	}
+	
+.success{
+    color: #ffffff;  
+	background-color: #8ac469;  
+    background-image:url(../img/msg_success.png);
+    margin: 10px 10px 10px 10px !important	;
+    float: left;
+    width: 100%;
+    border-radius: 10px;
+    border-color: #b6c7cd;
+}
+	.success .dismiss{
+		color: #ffffff;  
+		background-position:0px 3px;
+	}
+.warning{
+    color: #655f4f;  
+    background-color: #fdedc5;  
+    background-image:url(../img/msg_warning.png);
+	border-color:#b6c7cd;
+	border-radius: 5px;
+	clear:both;
+}
+	.warning .dismiss{
+		color: #655f4f;
+		background-position:0px -16px;
+	}
+	.warning a,
+	.warning a:hover{
+		color:#000000;
+		font-weight:bold;
+		text-decoration:none;
+	}
+.error{
+    color:#ffffff;  
+    background-color:#ed7053;
+    background-image:url(../img/msg_error.png);
+	border-color:#c63d09;
+	float: left;
+    width: 100%;
+    border-color: #b6c7cd;
+	border-radius: 10px;
+	font-size: 11px;	
+}
+}  
+	.error .dismiss{
+		color:#ffffff;
+		background-position:0px -54px;
+	}
+	.error a,
+	.error a:hover{
+		color:#ffffff;
+		font-weight:bold;
+		text-decoration:none;
+	}

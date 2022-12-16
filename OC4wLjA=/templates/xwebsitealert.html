@@ -1,0 +1,31 @@
+<div class="btn">
+	<a href="#" class="add"><img src="{CURRENT_VERSION_FOLDER}img/wizard_add.png" width="16" height="16" alt="" /></a>
+</div>
+<h1>[!L!]Websites[!/L!]</h1>
+<div class="info">[!L!]Start typing (<strong>2 characters at least</strong>) the website name (without www) and then select it from the list of returned results. The searched website must exist in the visited websites list.[!/L!]</div>
+<!-- BEGIN DYNAMIC BLOCK: template_row -->
+<fieldset class="template">
+
+  <div class="req">
+    <label for="web_txt">[!L!]Website[!/L!]:</label>
+   <span> <input type="text" name="web_txt[]" class="web_txt" value="{WEB}" /></span>
+    <input type="hidden" name="web[]" value="{WEB_ID}" /><a href="#" class="remove"><img src="{CURRENT_VERSION_FOLDER}img/minus.png" /></a>
+ </div>
+  <div class="req even">
+    <label for="web_hour">[!L!]Time[!/L!]:</label>
+    <select name="web_hour[]" class="small">
+      
+  
+	 		{WEB_HOUR}   
+
+    </select>
+    h
+    &nbsp;
+    <select name="web_minute[]" class="small">
+      
+			{WEB_MINUTE}
+
+    </select>
+    m </div>
+</fieldset>
+<!-- END DYNAMIC BLOCK: template_row -->

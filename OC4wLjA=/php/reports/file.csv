@@ -1,0 +1,6 @@
+Title: {TITLE}
+User(Machine) / Group: {USER_DEPARTMENT_NAME}
+Time period: {TIME_PERIOD}
+
+Name,Date,Operation,Drive Type,Path<!-- BEGIN DYNAMIC BLOCK: file_row -->
+"{NAME}","{DATE}","{OPERATION}","{TYPE}","{PATH}"<!-- END DYNAMIC BLOCK: file_row -->

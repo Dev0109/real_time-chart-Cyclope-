@@ -1,0 +1,21 @@
+.box{
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #cacaca;		
+	float:left;
+	width:100%;
+	margin-bottom:10px;
+	clear:both;
+	behavior:url(PIE.htc);
+	position:relative;
+	background-color:#FFF;
+}
+	.average li{
+		-webkit-border-radius:5px;
+		-moz-border-radius:5px;
+		border-radius:5px;
+		border:1px solid #b3b3b3;
+		behavior:url(PIE.htc);
+		position:relative;
+	}

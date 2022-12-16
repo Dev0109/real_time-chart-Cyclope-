@@ -1,0 +1,47 @@
+<div id="trial">
+<div class="warning">
+[!L!]If you wish to evaluate the Cyclope Trial version, please fill the required data and click Start Evaluation.[!/L!] [!L!]If you already received a license key, please paste it into the License Key field and click Activate License.[!/L!]</div>
+<h1 class="windowtitle">{PAGE_TITLE}</h1>
+<div id="content" class="selectemployee panelrow productivitypage">{MESSAGE}
+<fieldset>
+  <div class="row">
+      <form action="{SEND_TO}" method="post" id="form">
+        <input type="hidden" name="act" value="licence-activate" id="act">
+        <input type="hidden" name="pag" value="{PAG}">
+        <div  class="req even col-sm-3">
+          <label for="company_name">[!L!]Company Name[!/L!]</label>
+          <span>
+          <input type="text" id="company_name" name="company_name" value="{COMPANY_NAME}" />
+          </span> 
+		</div>
+		<div  class="req col-sm-3">
+          <label for="name">[!L!]Name[!/L!]</label>
+          <span>
+          <input type="text" id="name" name="name" value="{NAME}" />
+          </span> 
+		</div>
+		<div  class="req even col-sm-3">
+          <label for="email">[!L!]Email[!/L!]</label>
+          <span>
+          <input type="text" id="email" name="email" value="{EMAIL}" />
+          </span> 
+		 </div>
+		 <div class="col-sm-3">
+          <label for="phone">[!L!]Phone[!/L!]</label>
+          <span>
+          <input type="text" id="phone" name="phone" value="{PHONE}" />
+          </span> 
+		 </div>	
+    <div class="req even col-sm-3">
+      <label for="country">[!L!]Country[!/L!]</label>
+      <select id="country" name="country"><option></option>{COUNTRY}</select></div>
+    <div class="req col-sm-3">
+      <label for="time_zone">[!L!]Time Zone GMT[!/L!]</label>
+      <select id="time_zone" class="time_zone_none" name="time_zone"><option></option>{TIMEZONE}</select></div></div>
+		 {CHANGE_FIELDS}
+        <div class="buttons">{CHANGE_BUTTON}
+		  {TRIAL_BUTTON}</div>
+      </form>
+    </fieldset>
+</div>
+</div>

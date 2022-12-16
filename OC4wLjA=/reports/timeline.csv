@@ -1,0 +1,6 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}{HIDE_START}[!L!]Hour[!/L!],[!L!]Start Time[!/L!],[!L!]End Time[!/L!],[!L!]Applications[!/L!],[!L!]Category[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: template_row -->
+"{HOUR}","{START}","{END}","{APPLICATION}","{CATEGORY}"<!-- END DYNAMIC BLOCK: template_row -->

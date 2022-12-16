@@ -1,0 +1,28 @@
+<h1 class="windowtitle">[!L!]Reports by Email[!/L!]<span class="btn btn-info"><a class="addtheme monitored " href="{ADD_LINK}">[!L!]Add Reports Set[!/L!]</a></span></h1>
+<div id="content">
+	{MESSAGE}{NO_DATA_MESSAGE}
+  <div class="table-responsive">
+  <table cellspacing="0" class="list application table filter bgwhite {HIDE_CONTENT}" id="emailreports">
+    <thead>
+      <tr>
+        <th>[!L!]Name[!/L!]</th>
+		<th>[!L!]For[!/L!]</th>
+		<th>[!L!]Description[!/L!]</th>
+        <th>[!L!]Actions[!/L!]</th>
+      </tr>
+    </thead>
+    <tbody class="categories">
+    <!-- BEGIN DYNAMIC BLOCK: template_row -->
+    <tr class="{CLASS}">
+      <td>{NAME}</td>
+	  <td>{FOR}</td>
+	  <td>{DESCRIPTION}</td>
+      <td class="actions">  	  
+	  	<a href="{EDIT_LINK}" class="edit">[!L!]Edit[!/L!]</a><a href="{DELETE_LINK}" class="delete">[!L!]Delete[!/L!]</a>
+      </td>
+    </tr>
+    <!-- END DYNAMIC BLOCK: template_row -->
+    </tbody>    
+  </table>
+</div>
+</div>

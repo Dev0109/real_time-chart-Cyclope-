@@ -1,0 +1,6 @@
+[!L!]Title:[!/L!] [!L!]{TITLE}[!/L!] 
+[!L!]User(Machine) / Group:[!/L!] {USER_DEPARTMENT_NAME}
+[!L!]Time period:[!/L!] {TIME_PERIOD}
+
+{NO_DATA_MESSAGE}{HIDE_START}[!L!]Name[!/L!],[!L!]Total (h)[!/L!],[!L!]Total (m)[!/L!],[!L!]Total (s)[!/L!],[!L!]Active (h)[!/L!],[!L!]Active (m)[!/L!],[!L!]Active (s)[!/L!],[!L!]Active (AVG) (h)[!/L!],[!L!]Active (AVG) (m)[!/L!],[!L!]Active (AVG) (s)[!/L!],[!L!]Overtime (h)[!/L!],[!L!]Overtime (m)[!/L!],[!L!]Overtime (s)[!/L!],[!L!]Overtime (AVG) (h)[!/L!],[!L!]Overtime (AVG) (m)[!/L!],[!L!]Overtime (AVG) (s)[!/L!],[!L!]Idle (h)[!/L!],[!L!]Idle (m)[!/L!],[!L!]Idle (s)[!/L!],[!L!]Idle (AVG) (h)[!/L!],[!L!]Idle (AVG) (m)[!/L!],[!L!]Idle (AVG) (s)[!/L!],[!L!]Online (h)[!/L!],[!L!]Online (m)[!/L!],[!L!]Online (s)[!/L!],[!L!]Online (AVG) (h)[!/L!],[!L!]Online (AVG) (m)[!/L!],[!L!]Online (AVG) (s)[!/L!],[!L!]Activity %[!/L!]{HIDE_END}<!-- BEGIN DYNAMIC BLOCK: ua_row -->
+"{NAME}","{TOTAL_H}","{TOTAL_M}","{TOTAL_S}","{ACTIVE_H}","{ACTIVE_M}","{ACTIVE_S}","{ACTIVE_AVG_H}","{ACTIVE_AVG_M}","{ACTIVE_AVG_S}","{OVERTIME_H}","{OVERTIME_M}","{OVERTIME_S}","{OVERTIME_AVG_H}","{OVERTIME_AVG_M}","{OVERTIME_AVG_S}","{IDLE_H}","{IDLE_M}","{IDLE_S}","{IDLE_AVG_H}","{IDLE_AVG_M}","{IDLE_AVG_S}","{ONLINE_H}","{ONLINE_M}","{ONLINE_S}","{ONLINE_AVG_H}","{ONLINE_AVG_M}","{ONLINE_AVG_S}","{ACTIVITY_PERCENT}"<!-- END DYNAMIC BLOCK: ua_row -->

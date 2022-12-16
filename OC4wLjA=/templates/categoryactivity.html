@@ -1,0 +1,62 @@
+{PDF_HEADER}<!-- BEGIN DYNAMIC BLOCK: ajax -->
+<div id="categoryactivity" class="{PDF_CLASS}">
+<!--   <h1{PDF_HIDE}>{PAGE_TITLE} <span id="append">{APPEND}</span></h1>
+  
+  <ul class="filter" {PDF_HIDE}>
+    <li class="time"> [!L!]Filters[!/L!] 
+      <input type="text" name="time[time]" id="time-filter" class="flobn-range" value="{DEFAULT_VALUE}" />
+    </li>
+    <li class="export"><tr><td><a href="{HELP_LINK}" target="_blank" id="export-help" {SELECTED_SUPPORT}>[!L!]Explain report[!/L!]</a> <a href="index.php?pag=emailreport&preset=13" id="export-email" >[!L!]Send Email[!/L!]</a> <a href="index.php?pag=categoryactivity&act=reports-categoryactivity" id="export-csv" >[!L!]Download CSV[!/L!]</a> <a href="index.php?pag=categoryactivity&act=reports-categoryactivity&format=xls{EXPORT_APP_FILTER}" id="export-xls" >[!L!]Download XLS[!/L!]</a> <a href="index.php?pag=categoryactivity&render=pdf" target="_blank" id="export-pdf" >[!L!]Generate PDF[!/L!]</a></li>
+  </ul> -->
+  <div class="col-md-12 p-0 overtitle">
+      <ul class="filter" {PDF_HIDE}>
+          <li class="col-md-12 time text-left p-0"><h1>{PAGE_TITLE}<div class="main-btn"> <span id="append" class="cyclope">{APPEND}</span></div></h1>
+      <!--  <img data-toggle="tooltip" data-placement="top" title="Select the desired time frame. The default value is Today's date." src="{CURRENT_VERSION_FOLDER}assets/images/tooltip.png"> -->
+
+            </li>
+
+          <li class="col-md-12 export text-right p-0 time">
+            <div class="pull-left">
+              <span class="filter-img"><img src="{CURRENT_VERSION_FOLDER}assets/images/filter.png" class="filter_icon"></span> <!-- <span class="filtertxt">[!L!]Filters[!/L!]</span> -->
+              
+              <input type="text" name="time[time]" class="flobn-range" id="time-filter" value="{DEFAULT_VALUE}" />
+            </div>
+            <div class="pull-right">
+             <a href="{HELP_LINK}" target="_blank" id="export-help" {SELECTED_SUPPORT}><img src="{CURRENT_VERSION_FOLDER}assets/images/help_menu.png"></a>
+
+             <a href="index.php?pag=emailreport&preset=13" id="export-email" ><img src="{CURRENT_VERSION_FOLDER}assets/images/email.png"></a>
+
+             <a href="index.php?pag=categoryactivity&act=reports-categoryactivity" id="export-csv" ><img src="{CURRENT_VERSION_FOLDER}assets/images/csv.png" class="csv"></a>
+              <a href="index.php?pag=categoryactivity&act=reports-categoryactivity&format=xls{EXPORT_APP_FILTER}" id="export-xls" ><img src="{CURRENT_VERSION_FOLDER}assets/images/xls1.png" class="xls"></a>
+
+             <a href="index.php?pag=categoryactivity&render=pdf" target="_blank" id="export-pdf" ><img src="{CURRENT_VERSION_FOLDER}assets/images/pdf.png" class="pdf"></a></div>
+          </li>
+         </ul>
+  </div> 
+  
+  <div class="bd-ajax">
+    <!-- END DYNAMIC BLOCK: ajax -->
+    {NO_DATA_MESSAGE}{ENCRYPTMESSAGERAW}
+    <div id="categories_chart" class="{HIDE_CONTENT} productivitypage panelrow">{CATEGORY_CHART}</div>
+    <table cellspacing="0" class="table list application topapplications {HIDE_CONTENT} filter" >
+      <thead>
+        <tr>
+          <th class="first-of-type"><strong>[!L!]Category[!/L!]</strong></th>
+          <th ><strong>[!L!]Time[!/L!]</strong></th>
+          <th  class="th-activeperc"><strong>[!L!]% from Active Time[!/L!]</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- BEGIN DYNAMIC BLOCK: template_row -->
+        <tr>
+          <td>{SPACER}<b style="background-color:#{COLOR}"></b>{CATEGORY}</td>
+          <td><span>{TIME}</span></td>
+          <td class="td-activeperc"><div>{PROCENT}%</div></td>
+        </tr>
+        <!-- END DYNAMIC BLOCK: template_row -->
+      </tbody>
+    </table>
+    <!-- BEGIN DYNAMIC BLOCK: ajax -->
+  </div>
+</div>
+<!-- END DYNAMIC BLOCK: ajax -->
